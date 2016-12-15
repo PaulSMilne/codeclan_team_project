@@ -10,6 +10,9 @@ Player.prototype = {
   addCard: function(card) {
     this.hand.push(card);
   },
+  removeCard: function() {
+    return this.hand.shift();
+  },
 }
 
 module.exports = Player;

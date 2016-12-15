@@ -9,6 +9,7 @@ describe('Player', function() {
 
   beforeEach(function() {
     player1 = new Player("Paul");
+    
 
   });
 
@@ -24,6 +25,16 @@ describe('Player', function() {
     var cardStub = {name: "M. Bison"};
     player1.addCard(cardStub);
     assert.equal(1, player1.cardCount());
+  });
+
+  it('should be able to remove top card on deck', function() {
+    var cardStub1 = {name: "Dhalsim"};
+    var cardStub2 = {name: "M. Bison"};
+    var cardStub3 = {name: "Chun Li"};
+    player1.addCard(cardStub1);
+    player1.addCard(cardStub2);
+    player1.addCard(cardStub3);
+    assert.equal( cardStub1, player1.removeCard());
   });
 
 })
