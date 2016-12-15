@@ -3,6 +3,7 @@ var Game = function(deck, handSize) {
   this.handSize = handSize;
   this.players = [];
   this.table = [];
+  this.currentPlayer;
 };
 
 Game.prototype = {
@@ -13,7 +14,8 @@ Game.prototype = {
     this.players.push(newPlayer);
   },
   deal: function() {
-    this.deck.shuffleCards();
+    // this.deck.shuffleCards();
+    this.currentPlayer = this.players[0];
     var cardCount = 0;
     while (cardCount < this.handSize) {
       for (player of this.players) {
@@ -21,8 +23,30 @@ Game.prototype = {
       }
       cardCount++;
     }
-
+  },
+  playRound: function(ability) {
+    this.table.push(this.currentPlayer.removeCard());
+    this.updateTurn();
+    this.table.push(this.currentPlayer.removeCard());
+    if (this.table[0].abilities[ability] > this.table[1].abilities[ability]) {
+      this.updateTurn();
+      for (card of this.table) {
+        this.currentPlayer.addCard(this.table.pop());
+      }
+    } else {
+        for (card of this.table) {
+          this.currentPlayer.addCard(this.table.pop());
+        }
+    }
+  },
+  updateTurn: function() {
+    if (this.currentPlayer === this.players[0]) {
+      this.currentPlayer = this.players[1];
+    } else {
+      this.currentPlayer = this.players[0];
+    }
   }
+
 };
 
 module.exports = Game;

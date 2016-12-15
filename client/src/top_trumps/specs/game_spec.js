@@ -10,7 +10,7 @@ var player1;
 var player2;
 
 describe("Game", function() {
-  before(function() {
+  beforeEach(function() {
     var stubDeck = [1, 2, 3, 4, 5, 6];
     game = new Game(stubDeck, 3);
     player1 = new Player("Paul");
@@ -77,5 +77,12 @@ describe("Game", function() {
     assert.equal(1, player1.cardCount());
     assert.equal(1, player2.cardCount());
   });
+
+  it("should be able to play a round", function() {
+    game2.deal();
+    game2.playRound("resolve");
+    // assert.equal(2, player1.cardCount());
+    assert.equal(0, player2.cardCount());
+  })
 
 });
