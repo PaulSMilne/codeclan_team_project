@@ -18,5 +18,12 @@ describe('Player', function() {
 
   it('should start with empty hand', function() {
     assert.equal(0, player1.cardCount());
-  })
+  });
+
+  it('should be able to add card to the hand', function() {
+    var cardStub = {name: "M. Bison"};
+    player1.addCard(cardStub);
+    assert.equal(1, player1.cardCount());
+  });
+
 })
