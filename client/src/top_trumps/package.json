@@ -1,0 +1,13 @@
+{
+  "name": "top_trumps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deck.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "author": "",
+  "license": "ISC"
+}
