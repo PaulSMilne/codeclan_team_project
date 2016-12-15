@@ -2,6 +2,7 @@ var Game = function(deck, handSize) {
   this.deck = deck;
   this.handSize = handSize;
   this.players = [];
+  this.table = [];
 };
 
 Game.prototype = {
@@ -12,11 +13,11 @@ Game.prototype = {
     this.players.push(newPlayer);
   },
   deal: function() {
-    deck.shuffleCards();
+    this.deck.shuffleCards();
     var cardCount = 0;
     while (cardCount < this.handSize) {
       for (player of this.players) {
-        player.addCard(deck.cards.shift());
+        player.addCard(this.deck.cards.shift());
       }
       cardCount++;
     }
