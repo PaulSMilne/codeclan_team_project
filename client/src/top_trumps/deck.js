@@ -1,3 +1,4 @@
+var _ = require('underscore');
 var Deck = function(){
      this.cards = [];
 }
@@ -5,6 +6,10 @@ var Deck = function(){
 Deck.prototype = {
      addCards: function(cards){
           this.cards = cards;
+     },
+
+     shuffleCards: function(){
+          this.cards = _.shuffle(this.cards);
      }
 }
 
