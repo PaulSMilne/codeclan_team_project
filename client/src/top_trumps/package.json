@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "deck.js",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.2"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "mocha specs"
