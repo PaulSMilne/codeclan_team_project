@@ -4,7 +4,9 @@ var Player = function(name){
 }
 
 Player.prototype = {
-
+  cardCount: function() {
+    return this.hand.length;
+  }
 }
 
 module.exports = Player;

@@ -17,6 +17,6 @@ describe('Player', function() {
   });
 
   it('should start with empty hand', function() {
-    assert.equal(0, player1.hand.length);
+    assert.equal(0, player1.cardCount());
   })
 })
