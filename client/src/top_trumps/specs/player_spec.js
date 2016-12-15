@@ -1,5 +1,4 @@
 var Player = require('../player');
-var Card = require('../card');
 var assert = require('assert');
 
 describe('Player', function() {
