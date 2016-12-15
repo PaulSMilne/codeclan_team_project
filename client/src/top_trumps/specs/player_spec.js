@@ -10,9 +10,13 @@ describe('Player', function() {
   beforeEach(function() {
     player1 = new Player("Paul");
 
-  })
+  });
 
   it('should have a name', function(){
     assert.equal("Paul", player1.name);
+  });
+
+  it('should start with empty hand', function() {
+    assert.equal(0, player1.hand.length);
   })
 })
