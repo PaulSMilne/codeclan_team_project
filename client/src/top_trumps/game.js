@@ -10,6 +10,17 @@ Game.prototype = {
   },
   addPlayer: function(newPlayer) {
     this.players.push(newPlayer);
+  },
+  deal: function() {
+    deck.shuffleCards();
+    var cardCount = 0;
+    while (cardCount < this.handSize) {
+      for (player of this.players) {
+        player.addCard(deck.cards.shift());
+      }
+      cardCount++;
+    }
+
   }
 };
 

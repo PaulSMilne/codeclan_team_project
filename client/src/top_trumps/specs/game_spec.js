@@ -1,12 +1,19 @@
 var assert = require("assert");
 var Game = require("../game");
+var Deck = require("../deck");
+var Player = require('../player');
 
 var game;
+var deck;
+var player1;
+var player2;
 
 describe("Game", function() {
   before(function() {
     var stubDeck = [1, 2, 3, 4, 5, 6];
     game = new Game(stubDeck, 3);
+    player1 = new Player("Paul");
+    player2 = new Player("Bertie");
   });
 
   it("should start with no players", function() {
