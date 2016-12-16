@@ -7,6 +7,7 @@ var app = function() {
   var startview = new StartView();
   startview.makePlayers();
   getFighters();
+  getVenues();
 };
 
 var getFighters = function() {
@@ -20,6 +21,24 @@ var getFighters = function() {
     var jsonString = event.target.responseText;
     var data = JSON.parse(jsonString);
     createNewGame(data);
+  };
+  request.send();
+};
+
+var getVenues = function() {
+  var url = "http://localhost:3000/venues";
+  var request = new XMLHttpRequest();
+  request.open("GET", url);
+
+  request.onload = function(event) {
+    if (event.target.status !== 200) return;
+    var directory = "images/venues/";
+    var jsonString = event.target.responseText;
+    var data = JSON.parse(jsonString);
+    var img = document.createElement('img');
+    img.src = directory + data.countries[0].venues[0].image;
+    var splash = document.getElementById('splash');
+    splash.appendChild(img);
   };
   request.send();
 };
