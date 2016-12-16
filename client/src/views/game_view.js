@@ -6,9 +6,18 @@ var GameView = function(game) {
 
 GameView.prototype = {
   display: function() {
-    this.buildFighterCard();  
+    this.buildControlButton(); 
   },
-  buildFighterCard: function() {
+  buildControlButton: function() {
+    var gameSection = document.getElementById('game');
+    var controlButton = document.createElement('button');
+    controlButton.innerText = "Current Player Begin";
+    gameSection.appendChild(controlButton);
+    controlButton.onclick = function() {
+      this.buildFighterCard(); 
+    }.bind(this); 
+  },
+  buildFighterCard: function(card) {
     var gameSection = document.getElementById('game');
     var currentCard = {
       id: 1,
