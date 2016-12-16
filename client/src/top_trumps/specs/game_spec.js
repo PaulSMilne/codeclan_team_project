@@ -46,6 +46,38 @@ describe("Game", function() {
                 resolve: 12,
                 range: 10
               }
+  },
+  {
+    id: 7,
+    name: "Chun Li",
+    homeCountry: "China",
+    fightingStyle: "Chinese martial arts",
+    quote: "Want to see my Kung-Fu? I'll show you",
+    abilities:{
+                strength: 14,
+                agility:  17,
+                defense:  12,
+                intelligence: 13,
+                charm: 14,
+                resolve: 16,
+                range: 12
+              }
+  },
+  {
+    id: 8,
+    name: "Cody",
+    homeCountry: "USA",
+    fightingStyle: "Underworld brawling",
+    quote: "Well now, let's see if we can't do somethin' about my boredom.",
+    abilities:{
+                strength: 12,
+                agility:  11,
+                defense:  10,
+                intelligence: 9,
+                charm: 11,
+                resolve: 7,
+                range: 13,
+              }
   }]);
     game2 = new Game(deck, 1);
     game2.addPlayer(player1);
@@ -81,6 +113,8 @@ describe("Game", function() {
   it("should be able to play a round", function() {
     game2.deal();
     game2.playRound("resolve");
+    
+
     assert.equal(2, player1.cardCount());
     assert.equal(0, player2.cardCount());
   });
@@ -95,11 +129,33 @@ describe("Game", function() {
     game2.deal();
     game2.populateTable();
     game2.compareAbility("defense");
-    console.log("Player2", player2.hand);
-    console.log("player1 ", player1.hand);
-
+    assert.equal(0, player2.cardCount());
     assert.equal(2, player1.cardCount());
+  });
 
+  it("should be able to determine round winner", function() {
+    game2.deal();
+    game2.populateTable();
+    game2.compareAbility("defense");
+    assert.equal(player1, game2.roundWinner());
+
+  });
+
+  it("should be able to determine draw", function() {
+    game2.deal();
+    game2.populateTable();
+    game2.compareAbility("intelligence");
+    assert.equal(0, player1.cardCount());
+    assert.equal(2, game2.table.length);
+  });
+
+  it("should be able to check if game has been won", function() {
+    game2.deal();
+    game2.populateTable();
+    game2.compareAbility("defense");
+    assert.equal(0, player2.cardCount());
+    assert.equal(2, player1.cardCount());
+    assert.equal(true, game2.isGameWon);
   })
 
 });
