@@ -1,0 +1,235 @@
+{
+  "countries": [
+    {
+      "country": "Japan",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Kanzuki Beach",
+          "coords": {
+            "lat": 26.592,
+            "lng": 127.977
+          },
+          "image": "venues/kanzuki_beach.jpg",
+          "themeMusic": ""
+        },
+        {
+          "name": "Suzaku Castle",
+          "coords": {
+            "lat": 43.062,
+            "lng": 141.354
+          },
+          "image": "venues/suzaku_castle.jpg",
+          "themeMusic": ""
+        },
+        {
+          "name": "Kanzuki Estate",
+          "coords": {
+            "lat": 34.694,
+            "lng": 135.502
+          },
+          "image": "venues/kanzuki_estate.jpg",
+          "themeMusic": ""
+        },
+        {
+          "name": "Bath House",
+          "coords": {
+            "lat": 35.685,
+            "lng": 139.753
+          },
+          "image": "venues/bath_house.jpg",
+          "themeMusic": ""
+        }
+      ]
+    },
+    {
+      "country": "Thailand",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Buddha Statue",
+          "coords": {
+            "lat": 13.756,
+            "lng": 100.502
+          },
+          "image": "venues/buddha_statue.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    },
+    {
+      "country": "United States of America",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Ring of Destiny",
+          "coords": {
+            "lat": 36.170,
+            "lng": -115.140
+          },
+          "image": "venues/ring_of_destiny.png",
+          "themeMusic": ""
+        },
+        {
+          "name": "Air Force Base",
+          "coords": {
+            "lat": 39.550,
+            "lng": -105.782
+          },
+          "image": "venues/air_force_base.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    },
+    {
+      "country": "Russia",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Factory",
+          "coords": {
+            "lat": 55.751,
+            "lng": 37.618
+          },
+          "image": "venues/factory.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    },
+    {
+      "country": "New Zealand",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Mysterious Cove",
+          "coords": {
+            "lat": -36.848,
+            "lng": 174.763
+          },
+          "image": "venues/mysterious_cove.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    },
+    {
+      "country": "Unknown",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Shadaloo Base",
+          "coords": {
+            "lat": -21.833,
+            "lng": -138.917
+          },
+          "image": "venues/shadaloo_base.jpg",
+          "themeMusic": ""
+        }
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Distillery",
+          "coords": {
+            "lat": 51.507,
+            "lng": -0.128
+          },
+          "image": "venues/distillery.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    },
+    {
+      "country": "France",
+      "flag": "",
+      "venues": [
+        {
+          "name": "The Beep",
+          "coords": {
+            "lat": 48.865,
+            "lng": 2.349
+          },
+          "image": "venues/the_beep.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    },
+    {
+      "country": "Brazil",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Jungle",
+          "coords": {
+            "lat": -3.465,
+            "lng": -62.216
+          },
+          "image": "venues/jungle.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    },
+    {
+      "country": "China",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Downtown",
+          "coords": {
+            "lat": 31.230,
+            "lng": 121.474
+          },
+          "image": "venues/downtown.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    },
+    {
+      "country": "Hong Kong",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Big City",
+          "coords": {
+            "lat": 22.286,
+            "lng": 114.149
+          },
+          "image": "venues/big_city.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    },
+    {
+      "country": "Spain",
+      "flag": "",
+      "venues": [
+        {
+          "name": "The Cage",
+          "coords": {
+            "lat": 41.390,
+            "lng": 2.154
+          },
+          "image": "venues/the_cage.jpg",
+          "themeMusic": ""
+        }
+      ]  
+    },
+    {
+      "country": "India",
+      "flag": "",
+      "venues": [
+        {
+          "name": "Hyper Street",
+          "coords": {
+            "lat": 28.614,
+            "lng": 77.209
+          },
+          "image": "venues/hyper_street.jpg",
+          "themeMusic": ""
+        }
+      ] 
+    }
+  ]
+}
