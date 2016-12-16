@@ -1,0 +1,633 @@
+{
+  "fighters": [ 
+    {
+      "id": 1,
+      "name": "Abel",
+      "homeCountry": "France",
+      "fightingStyle": "MMA",
+      "quote": "You've got good skills, but you have some growing to do before going pro.",
+      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/4/49/SFVAbel.jpg/revision/latest?cb=20160629143935",
+      "abilities": {
+                  "strength": 14,
+                  "agility":  10,
+                  "defense":  11,
+                  "intelligence": 7,
+                  "charm": 5,
+                  "resolve": 16,
+                  "range": 12
+                },
+      "specialMoves": ["Grappling", "Wheel Kick", "Marseilles Roll", "Falling Sky", "Tornado"]
+    },
+    {
+      "id": 2,
+      "name": "Adon",
+      "homeCountry": "Thailand",
+      "fightingStyle": "Muay Thai",
+      "quote": "I'll show you just how strong I am!",
+      "image": "http://vignette1.wikia.nocookie.net/streetfighter/images/0/0c/Adon_SFV_Encyclopedia.jpg/revision/latest?cb=20160509010322",
+      "abilities": {
+                  "strength": 13,
+                  "agility":  15,
+                  "defense":  11,
+                  "intelligence": 8,
+                  "charm": 10,
+                  "resolve": 9,
+                  "range": 11
+                  },
+      "specialMoves": ["Rising Jaguar", "Jaguar Kick", "Airborne Jaguar Kick", "Jaguar Tooth", "Jaguar Crunch", "Jaguar Varied Assault", "Jaguar Revolver", "Jaguar Avalanche"]
+    },
+    {
+      "id": 3,
+      "name": "Akuma",
+      "homeCountry": "Japan",
+      "fightingStyle": "Ansatsuken",
+      "quote": "I am Akuma. And I will teach you the meaning of pain!",
+      "image": "http://vignette3.wikia.nocookie.net/streetfighter/images/3/37/Akuma_Character_art.jpg/revision/latest/scale-to-width-down/540?cb=20161203220054",
+      "abilities": {
+                  "strength": 14,
+                  "agility":  13,
+                  "defense":  15,
+                  "intelligence": 10,
+                  "charm": 7,
+                  "resolve": 17,
+                  "range": 13
+                },
+      "specialMoves": ["Gohadoken", "Goshoryuken", "Tatsumaki Zankukyaku", "Zanku Hadoken", "Shakunetsu Hadoken, Hyakkishu, Tenmakujinkyaku, Zenpou Tenshin"]
+    },
+    {
+      "id": 4,
+      "name": "Balrog",
+      "homeCountry": "United States of America",
+      "fightingStyle": "Fight-Style Boxing",
+      "quote": "I'll make you regret that you were ever born. You two-bit chump!",
+      "image": "http://vignette4.wikia.nocookie.net/streetfighter/images/5/59/Balrognobg.png/revision/latest/scale-to-width-down/540?cb=20160628005514",
+      "abilities":{
+                  "strength": 13,
+                  "agility":  12,
+                  "defense":  12,
+                  "intelligence": 4,
+                  "charm": 5,
+                  "resolve": 11,
+                  "range": 14
+                },
+      "specialMoves": ["Turn Punch", "Dash Straight", "Dash Upper", "Dash Low Straight", "Dash Swing Blow", "Dash Low Smash", "Buffalo Headbutt", "Reflect Glove", "Wild Smash", "Crazy Buffalo", "Violent Buffalo", "Dirty Bull", "Crazy Rush"]
+    },
+    {
+      "id": 5,
+      "name": "Blanka",
+      "homeCountry": "Brazil",
+      "fightingStyle": "Electricity, feral maneuvers",
+      "quote": "Seeing you in action is a joke!",
+      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/b/b2/SFVBlanka.jpg/revision/latest?cb=20160629140605",
+      "abilities": {
+                  "strength": 12,
+                  "agility":  13,
+                  "defense":  14,
+                  "intelligence": 10,
+                  "charm": 6,
+                  "resolve": 15,
+                  "range": 11
+                },
+      "specialMoves": ["Electric Thunder", "Rolling Attack", "Vertical Roll", "Backstep Roll", "Coward Crouch", "Lightning Grenade", "Ground Shave Roll", "Tropical Hazard", "Shout of Earth", "Lightning Cannonball"]
+    },
+    {
+      "id": 6,
+      "name": "Cammy",
+      "homeCountry": "United Kingdom",
+      "fightingStyle": "Shadaloo",
+      "quote": "You must enjoy being beat. Let me remodel your face one more time.",
+      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/2/22/Cammyclean.png/revision/latest/scale-to-width-down/540?cb=20160604034552",
+      "abilities": {
+                  "strength": 12,
+                  "agility":  15,
+                  "defense":  11,
+                  "intelligence": 10,
+                  "charm": 10,
+                  "resolve": 12,
+                  "range": 10
+                },
+      "specialMoves": ["Spiral Arrow", "Cannon Spike", "Cannon Strike", "Quick Spin", "Knuckle", "Hooligan Combination", "Razor Edge Slicer", "Cross Scissors Pressure", "Cannon Revenge", "Killer Scythe Kick", "Choke Whip", "Killer Choke Whip", "Killer Bee Assault", "Reverse Shaft Breaker", "Psycho Streak", "Killer Bee Stinger", "Spin Drive Smasher"]
+    },
+    {
+      "id": 7,
+      "name": "Chun Li",
+      "homeCountry": "China",
+      "fightingStyle": "Chinese martial arts",
+      "quote": "Want to see my Kung-Fu? I'll show you",
+      "image": "http://vignette4.wikia.nocookie.net/streetfighter/images/f/fd/Chun-liclean.png/revision/latest/scale-to-width-down/540?cb=20160604034820",
+      "abilities":{
+                  "strength": 14,
+                  "agility":  17,
+                  "defense":  12,
+                  "intelligence": 13,
+                  "charm": 14,
+                  "resolve": 16,
+                  "range": 12
+                },
+      "specialMoves": ["Hyakuretsukyaku", "Kikoken", "Hazanshu", "Spinning Bird Kick", "Tenshokyaku", "Sou Hakkei", "Sen'en Shuu", "Rankyaku", "Renkiko", "Hishou Kyaku (Pocket Fighter)"]
+    },
+    {
+      "id": 8,
+      "name": "Cody",
+      "homeCountry": "United States of America",
+      "fightingStyle": "Underworld brawling",
+      "quote": "Well now, let's see if we can't do somethin' about my boredom.",
+      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/d/db/SFVCody.jpg/revision/latest?cb=20160629142422",
+      "abilities": {
+                  "strength": 12,
+                  "agility":  11,
+                  "defense":  10,
+                  "intelligence": 9,
+                  "charm": 11,
+                  "resolve": 7,
+                  "range": 13
+                },
+      "specialMoves": ["Bad Spray", "Crack Kick", "Jaw Crusher", "Bad Stone", "Criminal Upper", "Ruffian Kick", "Zonk Knuckle", "Mega Crash", "Dead End Irony"]
+    },
+    {
+      "id": 9,
+      "name": "C. Viper",
+      "homeCountry": "United States of America",
+      "fightingStyle": "Using secret spy gadgets",
+      "quote": "Try getting a real job!",
+      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/0/0d/SFVViper.jpg/revision/latest?cb=20160629144011",
+      "abilities":{
+                  "strength": 10,
+                  "agility":  15,
+                  "defense":  13,
+                  "intelligence": 16,
+                  "charm": 13,
+                  "resolve": 10,
+                  "range": 7
+                },
+      "specialMoves": ["Bad Spray", "Knife Pickup", "Crack Kick", "Jaw Crusher", "Bad Stone", "Criminal Upper", "Ruffian Kick", "Zonk Knuckle", "Mega Crash", "Dead End Irony"]
+    },
+    { 
+      "id": 10,
+      "name": "Dan",
+      "homeCountry": "Hong Kong",
+      "fightingStyle": "Saikyo Ultimate Style",
+      "quote": "I hope you're ready for a beating!",
+      "image": "http://vignette3.wikia.nocookie.net/streetfighter/images/e/eb/SFVDan.jpg/revision/latest?cb=20160629141716",
+      "abilities":{
+                  "strength": 12,
+                  "agility":  11,
+                  "defense":  10,
+                  "intelligence": 9,
+                  "charm": 6,
+                  "resolve": 10,
+                  "range": 10
+                },
+      "specialMoves": ["Gadoken", "Koryuken", "Dankukyaku", "Airborne Dankukyaku", "Air Taunt", "Rolling Taunt", "Saikyo", "Defense", "Shinku Gadoken", "Koryuu Rekka", "Hissho Buraiken", "Legendary Taunt", "Shisso Buraiken", "Haoh Gadoken", "Otoko Michi"]
+    },
+    { "id": 11,
+      "name": "Dee Jay",
+      "homeCountry": "Jamaica",
+      "fightingStyle": "Kickboxing",
+      "quote": "Were my killer combos too much for you, mon?",
+      "image": "http://vignette4.wikia.nocookie.net/streetfighter/images/f/fb/SFVDeeJay.jpg/revision/latest?cb=20160629140810",
+      "abilities":{
+                  "strength": 14,
+                  "agility":  13,
+                  "defense":  14,
+                  "intelligence": 13,
+                  "charm": 16,
+                  "resolve": 12,
+                  "range": 13
+                },
+      "specialMoves": ["Air Slasher", "Double Dread Kick", "Machine Gun Upper", "Jackknife Maximum", "Sobat Carnival", "Sobat Festival", "Climax Beat"]
+    },
+    {
+      "id": 12,
+      "name": "Dhalsim",
+      "homeCountry": "India",
+      "fightingStyle": "Esoteris Yoga",
+      "quote": "Today, I shall win again.",
+      "image": "https://static1.squarespace.com/static/50f14d35e4b0d70ab5fc4f24/t/53f2f149e4b010bb9e7406b7/1408430416117/",
+      "abilities":{
+                  "strength": 13,
+                  "agility":  17,
+                  "defense":  11,
+                  "intelligence": 15,
+                  "charm": 16,
+                  "resolve": 14,
+                  "range": 19
+                },
+      "specialMoves": ["Yoga Fire", "Yoga Flame", "Yoga Blast", "Yoga Teleport", "Yoga Escape", "Yoga Teleport", "Yoga Bringer", "Yoga Legend", "Yoga Smash", "Yoga Float", "Yoga Burner", "Yoga Strike", "Yoga Stream", "Yoga Tempest", "Yoga Inferno", "Yoga Volcano", "Yoga Catastrophe", "Yoga Shangri-La"]
+    },
+    {
+      "id": 13,
+      "name": "Dudley",
+      "homeCountry": "United Kingdom",
+      "fightingStyle": "Boxing",
+      "quote": "You have no dignity!",
+      "image": "http://vignette1.wikia.nocookie.net/streetfighter/images/7/72/SFVDudley.jpg/revision/latest?cb=20160629142628",
+      "abilities":{
+                  "strength": 13,
+                  "agility":  12,
+                  "defense":  12,
+                  "intelligence": 12,
+                  "charm": 13,
+                  "resolve": 11,
+                  "range": 10
+                },
+      "specialMoves": ["Jet Upper", "Machinegun Blow", "Cross Counter", "Short Swing Blow", "Thunderbolt", "Rocket Upper", "Rolling Thunder", "Corkscrew Blow", "Corkscrew Cross"]
+    },
+    {
+      "id": 14,
+      "name": "E. Honda",
+      "homeCountry": "Japan",
+      "fightingStyle": "Sumo Wrestling",
+      "quote": "It's only natural that a Sumo should become the World's Strongest!",
+      "image": "http://vignette3.wikia.nocookie.net/streetfighter/images/0/05/SFVHonda.jpg/revision/latest?cb=20160629140718",
+      "abilities":{
+                  "strength": 15,
+                  "agility":  13,
+                  "defense":  13,
+                  "intelligence": 14,
+                  "charm": 9,
+                  "resolve": 12,
+                  "range": 12
+                },
+      "specialMoves": ["Hundred Hand Slap", "Sumo Headbutt", "Sumo Smash", "Oicho Throw", "Super Shiko", "Super Killer Head Ram", "Orochi Crush", "Fuji Otoshi", "Ultimate Killer Head Ram", "Fuji Drop", "Orochi Breaker"]
+    },
+    {
+      "id": 15,
+      "name": "El Fuerte",
+      "homeCountry": "Mexico",
+      "fightingStyle": "Lucha Libre (Mexican wrestling)",
+      "quote": "It's Super Dynamic Cooking Time!",
+      "image": "http://vignette4.wikia.nocookie.net/streetfigh,ter/images/a/ab/SFVFuerte.jpg/revision/latest?cb=20160629144123",
+      "abilities": {
+                  "strength": 12,
+                  "agility":  16,
+                  "defense":  10,
+                  "intelligence": 12,
+                  "charm": 13,
+                  "resolve": 11,
+                  "range": 9
+                },
+      "specialMoves": ["Habanero Dash", "Habanero Back Dash", "Guacamole Leg Throw", "Enchilada Jump", "Flying Nachos", "El Fuerte Dynamite", "El Fuerte Flying Giga Buster", "El Fuerte Ultra Spark"]
+    },
+    {
+      "id": 16,
+      "name": "Fei Long",
+      "homeCountry": "Hong Kong",
+      "fightingStyle": "Kung Fu",
+      "quote": "There is no way you can ever knock me out!",
+      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/e/e0/SFVFeiLong.jpg/revision/latest?cb=20160629140902",
+      "abilities":{
+                  "strength": 13,
+                  "agility":  17,
+                  "defense":  12,
+                  "intelligence": 13,
+                  "charm": 15,
+                  "resolve": 14,
+                  "range": 10
+                },
+      "specialMoves": ["Rekkaken", "Shienkyaku", "Rekkukyaku", "Tenshin", "Ryuogeki", "Shoenryu", "Rekkashinken", "Shien Renkyaku", "Ryuu Yassai", "Rekkashingeki", "Gekirinken"]
+    },
+    {
+      "id": 17,
+      "name": "Gen",
+      "homeCountry": "China",
+      "fightingStyle": "Chinese martial arts (Sō and Ki styles)",
+      "quote": "You cannot keep my fists in your sight, for they move with the fury of hell!",
+      "image": "http://vignette4.wikia.nocookie.net/streetfighter/images/b/bf/Gen_SFV_Encyclopedia.jpg/revision/latest?cb=20160509010630",
+      "abilities":{
+                  "strength": 12,
+                  "agility":  11,
+                  "defense":  13,
+                  "intelligence": 16,
+                  "charm": 15,
+                  "resolve": 18,
+                  "range": 9
+                },
+      "specialMoves": ["Hyakurenko", "Gekiro", "Jyasen", "Shishisho", "Oga", "Setsunasen", "Kouga", "Zan'ei", "Zetsuei", "Shitenshuu", "Shitenketsu", "Jyakoha", "Ryukoha", "Teiga"]
+    },
+    {
+      "id": 18,
+      "name": "Gouken",
+      "homeCountry": "Japan",
+      "fightingStyle": "Ansatsuken",
+      "quote": "Concentrate not on destroying your foe, but on attaining your own victory.",
+      "image": "",
+      "abilities": {
+        "strength": 12,
+        "agility": 6,
+        "defense": 17,
+        "intelligence": 14, 
+        "charm": 5,
+        "resolve": 14,
+        "range": 10
+      },
+      "specialMoves": ["Senkugoshoha", "Tatsumaki Gorasen", "Kongoshin"]
+    },
+    {
+      "id": 19,
+      "name": "Guile",
+      "homeCountry": "United States of America",
+      "fightingStyle": "Martial Arts and Pro Wrestling",
+      "quote": "Go home and be a family man.",
+      "image": "",
+      "abilities": {
+        "strength": 14,
+        "agility": 15,
+        "defense": 14,
+        "intelligence": 7, 
+        "charm": 14,
+        "resolve": 8,
+        "range": 12
+      },
+      "specialMoves": ["Sonic Boom", "Flash Kick", "Opening Gambit"]
+    },
+    {
+      "id": 20,
+      "name": "Guy",
+      "homeCountry": "United States of America",
+      "fightingStyle": "Bushin-ryu Ninjutsu",
+      "quote": "There's something you should get to know better. Your limits.",
+      "image": "",
+      "abilities": {
+        "strength": 14,
+        "agility": 16,
+        "defense": 6,
+        "intelligence": 10, 
+        "charm": 13,
+        "resolve": 9,
+        "range": 16
+      },
+      "specialMoves": ["Bushin Senpukyaku", "Hozanto", "Bushin Izuna Otoshi"]
+    },
+    {
+      "id": 21,
+      "name": "Hakan",
+      "homeCountry": "Turkey",
+      "fightingStyle": "Turkish Oil Wrestling",
+      "quote": "Looks like it's time to o il up!",
+      "image": "",
+      "abilities": {
+        "strength": 18,
+        "agility": 12,
+        "defense": 12,
+        "intelligence": 7, 
+        "charm": 7,
+        "resolve": 14,
+        "range": 11
+      },
+      "specialMoves": ["slide attack", "Oil Rocket throw"]
+    },
+    {
+      "id": 22,
+      "name": "Ibuki",
+      "homeCountry": "Japan",
+      "fightingStyle": "Ninjutsu",
+      "quote": "Ibuki! On the scene!",
+      "image": "",
+      "abilities": {
+        "strength": 5,
+        "agility": 17,
+        "defense": 15,
+        "intelligence": 14, 
+        "charm": 14,
+        "resolve": 7,
+        "range": 7
+      },
+      "specialMoves": ["Hien", "Kasumi Gake"]
+    },
+    {
+      "id": 23,
+      "name": "Juri Han",
+      "homeCountry": "South Korea",
+      "fightingStyle": "Taekwondo",
+      "quote": "Well then, where do you want me to break you first?",
+      "image": "",
+      "abilities": {
+        "strength": 9,
+        "agility": 18,
+        "defense": 8,
+        "intelligence": 12, 
+        "charm": 18,
+        "resolve": 7,
+        "range": 11
+      },
+      "specialMoves": ["Pinwheel Kick", "Kasatushi"]
+    },
+    {
+      "id": 24,
+      "name": "Ken Masters",
+      "homeCountry": "United States of America",
+      "fightingStyle": "Ansatsuken",
+      "quote": "I'm ready for ya, bring it on!",
+      "image": "",
+      "abilities": {
+        "strength": 15,
+        "agility": 15,
+        "defense": 8,
+        "intelligence": 11, 
+        "charm": 13,
+        "resolve": 16,
+        "range": 14
+      },
+      "specialMoves": ["Shoryuken", "Heat Rush"]
+    },
+    {
+      "id": 25,
+      "name": "Makoto",
+      "homeCountry": "Japan",
+      "fightingStyle": "Rindoukan",
+      "quote": "I know I'm still young, but fighters in training really have the desire to win!",
+      "image": "",
+      "abilities": {
+        "strength": 16,
+        "agility": 11,
+        "defense": 13,
+        "intelligence": 14, 
+        "charm": 8,
+        "resolve": 15,
+        "range": 10
+      },
+      "specialMoves": ["Fukiage", "Hayate", "Oroshi"]
+    },
+    {
+      "id": 26,
+      "name": "M. Bison",
+      "homeCountry": "Unknown",
+      "fightingStyle": "Psycho Power",
+      "quote": "Now, face the mighty Bison!",
+      "image": "",
+      "abilities": {
+        "strength": 14,
+        "agility": 12,
+        "defense": 12,
+        "intelligence": 17, 
+        "charm": 4,
+        "resolve": 14,
+        "range": 18
+      },
+      "specialMoves": ["Psycho Crusher", "Double Knee Press", "Devil Reverse"]
+    },
+    {
+      "id": 27,
+      "name": "Rose",
+      "homeCountry": "Italy",
+      "fightingStyle": "Soul Power",
+      "quote": "You're nervous, aren't you?",
+      "image": "",
+      "abilities": {
+        "strength": 8,
+        "agility": 13,
+        "defense": 16,
+        "intelligence": 11, 
+        "charm": 14,
+        "resolve": 15,
+        "range": 16
+      },
+      "specialMoves": ["Soul Piede", "Soul Illusion", "Soul Reflect"]
+    },
+    {
+      "id": 28,
+      "name": "Rufus",
+      "homeCountry": "United States of America",
+      "fightingStyle": "Kung Fu",
+      "quote": "My fists'll give you amnesia!",
+      "image": "",
+      "abilities": {
+        "strength": 18,
+        "agility": 14,
+        "defense": 12,
+        "intelligence": 6, 
+        "charm": 6,
+        "resolve": 16,
+        "range": 5
+      },
+      "specialMoves": ["Glory Kick", "Fragrance Palm", "Galactic Tornado"]
+    },
+    {
+      "id": 29,
+      "name": "Ryu",
+      "homeCountry": "Japan",
+      "fightingStyle": "Ansatsuken",
+      "quote": "This is the path of my destiny!",
+      "image": "",
+      "abilities": {
+        "strength": 16,
+        "agility": 12,
+        "defense": 14,
+        "intelligence": 12, 
+        "charm": 13,
+        "resolve": 16,
+        "range": 10
+      },
+      "specialMoves": ["Shoryuken", "Hadoken", "Tatsumaki Senpukyaku"]
+    },
+    {
+      "id": 30,
+      "name": "Sagat",
+      "homeCountry": "Thailand",
+      "fightingStyle": "Muay Thai",
+      "quote": "A strong fighter is not one who always wins, but one who stands after defeat.",
+      "image": "",
+      "abilities": {
+        "strength": 16,
+        "agility": 16,
+        "defense": 13,
+        "intelligence": 11, 
+        "charm": 9,
+        "resolve": 14,
+        "range": 16
+      },
+      "specialMoves": ["Tiger Shot", "Tiger Knee", "Tiger Uppercut"]
+    },
+    {
+      "id": 31,
+      "name": "Sakura Kasugano",
+      "homeCountry": "Japan",
+      "fightingStyle": "Ansatsuken",
+      "quote": "Training is fun if you set your mind to a specific goal to work toward!",
+      "image": "",
+      "abilities": {
+        "strength": 9,
+        "agility": 16,
+        "defense": 8,
+        "intelligence": 12, 
+        "charm": 17,
+        "resolve": 9,
+        "range": 13
+      },
+      "specialMoves": ["Flower Kick", "Pendulum Upper", "Tatsumaki"]
+    },
+    {
+      "id": 32,
+      "name": "Seth",
+      "homeCountry": "Unknown",
+      "fightingStyle": "Transcendent Fighting Style",
+      "quote": "Show me everything you have to offer.",
+      "image": "",
+      "abilities": {
+        "strength": 18,
+        "agility": 9,
+        "defense": 8,
+        "intelligence": 12, 
+        "charm": 2,
+        "resolve": 14,
+        "range": 18
+      },
+      "specialMoves": ["Sonic Boom", "Chariot Tackle", "Yoga Teleport"]
+    },
+    {
+      "id": 33,
+      "name": "T. Hawk",
+      "homeCountry": "Mexico",
+      "fightingStyle": "Thunderfoot Martial Arts",
+      "quote": "Your scream sounds like a pathetic war cry!",
+      "image": "",
+      "abilities": {
+        "strength": 16,
+        "agility": 10,
+        "defense": 13,
+        "intelligence": 11, 
+        "charm": 10,
+        "resolve": 15,
+        "range": 14
+      },
+      "specialMoves": ["Condor Dive", "Tomahawk Buster", "Mexican Typhoon"]
+    },
+    {
+      "id": 34,
+      "name": "Vega",
+      "homeCountry": "Spain",
+      "fightingStyle": "Spanish Ninjutsu",
+      "quote": "You'll be seeing red by the time I'm done with you...",
+      "image": "",
+      "abilities": {
+        "strength": 12,
+        "agility": 18,
+        "defense": 8,
+        "intelligence": 12, 
+        "charm": 17,
+        "resolve": 9,
+        "range": 16
+      },
+      "specialMoves": ["Flying Barcelona Attack", "Scarlett Terror", "Sky High Claw"]
+    },
+    {
+      "id": 35,
+      "name": "Zangief",
+      "homeCountry": "Russia",
+      "fightingStyle": "Russian Pro Wrestling",
+      "quote": "I am...the Red Cyclone!",
+      "image": "",
+      "abilities": {
+        "strength": 17,
+        "agility": 5,
+        "defense": 13,
+        "intelligence": 9, 
+        "charm": 10,
+        "resolve": 15,
+        "range": 9
+      },
+      "specialMoves": ["Spinning Piledriver", "Flying Power Bomb", "Double Lariat"]
+    }
+  ]
+}
