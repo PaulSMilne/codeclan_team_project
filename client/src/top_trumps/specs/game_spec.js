@@ -81,8 +81,25 @@ describe("Game", function() {
   it("should be able to play a round", function() {
     game2.deal();
     game2.playRound("resolve");
-    // assert.equal(2, player1.cardCount());
+    assert.equal(2, player1.cardCount());
     assert.equal(0, player2.cardCount());
+  });
+
+  it("should be able to populate and display table", function(){
+    game2.deal();
+    game2.populateTable();
+    assert.equal(2, game2.table.length);
+  });
+
+  it("should be able to compare abilities when one is selected", function() {
+    game2.deal();
+    game2.populateTable();
+    game2.compareAbility("defense");
+    console.log("Player2", player2.hand);
+    console.log("player1 ", player1.hand);
+
+    assert.equal(2, player1.cardCount());
+
   })
 
 });
