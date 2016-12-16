@@ -1,8 +1,11 @@
 var Deck = require('./top_trumps/deck.js');
 var Game = require('./top_trumps/game.js');
 var GameView = require('./views/game_view.js'); 
+var StartView = require('./views/start_view.js')
 
 var app = function() {
+  var startview = new StartView();
+  startview.makePlayers();
   getFighters();
 };
 
