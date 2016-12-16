@@ -24,17 +24,38 @@ Game.prototype = {
       cardCount++;
     }
   },
+  populateTable: function() {
+    this.table.push(this.currentPlayer.removeCard());
+    this.updateTurn();
+    this.table.push(this.currentPlayer.removeCard());
+    this.updateTurn();
+  },
+  compareAbility: function(ability) {
+    if(this.table[0].abilities[ability] === this.table[1].abilities[ability]) {
+      this.game.populateTable();
+    }
+    else if (this.table[0].abilities[ability] > this.table[1].abilities[ability]) {
+      while (this.table.length > 0) {
+        this.currentPlayer.addCard(this.table.pop());
+      }
+    } else {
+      this.updateTurn();
+        while (this.table.length > 0) {
+          this.currentPlayer.addCard(this.table.pop());
+        }
+    }
+  },
   playRound: function(ability) {
     this.table.push(this.currentPlayer.removeCard());
     this.updateTurn();
     this.table.push(this.currentPlayer.removeCard());
     if (this.table[0].abilities[ability] > this.table[1].abilities[ability]) {
       this.updateTurn();
-      for (card of this.table) {
+      while (this.table.length > 0) {
         this.currentPlayer.addCard(this.table.pop());
       }
     } else {
-        for (card of this.table) {
+        while(this.table.length > 0) {
           this.currentPlayer.addCard(this.table.pop());
         }
     }
@@ -45,7 +66,7 @@ Game.prototype = {
     } else {
       this.currentPlayer = this.players[0];
     }
-  }
+  },
   //winchecker loops round each hand to see if = 0, then declare winner is other person
 
 };
