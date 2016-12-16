@@ -6,6 +6,9 @@ var GameView = function(game) {
 
 GameView.prototype = {
   display: function() {
+    this.buildFighterCard();  
+  },
+  buildFighterCard: function() {
     var gameSection = document.getElementById('game');
     var currentCard = {
       id: 1,
@@ -13,7 +16,7 @@ GameView.prototype = {
       homeCountry: "France",
       fightingStyle: "MMA",
       quote: "You've got good skills, but you have some growing to do before going pro.",
-      image: "http://vignette2.wikia.nocookie.net/streetfighter/images/4/49/SFVAbel.jpg/revision/latest?cb=20160629143935",
+      image: "http://vignette1.wikia.nocookie.net/streetfighter/images/d/de/Sf4charselectabel.png/revision/latest?cb=20150322174601",
       abilities: {
                   strength: 14,
                   agility:  10,
@@ -26,8 +29,10 @@ GameView.prototype = {
       specialMoves: ["Grappling", "Wheel Kick", "Marseilles Roll", "Falling Sky", "Tornado"]
     };
     var fighterCard = document.createElement('div');
+    fighterCard.classList.add('fighter-card');
     var image = document.createElement('img');
     image.src = currentCard.image;
+    image.style.width = "200px";
     var abilitiesList = document.createElement('ul');
     for(ability in currentCard.abilities) {
       var listItem = document.createElement('li');
@@ -36,7 +41,7 @@ GameView.prototype = {
     }
     fighterCard.appendChild(image);
     fighterCard.appendChild(abilitiesList);
-    gameSection.appendChild(fighterCard);
+    gameSection.appendChild(fighterCard); 
   }
 }
 
