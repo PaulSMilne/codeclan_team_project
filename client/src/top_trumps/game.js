@@ -4,6 +4,7 @@ var Game = function(deck, handSize) {
   this.players = [];
   this.table = [];
   this.currentPlayer;
+  this.isGameWon = false;
 };
 
 Game.prototype = {
@@ -25,16 +26,18 @@ Game.prototype = {
     }
   },
   populateTable: function() {
-    this.table.push(this.currentPlayer.removeCard());
+    this.table.unshift(this.currentPlayer.removeCard());
     this.updateTurn();
-    this.table.push(this.currentPlayer.removeCard());
+    this.table.unshift(this.currentPlayer.removeCard());
     this.updateTurn();
   },
   compareAbility: function(ability) {
-    if(this.table[0].abilities[ability] === this.table[1].abilities[ability]) {
-      this.game.populateTable();
+    var firstCard = this.table[1].abilities[ability];
+    var secondCard = this.table[0].abilities[ability];
+    if(firstCard === secondCard ) {
+      return;
     }
-    else if (this.table[0].abilities[ability] > this.table[1].abilities[ability]) {
+    else if (firstCard > secondCard ) {
       while (this.table.length > 0) {
         this.currentPlayer.addCard(this.table.pop());
       }
@@ -44,12 +47,18 @@ Game.prototype = {
           this.currentPlayer.addCard(this.table.pop());
         }
     }
+    this.gameOverCheck();
   },
   playRound: function(ability) {
-    this.table.push(this.currentPlayer.removeCard());
+    this.table.unshift(this.currentPlayer.removeCard());
     this.updateTurn();
-    this.table.push(this.currentPlayer.removeCard());
-    if (this.table[0].abilities[ability] > this.table[1].abilities[ability]) {
+    this.table.unshift(this.currentPlayer.removeCard());
+    var firstCard = this.table[1].abilities[ability];
+    var secondCard = this.table[0].abilities[ability];
+    if(firstCard === secondCard ) {
+      return;
+    }
+    else if (firstCard > secondCard) {
       this.updateTurn();
       while (this.table.length > 0) {
         this.currentPlayer.addCard(this.table.pop());
@@ -59,6 +68,7 @@ Game.prototype = {
           this.currentPlayer.addCard(this.table.pop());
         }
     }
+    this.gameOverCheck();
   },
   updateTurn: function() {
     if (this.currentPlayer === this.players[0]) {
@@ -67,6 +77,14 @@ Game.prototype = {
       this.currentPlayer = this.players[0];
     }
   },
+  roundWinner: function() {
+    return this.currentPlayer;
+  },
+  gameOverCheck: function() {
+    if (this.players[0].hand.length ===0 || this.players[1].hand.length===0) {
+      this.isGameWon = true;
+    }
+  }
   //winchecker loops round each hand to see if = 0, then declare winner is other person
 
 };
