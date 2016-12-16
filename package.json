@@ -4,20 +4,21 @@
   "description": "Codeclan project to create a webplayable top trumps game based on the street fighter video game",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PaulSMilne/codeclan_team_project.git"
   },
-  "author": "Paul Milne",
+  "author": "Paul Milne, Diana Man, Bertie Croll",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PaulSMilne/codeclan_team_project/issues"
   },
   "homepage": "https://github.com/PaulSMilne/codeclan_team_project#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "underscore": "^1.8.3"
   }
 }
