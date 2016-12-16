@@ -13,11 +13,11 @@ GameView.prototype = {
     var controlButton = document.createElement('button');
     controlButton.innerText = "Current Player Begin";
     gameSection.appendChild(controlButton);
-    controlButton.onclick = function() {
-      this.buildFighterCard(); 
-    }.bind(this); 
+    controlButton.onclick = this.buildFighterCard;
   },
-  buildFighterCard: function(card) {
+  
+  buildFighterCard: function() {
+    console.log(this);
     var gameSection = document.getElementById('game');
     var currentCard = {
       id: 1,
