@@ -1,9 +1,21 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var fs = require('fs');
+var FIGHTERS_DATA = path.join(__dirname + '/data/fighters.json');
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
+
+app.get('/fighters', function (req, res) {
+  fs.readFile(FIGHTERS_DATA, function(err, data){
+    if(err){
+      console.error(err)
+      return
+    }
+    res.json(JSON.parse(data))
+  })
 });
 
 app.use(express.static('client/build'));
