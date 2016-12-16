@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Window 1</title>
+     <script>
+     var openNewWindow = function(url){
+          window.open(url);
+     };
+     window.onload = function(){
+          var button = document.getElementById('windowOpener');
+          button.onclick = openNewWindow("window2.html");
+     }
+     </script>
+</head>
+<body>
+
+<h1>Window 1</h1>
+<input type="button" id="windowOpener" value="Open window 2">
+</body>
+</html>

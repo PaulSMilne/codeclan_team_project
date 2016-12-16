@@ -1,0 +1,43 @@
+# FLOW OF VIEWS FOR MVP GAME
+
+
+## SPLASH PAGE
+
+Input text boxes to record players names
+
+button to start play
+
+
+## GAME PAGE
+
+###Start play:
+
+Shows player names and card counts.
+
+Button to display player 1's top card.
+
+###Step 1:
+
+Displays top card with method to select ability
+
+Play card button
+
+###Step 2: 
+
+Displays both cards
+
+Says winner
+
+Displays new card count
+
+Play card button for hand winner
+
+###Step 3: 
+
+Repeat Step 1 with appropriate player's card
+
+###Step 4: 
+
+When card count of one player reaches zero, game winner is declared. 
+
+Play again button
