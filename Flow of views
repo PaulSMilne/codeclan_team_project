@@ -3,6 +3,12 @@
 
 ## SPLASH PAGE
 
+###Step 1: 
+
+Splash with start button
+
+###Step 2: 
+
 Input text boxes to record players names
 
 button to start play
@@ -14,7 +20,7 @@ button to start play
 
 Shows player names and card counts.
 
-Button to display player 1's top card.
+Button to display active player's top card.
 
 ###Step 1:
 
@@ -24,7 +30,7 @@ Play card button
 
 ###Step 2: 
 
-Displays both cards
+Displays all top cards
 
 Says winner
 
@@ -40,4 +46,4 @@ Repeat Step 1 with appropriate player's card
 
 When card count of one player reaches zero, game winner is declared. 
 
-Play again button
+Play again or rematch

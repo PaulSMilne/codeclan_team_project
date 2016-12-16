@@ -2,23 +2,48 @@
 <html>
 <head>
   <title>Street Fighter Top Trumps</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="bundle.js"></script>
 </head>
 <body>
   <header>
-    <h1>Street Fighter</h1>
-    <h2>Top Trumps</h2>
+    <h1>Street Fighter Top Trumps</h1>
   </header>
 
-  <p>Welcome to the Street Fighter Hombu D&omacr;j&omacr;</p>
+    <section id="splash">
 
-  <p>You have requested a battle with our resident sensh&umacr;sei, or intensive training student.</p>
+      <p>Welcome to Street Fighter Top Trumps.</p>
 
-  <p>You have been dealt a hand of cards. Choose an ability from your top card to pit against your opponent:</p>
+      <p>Choose your player names:</p>
 
-  <div id="player1">
-  </div>
+      <p><label for="player1">Player 1</label><br>
+      <input type="text" id="player1" class="player_name"></p>
 
+      <p><label for="player2">Player 2</label><br>
+      <input type="text" id="player2" class="player_name"></p>
+
+      <input type="button" id="start_play" value="Start Play">
+
+    </section>
+
+
+
+<!--game section displays when players have chosen names and pressed start play button-->
+    <section id="game">
+
+      <p>Something goes here</p>
+    
+    </section>
+
+    <section id="winner">
+      <section id="announceWinner">
+      </section>
+      <p>
+        <input type="button" id="newPlayersGame" class="newGame" value="New Players">
+
+        <input type="button" id="rematchGame" class="newGame" value="Rematch">
+      </p>
+    </section>
 
 </body>
 </html>
