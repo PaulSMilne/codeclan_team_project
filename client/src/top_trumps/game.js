@@ -46,6 +46,7 @@ Game.prototype = {
       this.currentPlayer = this.players[0];
     }
   }
+  //winchecker loops round each hand to see if = 0, then declare winner is other person
 
 };
 
