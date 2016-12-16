@@ -4,10 +4,6 @@ var GameView = require('./views/game_view.js');
 
 var app = function() {
   getFighters();
-  // var deck = new Deck(["api data"]);
-  // var game = new Game(deck, 3);
-  // var gameView = new GameView(game);
-  // gameView.display();
 };
 
 var getFighters = function() {
@@ -18,11 +14,18 @@ var getFighters = function() {
   request.onload = function(event) {
     if (event.target.status !== 200) return;
 
-    var jsonString = this.responseText;
+    var jsonString = event.target.responseText;
     var data = JSON.parse(jsonString);
-    console.log(data);
+    createNewGame(data);
   };
   request.send();
 };
+
+var createNewGame = function(data) {
+  var deck = new Deck(data);
+  var game = new Game(deck, 3);
+  var gameView = new GameView(game);
+  gameView.display();
+} 
 
 window.onload = app;
