@@ -4,6 +4,7 @@
      border-radius:10px;
      box-shadow: 5px 5px 5px;
      height:300px;
+     transform:rotate(-3deg);
      width:200px;
 }
 
