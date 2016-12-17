@@ -43,6 +43,8 @@ header {margin-top:250px;}
      width:100%;
 }
 
+.card button:first-letter {text-transform:capitalize;}
+
 .card ul#abilities {
      list-style-type: none;
      padding-left:0;
