@@ -2,9 +2,9 @@
      background:no-repeat center top url("/images/chun-li.png") ;
      border:2px #C9A955 solid;
      border-radius:10px;
-     box-shadow: 5px 5px 5px;
+     box-shadow: 3px 3px 10px;
      height:300px;
-     transform:rotate(-3deg);
+     /*transform:rotate(-3deg);*/
      width:200px;
 }
 
@@ -12,4 +12,5 @@
      font-family: 'Shojumaru', cursive;
      margin-top: 185px;
      text-align:center;
+     font-size: 1.2em;
 }
