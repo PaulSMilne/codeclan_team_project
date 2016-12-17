@@ -1,9 +1,10 @@
 .card {
-     background:no-repeat center top url("/images/chun-li.png") ;
+     background:no-repeat center top url("/images/characters/chun-li.png") ;
      border:2px #C9A955 solid;
      border-radius:10px;
      box-shadow: 3px 3px 10px;
-     height:300px;
+     /*height:300px;*/
+     padding-bottom:5px;
      /*transform:rotate(-3deg);*/
      width:200px;
 }
@@ -13,4 +14,12 @@
      margin-top: 185px;
      text-align:center;
      font-size: 1.2em;
+     margin-bottom:0;
+}
+
+.card button {
+     width:100%;
+     background-color:#C9A955;
+     border:none;
+     font-family:Helvetica, sans-serif;
 }

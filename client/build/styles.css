@@ -1,7 +1,6 @@
 body {
-     background: no-repeat center top url("images/logo-sf.png") 
+     background-image: no-repeat center top url("images/logo-sf.png") 
 }
-
 
 header {margin-top:250px;}
 
