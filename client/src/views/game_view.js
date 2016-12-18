@@ -75,8 +75,11 @@ GameView.prototype = {
   displayRoundWinner: function() {
     var message = document.getElementById('message-display');
     var h2 = document.createElement('h2');
+    var h3 = document.createElement('h3');
     h2.innerText = this.game.currentPlayer.name + " wins";
+    h3.innerText = this.game.winningCard.quote;
     message.appendChild(h2);
+    message.appendChild(h3);
   }
 }
 

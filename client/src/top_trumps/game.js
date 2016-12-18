@@ -5,6 +5,7 @@ var Game = function(deck, handSize) {
   this.table = [];
   this.currentPlayer;
   this.isGameWon = false;
+  this.winningCard = null;
 };
 
 Game.prototype = {
@@ -35,13 +36,16 @@ Game.prototype = {
     var firstCard = this.table[1].abilities[ability];
     var secondCard = this.table[0].abilities[ability];
     if(firstCard === secondCard ) {
+      this.winningCard = null;
       return;
     }
     else if (firstCard > secondCard ) {
+      this.winningCard = this.table[1];
       while (this.table.length > 0) {
         this.currentPlayer.addCard(this.table.pop());
       }
     } else {
+      this.winningCard = this.table[0];
       this.updateTurn();
         while (this.table.length > 0) {
           this.currentPlayer.addCard(this.table.pop());
@@ -56,14 +60,17 @@ Game.prototype = {
     var firstCard = this.table[1].abilities[ability];
     var secondCard = this.table[0].abilities[ability];
     if(firstCard === secondCard ) {
+      this.winningCard = null;
       return;
     }
     else if (firstCard > secondCard) {
+      this.winningCard = this.table[1];
       this.updateTurn();
       while (this.table.length > 0) {
         this.currentPlayer.addCard(this.table.pop());
       }
     } else {
+      this.winningCard = this.table[0];
         while(this.table.length > 0) {
           this.currentPlayer.addCard(this.table.pop());
         }
