@@ -6,51 +6,43 @@ var GameView = function(game) {
 
 GameView.prototype = {
   display: function() {
+    var splash = document.getElementById('splash');
+    var game = document.getElementById('game');
+    splash.style.display = "none";
+    game.style.display = "initial";
     this.buildControlButton();
   },
   buildControlButton: function() {
     var gameSection = document.getElementById('game');
     var controlButton = document.createElement('button');
-    // controlButton.innerText = "Current Player Begin";
-    // gameSection.appendChild(controlButton);
-    // controlButton.onclick = this.buildFighterCard;
+    controlButton.innerText = "Current Player Begin";
+    gameSection.appendChild(controlButton);
+    controlButton.onclick = function() {
+      this.game.deal();
+      this.game.populateTable();
+      this.buildFirstCard();
+    }.bind(this);
   },
   
-  buildFighterCard: function() {
+  buildFirstCard: function() {
     console.log(this);
-    var gameSection = document.getElementById('game');
-    var currentCard = {
-      id: 1,
-      name: "Abel",
-      homeCountry: "France",
-      fightingStyle: "MMA",
-      quote: "You've got good skills, but you have some growing to do before going pro.",
-      image: "http://vignette1.wikia.nocookie.net/streetfighter/images/d/de/Sf4charselectabel.png/revision/latest?cb=20150322174601",
-      abilities: {
-                  strength: 14,
-                  agility:  10,
-                  defense:  11,
-                  intelligence: 7,
-                  charm: 5,
-                  resolve: 16,
-                  range: 12
-                },
-      specialMoves: ["Grappling", "Wheel Kick", "Marseilles Roll", "Falling Sky", "Tornado"]
-    };
-    var fighterCard = document.createElement('div');
-    fighterCard.classList.add('fighter-card');
+    var currentPlayer = this.game.currentPlayer;
+    if (currentPlayer === this.game.players[0]) {
+      var firstCard = document.getElementById('player1Card');
+
+    } else {
+      var firstCard = document.getElementById('player2Card');
+    }
     var image = document.createElement('img');
-    image.src = currentCard.image;
-    image.style.width = "200px";
+    image.src = this.game.table[1].image;
     var abilitiesList = document.createElement('ul');
-    for(ability in currentCard.abilities) {
+    for(ability in this.game.table[1].abilities) {
       var listItem = document.createElement('li');
-      listItem.innerText = ability + ": " + currentCard.abilities[ability];
+      listItem.innerText = ability + ": " + this.game.table[1].abilities[ability];
       abilitiesList.appendChild(listItem);
     }
-    fighterCard.appendChild(image);
-    fighterCard.appendChild(abilitiesList);
-    gameSection.appendChild(fighterCard); 
+    firstCard.appendChild(image);
+    firstCard.appendChild(abilitiesList);
   }
 }
 
