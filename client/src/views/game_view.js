@@ -21,6 +21,7 @@ GameView.prototype = {
       this.game.deal();
       this.game.populateTable();
       this.buildFirstCard();
+      controlButton.style.display = "none";
     }.bind(this);
   },
   
@@ -44,6 +45,7 @@ GameView.prototype = {
         console.log("selected ability", event.target.key);
         this.buildSecondCard();
         this.game.compareAbility(event.target.key);
+        this.displayRoundWinner();
       }.bind(this);
       abilitiesList.appendChild(listItem);
     }
@@ -69,6 +71,12 @@ GameView.prototype = {
     }
     secondCard.appendChild(image);
     secondCard.appendChild(abilitiesList);
+  },
+  displayRoundWinner: function() {
+    var message = document.getElementById('message-display');
+    var h2 = document.createElement('h2');
+    h2.innerText = this.game.currentPlayer.name + " wins";
+    message.appendChild(h2);
   }
 }
 
