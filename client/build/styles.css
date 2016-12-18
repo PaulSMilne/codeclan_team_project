@@ -1,5 +1,5 @@
 body {
-     background-image: no-repeat center top url("images/logo-sf.png") 
+     background: no-repeat center top url("/images/logo-sf.png") 
 }
 
 header {margin-top:250px;}
@@ -20,12 +20,12 @@ header {margin-top:250px;}
      padding-bottom:5px;
      padding-top:5px;
      /*transform:rotate(-3deg);*/
-     width:250px;
+     width:275px;
 }
 
 .topCard h1 {
      font-family: 'Shojumaru', cursive;
-     margin-top: 185px;
+     margin-top: 200px;
      text-align:center;
      font-size: 1.2em;
      margin-bottom:5px;
@@ -35,8 +35,9 @@ header {margin-top:250px;}
      background-color:#C9A955;
      border:none;
      font-family:Helvetica, sans-serif;
-     font-size:.75em;
-     height:25px;
+     font-size:.85em;
+     font-weight:bold;
+     height:2.5em;
      padding:3px;
      /*padding:3px 3px 3px 75px;
      text-align: left;*/
@@ -53,4 +54,4 @@ header {margin-top:250px;}
      margin-top:0;
 }
 
-.topCard ul#abilities li { margin-bottom:1px; }
+.topCard ul#abilities li { margin-bottom:1px; font-weight:bold;}
