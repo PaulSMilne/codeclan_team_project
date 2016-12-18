@@ -7,14 +7,12 @@
 
 .newGame {margin-right:10px;}
 
-.test {background: red;}
-
 /*
      CARD STYLES
 */
 .topCard {
      overflow:auto;
-     background-color: red;
+     background-color: white;
      border:2px #C9A955 solid;
      border-radius:10px;
      box-shadow: 3px 3px 10px;
