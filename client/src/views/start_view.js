@@ -1,4 +1,7 @@
-var Player = require('../top_trumps/player')
+var Player = require('../top_trumps/player');
+var Deck = require('../top_trumps/deck.js');
+var Game = require('../top_trumps/game.js');
+var GameView = require('./game_view.js'); 
 
 var StartView = function() {
   this.player1 = null;
@@ -19,8 +22,32 @@ StartView.prototype = {
       this.player2 = new Player(p2.value);
       console.log("p1", this.player1);
       console.log("p2", this.player2);
+      this.getFighters();
     }.bind(this);
-  }
-}
+  },
+  getFighters: function() {
+    var url = "http://localhost:3000/fighters";
+    var request = new XMLHttpRequest();
+    request.open("GET", url);
+
+    request.onload = function(event) {
+      if (event.target.status !== 200) return;
+
+      var jsonString = event.target.responseText;
+      var data = JSON.parse(jsonString);
+      this.createNewGame(data);
+    }.bind(this);
+    request.send();
+  },
+  createNewGame: function(data) {
+    var deck = new Deck(data);
+    var game = new Game(deck, 3);
+    game.addPlayer(this.player1);
+    game.addPlayer(this.player2);
+    var gameView = new GameView(game);
+    gameView.display();
+    console.log("new game", gameView);
+  } 
+};
 
 module.exports = StartView;
