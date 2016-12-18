@@ -6,6 +6,7 @@ var Game = function(deck, handSize) {
   this.currentPlayer;
   this.isGameWon = false;
   this.winningCard = null;
+  this.roundCount = 0;
 };
 
 Game.prototype = {
@@ -27,6 +28,7 @@ Game.prototype = {
     }
   },
   populateTable: function() {
+    this.roundCount++;
     this.table.unshift(this.currentPlayer.removeCard());
     this.updateTurn();
     this.table.unshift(this.currentPlayer.removeCard());

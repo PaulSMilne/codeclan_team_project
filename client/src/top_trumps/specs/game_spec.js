@@ -162,11 +162,17 @@ describe("Game", function() {
     game2.deal();
     game2.populateTable();
     game2.compareAbility("defense");
-    console.log("card", game2.winningCard);
     assert.equal(0, player2.cardCount());
     assert.equal(2, player1.cardCount());
     assert.equal(true, game2.isGameWon);
     assert.equal("Blanka", game2.winningCard.name);
+  });
+
+  it("should be able to count rounds", function() {
+    game2.deal();
+    game2.populateTable();
+    game2.compareAbility("defense");
+    assert.equal(1, game2.roundCount);
   })
 
 });

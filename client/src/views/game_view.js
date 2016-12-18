@@ -15,14 +15,40 @@ GameView.prototype = {
   buildControlButton: function() {
     var gameSection = document.getElementById('game');
     var controlButton = document.createElement('button');
-    controlButton.innerText = "Current Player Begin";
+    controlButton.innerText = "Start Game";
     gameSection.appendChild(controlButton);
     controlButton.onclick = function() {
       this.game.deal();
       this.game.populateTable();
-      this.buildFirstCard();
       controlButton.style.display = "none";
+      this.displayRoundMessage();
+      setTimeout(function() {
+        var message = document.getElementById('message-display');
+        message.style.display = "none";
+        this.buildFirstCard();
+      }.bind(this), 5000);
     }.bind(this);
+  },
+
+  displayRoundMessage: function() {
+    var message = document.getElementById('message-display');
+    var h2 = document.createElement('h2');
+    message.appendChild(h2);
+    var firstWord = "Round " + this.game.roundCount + "!";
+    var words = [firstWord, 3, 2, 1, "FIGHT!!!"];
+    var multiplier = 1;
+    for(word of words) {
+      console.log("for word",word);
+      this.timeOutMessage(h2, multiplier, word);
+      multiplier++;
+    }
+  },
+
+  timeOutMessage: function(h2Element, multiplier, word) {
+    setTimeout(function() {
+      console.log("timeout word",word);
+      h2Element.innerText = word;
+    }, multiplier * 750);
   },
   
   buildFirstCard: function() {
@@ -74,6 +100,8 @@ GameView.prototype = {
   },
   displayRoundWinner: function() {
     var message = document.getElementById('message-display');
+    message.innerHTML = "";
+    message.style.display = "initial";
     var h2 = document.createElement('h2');
     var h3 = document.createElement('h3');
     h2.innerText = this.game.currentPlayer.name + " wins";
