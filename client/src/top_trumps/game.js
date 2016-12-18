@@ -39,7 +39,6 @@ Game.prototype = {
     var secondCard = this.table[0].abilities[ability];
     if(firstCard === secondCard ) {
       this.winningCard = null;
-      return;
     }
     else if (firstCard > secondCard ) {
       this.winningCard = this.table[1];
