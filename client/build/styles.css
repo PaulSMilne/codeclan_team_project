@@ -11,8 +11,8 @@ header {margin-top:250px;}
 /*
      CARD STYLES
 */
-.card {
-     background:no-repeat center 5px url("/images/characters/chun-li.png") ;
+.topCard {
+     /*background:no-repeat center 5px url("/images/characters/chun-li.png") ;*/
      border:2px #C9A955 solid;
      border-radius:10px;
      box-shadow: 3px 3px 10px;
@@ -23,7 +23,7 @@ header {margin-top:250px;}
      width:250px;
 }
 
-.card h1 {
+.topCard h1 {
      font-family: 'Shojumaru', cursive;
      margin-top: 185px;
      text-align:center;
@@ -31,7 +31,7 @@ header {margin-top:250px;}
      margin-bottom:5px;
 }
 
-.card button {
+.topCard button {
      background-color:#C9A955;
      border:none;
      font-family:Helvetica, sans-serif;
@@ -43,9 +43,9 @@ header {margin-top:250px;}
      width:100%;
 }
 
-.card button:first-letter {text-transform:capitalize;}
+.topCard button:first-letter {text-transform:capitalize;}
 
-.card ul#abilities {
+.topCard ul#abilities {
      list-style-type: none;
      padding-left:0;
      margin-left:0;
@@ -53,4 +53,4 @@ header {margin-top:250px;}
      margin-top:0;
 }
 
-.card ul#abilities li { margin-bottom:1px; }
+.topCard ul#abilities li { margin-bottom:1px; }
