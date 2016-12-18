@@ -39,8 +39,11 @@ GameView.prototype = {
     for(ability in this.game.table[1].abilities) {
       var listItem = document.createElement('li');
       listItem.innerText = ability + ": " + this.game.table[1].abilities[ability];
-      listItem.onclick = function() {
+      listItem.key = ability;
+      listItem.onclick = function(event) {
+        console.log("selected ability", event.target.key);
         this.buildSecondCard();
+        this.game.compareAbility(event.target.key);
       }.bind(this);
       abilitiesList.appendChild(listItem);
     }
