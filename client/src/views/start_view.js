@@ -17,6 +17,8 @@ StartView.prototype = {
       if (!p1.value || !p2.value) {
         var errorDiv =document.getElementById('warning');
         errorDiv.innerHTML = "Please enter names for players to start play";
+        return;
+
       }
       this.player1 = new Player(p1.value);
       this.player2 = new Player(p2.value);
@@ -40,7 +42,7 @@ StartView.prototype = {
     request.send();
   },
   createNewGame: function(data) {
-    var deck = new Deck(data);
+    var deck = new Deck(data.fighters);
     var game = new Game(deck, 3);
     game.addPlayer(this.player1);
     game.addPlayer(this.player2);
