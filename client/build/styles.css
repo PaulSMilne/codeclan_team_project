@@ -13,6 +13,7 @@
      CARD STYLES
 */
 .topCard {
+     display: none;
      overflow:auto;
      background-color: white;
      border:2px #C9A955 solid;
@@ -25,7 +26,7 @@
 
 .topCard h1 {
      font-family: 'Shojumaru', cursive;
-     margin-top: 250px;
+     margin-top: 25px;
      text-align:center;
      font-size: 1.2em;
      margin-bottom:5px;

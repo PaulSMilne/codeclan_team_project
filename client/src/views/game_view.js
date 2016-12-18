@@ -32,6 +32,7 @@ GameView.prototype = {
 
   displayRoundMessage: function() {
     var message = document.getElementById('message-display');
+    message.innerHTML = "";
     var h2 = document.createElement('h2');
     message.appendChild(h2);
     var firstWord = "Round " + this.game.roundCount + "!";
@@ -60,8 +61,11 @@ GameView.prototype = {
     } else {
       var firstCard = document.getElementById('player2Card');
     }
+    firstCard.style.display = "inline-block";
     var image = document.createElement('img');
     image.src = this.game.table[1].image;
+    var nameH1 = document.createElement('h1');
+    nameH1.innerText = this.game.table[1].name;
     var abilitiesList = document.createElement('ul');
     for(ability in this.game.table[1].abilities) {
       var listItem = document.createElement('li');
@@ -76,7 +80,9 @@ GameView.prototype = {
       abilitiesList.appendChild(listItem);
     }
     firstCard.appendChild(image);
+    firstCard.appendChild(nameH1);
     firstCard.appendChild(abilitiesList);
+
   },
 
   buildSecondCard: function() {
@@ -87,8 +93,11 @@ GameView.prototype = {
     } else {
       var secondCard = document.getElementById('player1Card');
     }
+    secondCard.style.display = "inline-block";
     var image = document.createElement('img');
     image.src = this.game.table[0].image;
+    var nameH1 = document.createElement('h1');
+    nameH1.innerText = this.game.table[0].name;
     var abilitiesList = document.createElement('ul');
     for(ability in this.game.table[0].abilities) {
       var listItem = document.createElement('li');
@@ -96,6 +105,7 @@ GameView.prototype = {
       abilitiesList.appendChild(listItem);
     }
     secondCard.appendChild(image);
+    secondCard.appendChild(nameH1);
     secondCard.appendChild(abilitiesList);
   },
   displayRoundWinner: function() {
@@ -108,7 +118,38 @@ GameView.prototype = {
     h3.innerText = this.game.winningCard.quote;
     message.appendChild(h2);
     message.appendChild(h3);
+    if(this.game.isGameWon) {
+      setTimeout(function() {
+        this.clearLastRound();
+        this.gameOver();
+      }.bind(this), 5000);
+    } else 
+    {
+      setTimeout(function () {
+        this.clearLastRound();
+        this.game.populateTable();
+        this.displayRoundMessage();
+        setTimeout(function() {
+          var message = document.getElementById('message-display');
+          message.style.display = "none";
+          this.buildFirstCard();
+        }.bind(this), 5000);
+      }.bind(this),5000);
+    } 
+  },
+  clearLastRound: function() {
+    var firstCard = document.getElementById('player1Card');
+    firstCard.innerHTML = "";
+    firstCard.style.display = "none";
+    var secondCard = document.getElementById('player2Card');
+    secondCard.innerHTML = "";
+    secondCard.style.display = "none";
+  },
+  gameOver: function() {
+    var message = document.getElementById('message-display');
+    message.innerText = "Game Over!";
   }
-}
+
+};
 
 module.exports = GameView;
