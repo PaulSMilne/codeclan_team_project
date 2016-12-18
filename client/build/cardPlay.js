@@ -28,16 +28,33 @@ var fighter = [{
      // return powers;
      // console.log(powers.strength);
 // }
-window.onload = function (){
+buildCard = function (){
      var powers = fighter[0].abilities;
      var imageURL = fighter[0].image;
      var player2Card = document.querySelector("#player2Card");
      var player2head = document.querySelector("#player2Card h1");
      player2head.innerText = fighter[0].name;
-     var player1buttons = document.querySelectorAll("#player1Card li button")
      var player2buttons = document.querySelectorAll("#player2Card li")
-     console.log(player1buttons);
      player2Card.setAttribute("style", "background:no-repeat center 5px url('" + fighter[0].image + "')");
+     var button1 = player2buttons[0];
+     var button2 = player2buttons[1];
+     var button3 = player2buttons[2];
+     var button4 = player2buttons[3];
+     var button5 = player2buttons[4];
+     var button6 = player2buttons[5];
+     var button7 = player2buttons[6];
+     button1.innerHTML = "<button name='strength' value='" + powers.strength + "'>strength: " + powers.strength + "</button>";
+     button2.innerHTML = "<button name='agility' value='" + powers.agility + "'>agility: " + powers.agility + "</button>";
+     button3.innerHTML = "<button name='defense' value='" + powers.defense + "'>defense: " + powers.defense + "</button>";
+     button4.innerHTML = "<button name='intelligence' value='" + powers.intelligence + "'>intelligence: " + powers.intelligence + "</button>";
+     button5.innerHTML = "<button name='charm' value='" + powers.charm + "'>charm: " + powers.charm + "</button>";
+     button6.innerHTML = "<button name='resolve' value='" + powers.resolve + "'>resolve: " + powers.resolve + "</button>";
+     button7.innerHTML = "<button name='range' value='" + powers.range + "'>range: " + powers.range + "</button>";
+     console.log(button1);
 }
+
+window.onload = buildCard;
+
+
 
 
