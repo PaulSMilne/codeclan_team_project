@@ -4,7 +4,7 @@ var fighter = [{
       "homeCountry": "France",
       "fightingStyle": "MMA",
       "quote": "You've got good skills, but you have some growing to do before going pro.",
-      "image": "/images/characters/abel.png",
+      "image": "/images/characters/abel-new.png",
       "abilities": {
                   "strength": 14,
                   "agility":  10,

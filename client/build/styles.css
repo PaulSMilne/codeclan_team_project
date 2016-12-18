@@ -1,25 +1,25 @@
-body {
-     background: no-repeat center top url("/images/logo-sf.png") 
+#splash {
+     background: no-repeat center top url("/images/logo-sf.png");
+     padding-top:250px;
 }
-
-header {margin-top:250px;}
 
 #game, #winner {display:none;}
 
 .newGame {margin-right:10px;}
 
+.test {background: red;}
+
 /*
      CARD STYLES
 */
 .topCard {
-     /*background:no-repeat center 5px url("/images/characters/chun-li.png") ;*/
+     overflow:auto;
+     background-color: red;
      border:2px #C9A955 solid;
      border-radius:10px;
      box-shadow: 3px 3px 10px;
-     /*height:300px;*/
      padding-bottom:5px;
      padding-top:5px;
-     /*transform:rotate(-3deg);*/
      width:275px;
 }
 
@@ -39,8 +39,6 @@ header {margin-top:250px;}
      font-weight:bold;
      height:2.5em;
      padding:3px;
-     /*padding:3px 3px 3px 75px;
-     text-align: left;*/
      width:100%;
 }
 
