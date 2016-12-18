@@ -35,7 +35,7 @@ buildCard = function (){
      var player2head = document.querySelector("#player2Card h1");
      player2head.innerText = fighter[0].name;
      var player2buttons = document.querySelectorAll("#player2Card li")
-     player2Card.setAttribute("style", "background:no-repeat center 5px url('" + fighter[0].image + "')");
+     player2Card.setAttribute("style", "background:white no-repeat center 5px url('" + fighter[0].image + "')");
      var button1 = player2buttons[0];
      var button2 = player2buttons[1];
      var button3 = player2buttons[2];
