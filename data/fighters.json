@@ -6,7 +6,7 @@
       "homeCountry": "France",
       "fightingStyle": "MMA",
       "quote": "You've got good skills, but you have some growing to do before going pro.",
-      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/4/49/SFVAbel.jpg/revision/latest?cb=20160629143935",
+      "image": "/images/fighters/abel.png",
       "abilities": {
                   "strength": 14,
                   "agility":  10,
@@ -24,7 +24,7 @@
       "homeCountry": "Thailand",
       "fightingStyle": "Muay Thai",
       "quote": "I'll show you just how strong I am!",
-      "image": "http://vignette1.wikia.nocookie.net/streetfighter/images/0/0c/Adon_SFV_Encyclopedia.jpg/revision/latest?cb=20160509010322",
+      "image": "/images/fighters/adon.png",
       "abilities": {
                   "strength": 13,
                   "agility":  15,
@@ -42,7 +42,7 @@
       "homeCountry": "Japan",
       "fightingStyle": "Ansatsuken",
       "quote": "I am Akuma. And I will teach you the meaning of pain!",
-      "image": "http://vignette3.wikia.nocookie.net/streetfighter/images/3/37/Akuma_Character_art.jpg/revision/latest/scale-to-width-down/540?cb=20161203220054",
+      "image": "/images/fighters/akuma.png",
       "abilities": {
                   "strength": 14,
                   "agility":  13,
@@ -60,7 +60,7 @@
       "homeCountry": "United States of America",
       "fightingStyle": "Fight-Style Boxing",
       "quote": "I'll make you regret that you were ever born. You two-bit chump!",
-      "image": "http://vignette4.wikia.nocookie.net/streetfighter/images/5/59/Balrognobg.png/revision/latest/scale-to-width-down/540?cb=20160628005514",
+      "image": "/images/fighters/balrog.png",
       "abilities":{
                   "strength": 13,
                   "agility":  12,
@@ -78,7 +78,7 @@
       "homeCountry": "Brazil",
       "fightingStyle": "Electricity, feral maneuvers",
       "quote": "Seeing you in action is a joke!",
-      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/b/b2/SFVBlanka.jpg/revision/latest?cb=20160629140605",
+      "image": "/images/fighters/blanka.png",
       "abilities": {
                   "strength": 12,
                   "agility":  13,
@@ -96,7 +96,7 @@
       "homeCountry": "United Kingdom",
       "fightingStyle": "Shadaloo",
       "quote": "You must enjoy being beat. Let me remodel your face one more time.",
-      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/2/22/Cammyclean.png/revision/latest/scale-to-width-down/540?cb=20160604034552",
+      "image": "/images/fighters/cammy.png",
       "abilities": {
                   "strength": 12,
                   "agility":  15,
@@ -114,7 +114,7 @@
       "homeCountry": "China",
       "fightingStyle": "Chinese martial arts",
       "quote": "Want to see my Kung-Fu? I'll show you",
-      "image": "http://vignette4.wikia.nocookie.net/streetfighter/images/f/fd/Chun-liclean.png/revision/latest/scale-to-width-down/540?cb=20160604034820",
+      "image": "/images/fighters/chun-li.png",
       "abilities":{
                   "strength": 14,
                   "agility":  17,
@@ -132,7 +132,7 @@
       "homeCountry": "United States of America",
       "fightingStyle": "Underworld brawling",
       "quote": "Well now, let's see if we can't do somethin' about my boredom.",
-      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/d/db/SFVCody.jpg/revision/latest?cb=20160629142422",
+      "image": "/images/fighters/cody.png",
       "abilities": {
                   "strength": 12,
                   "agility":  11,
@@ -150,7 +150,7 @@
       "homeCountry": "United States of America",
       "fightingStyle": "Using secret spy gadgets",
       "quote": "Try getting a real job!",
-      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/0/0d/SFVViper.jpg/revision/latest?cb=20160629144011",
+      "image": "h/images/fighters/cviper.png",
       "abilities":{
                   "strength": 10,
                   "agility":  15,
@@ -168,7 +168,7 @@
       "homeCountry": "Hong Kong",
       "fightingStyle": "Saikyo Ultimate Style",
       "quote": "I hope you're ready for a beating!",
-      "image": "http://vignette3.wikia.nocookie.net/streetfighter/images/e/eb/SFVDan.jpg/revision/latest?cb=20160629141716",
+      "image": "/images/fighters/dan.png",
       "abilities":{
                   "strength": 12,
                   "agility":  11,
@@ -185,7 +185,7 @@
       "homeCountry": "Jamaica",
       "fightingStyle": "Kickboxing",
       "quote": "Were my killer combos too much for you, mon?",
-      "image": "http://vignette4.wikia.nocookie.net/streetfighter/images/f/fb/SFVDeeJay.jpg/revision/latest?cb=20160629140810",
+      "image": "/images/fighters/deejay.png",
       "abilities":{
                   "strength": 14,
                   "agility":  13,
@@ -203,7 +203,7 @@
       "homeCountry": "India",
       "fightingStyle": "Esoteris Yoga",
       "quote": "Today, I shall win again.",
-      "image": "https://static1.squarespace.com/static/50f14d35e4b0d70ab5fc4f24/t/53f2f149e4b010bb9e7406b7/1408430416117/",
+      "image": "/images/fighters/dhalsim.png",
       "abilities":{
                   "strength": 13,
                   "agility":  17,
@@ -221,7 +221,7 @@
       "homeCountry": "United Kingdom",
       "fightingStyle": "Boxing",
       "quote": "You have no dignity!",
-      "image": "http://vignette1.wikia.nocookie.net/streetfighter/images/7/72/SFVDudley.jpg/revision/latest?cb=20160629142628",
+      "image": "/images/fighters/dudley.png",
       "abilities":{
                   "strength": 13,
                   "agility":  12,
@@ -239,7 +239,7 @@
       "homeCountry": "Japan",
       "fightingStyle": "Sumo Wrestling",
       "quote": "It's only natural that a Sumo should become the World's Strongest!",
-      "image": "http://vignette3.wikia.nocookie.net/streetfighter/images/0/05/SFVHonda.jpg/revision/latest?cb=20160629140718",
+      "image": "/images/fighters/ehonda.png",
       "abilities":{
                   "strength": 15,
                   "agility":  13,
@@ -257,7 +257,7 @@
       "homeCountry": "Mexico",
       "fightingStyle": "Lucha Libre (Mexican wrestling)",
       "quote": "It's Super Dynamic Cooking Time!",
-      "image": "http://vignette4.wikia.nocookie.net/streetfigh,ter/images/a/ab/SFVFuerte.jpg/revision/latest?cb=20160629144123",
+      "image": "/images/fighters/elfuerte.png",
       "abilities": {
                   "strength": 12,
                   "agility":  16,
@@ -275,7 +275,7 @@
       "homeCountry": "Hong Kong",
       "fightingStyle": "Kung Fu",
       "quote": "There is no way you can ever knock me out!",
-      "image": "http://vignette2.wikia.nocookie.net/streetfighter/images/e/e0/SFVFeiLong.jpg/revision/latest?cb=20160629140902",
+      "image": "/images/fighters/feilong.png",
       "abilities":{
                   "strength": 13,
                   "agility":  17,
@@ -293,7 +293,7 @@
       "homeCountry": "China",
       "fightingStyle": "Chinese martial arts (Sō and Ki styles)",
       "quote": "You cannot keep my fists in your sight, for they move with the fury of hell!",
-      "image": "http://vignette4.wikia.nocookie.net/streetfighter/images/b/bf/Gen_SFV_Encyclopedia.jpg/revision/latest?cb=20160509010630",
+      "image": "/images/fighters/gen.png",
       "abilities":{
                   "strength": 12,
                   "agility":  11,
@@ -311,7 +311,7 @@
       "homeCountry": "Japan",
       "fightingStyle": "Ansatsuken",
       "quote": "Concentrate not on destroying your foe, but on attaining your own victory.",
-      "image": "",
+      "image": "/images/fighters/gouken.png",
       "abilities": {
         "strength": 12,
         "agility": 6,
@@ -329,7 +329,7 @@
       "homeCountry": "United States of America",
       "fightingStyle": "Martial Arts and Pro Wrestling",
       "quote": "Go home and be a family man.",
-      "image": "",
+      "image": "/images/fighters/guile.png",
       "abilities": {
         "strength": 14,
         "agility": 15,
@@ -347,7 +347,7 @@
       "homeCountry": "United States of America",
       "fightingStyle": "Bushin-ryu Ninjutsu",
       "quote": "There's something you should get to know better. Your limits.",
-      "image": "",
+      "image": "/images/fighters/guy.png",
       "abilities": {
         "strength": 14,
         "agility": 16,
@@ -365,7 +365,7 @@
       "homeCountry": "Turkey",
       "fightingStyle": "Turkish Oil Wrestling",
       "quote": "Looks like it's time to o il up!",
-      "image": "",
+      "image": "/images/fighters/hakan.png",
       "abilities": {
         "strength": 18,
         "agility": 12,
@@ -383,7 +383,7 @@
       "homeCountry": "Japan",
       "fightingStyle": "Ninjutsu",
       "quote": "Ibuki! On the scene!",
-      "image": "",
+      "image": "/images/fighters/ibuki.png",
       "abilities": {
         "strength": 5,
         "agility": 17,
@@ -401,7 +401,7 @@
       "homeCountry": "South Korea",
       "fightingStyle": "Taekwondo",
       "quote": "Well then, where do you want me to break you first?",
-      "image": "",
+      "image": "/images/fighters/juri.png",
       "abilities": {
         "strength": 9,
         "agility": 18,
@@ -419,7 +419,7 @@
       "homeCountry": "United States of America",
       "fightingStyle": "Ansatsuken",
       "quote": "I'm ready for ya, bring it on!",
-      "image": "",
+      "image": "/images/fighters/ken.png",
       "abilities": {
         "strength": 15,
         "agility": 15,
@@ -437,7 +437,7 @@
       "homeCountry": "Japan",
       "fightingStyle": "Rindoukan",
       "quote": "I know I'm still young, but fighters in training really have the desire to win!",
-      "image": "",
+      "image": "/images/fighters/makoto.png",
       "abilities": {
         "strength": 16,
         "agility": 11,
@@ -455,7 +455,7 @@
       "homeCountry": "Unknown",
       "fightingStyle": "Psycho Power",
       "quote": "Now, face the mighty Bison!",
-      "image": "",
+      "image": "/images/fighters/bison.png",
       "abilities": {
         "strength": 14,
         "agility": 12,
@@ -473,7 +473,7 @@
       "homeCountry": "Italy",
       "fightingStyle": "Soul Power",
       "quote": "You're nervous, aren't you?",
-      "image": "",
+      "image": "/images/fighters/rose.png",
       "abilities": {
         "strength": 8,
         "agility": 13,
@@ -491,7 +491,7 @@
       "homeCountry": "United States of America",
       "fightingStyle": "Kung Fu",
       "quote": "My fists'll give you amnesia!",
-      "image": "",
+      "image": "/images/fighters/rufus.png",
       "abilities": {
         "strength": 18,
         "agility": 14,
@@ -509,7 +509,7 @@
       "homeCountry": "Japan",
       "fightingStyle": "Ansatsuken",
       "quote": "This is the path of my destiny!",
-      "image": "",
+      "image": "/images/fighters/ryu.png",
       "abilities": {
         "strength": 16,
         "agility": 12,
@@ -527,7 +527,7 @@
       "homeCountry": "Thailand",
       "fightingStyle": "Muay Thai",
       "quote": "A strong fighter is not one who always wins, but one who stands after defeat.",
-      "image": "",
+      "image": "/images/fighters/sagat.png",
       "abilities": {
         "strength": 16,
         "agility": 16,
@@ -545,7 +545,7 @@
       "homeCountry": "Japan",
       "fightingStyle": "Ansatsuken",
       "quote": "Training is fun if you set your mind to a specific goal to work toward!",
-      "image": "",
+      "image": "/images/fighters/sakura.png",
       "abilities": {
         "strength": 9,
         "agility": 16,
@@ -563,7 +563,7 @@
       "homeCountry": "Unknown",
       "fightingStyle": "Transcendent Fighting Style",
       "quote": "Show me everything you have to offer.",
-      "image": "",
+      "image": "/images/fighters/seth.png",
       "abilities": {
         "strength": 18,
         "agility": 9,
@@ -581,7 +581,7 @@
       "homeCountry": "Mexico",
       "fightingStyle": "Thunderfoot Martial Arts",
       "quote": "Your scream sounds like a pathetic war cry!",
-      "image": "",
+      "image": "/images/fighters/thawk.png",
       "abilities": {
         "strength": 16,
         "agility": 10,
@@ -599,7 +599,7 @@
       "homeCountry": "Spain",
       "fightingStyle": "Spanish Ninjutsu",
       "quote": "You'll be seeing red by the time I'm done with you...",
-      "image": "",
+      "image": "/images/fighters/vega.png",
       "abilities": {
         "strength": 12,
         "agility": 18,
@@ -617,7 +617,7 @@
       "homeCountry": "Russia",
       "fightingStyle": "Russian Pro Wrestling",
       "quote": "I am...the Red Cyclone!",
-      "image": "",
+      "image": "/images/fighters/zangief.png",
       "abilities": {
         "strength": 17,
         "agility": 5,
