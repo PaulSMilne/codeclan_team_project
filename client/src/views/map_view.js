@@ -2,6 +2,7 @@ var MapView = function(data, game) {
   this.data = data;
   this.game = game;
   this.map = null;
+  this.countryMarkers = [];
   
 }
 
@@ -315,7 +316,18 @@ MapView.prototype = {
           scaledSize: new google.maps.Size(50, 30)
         }
       })
+      this.countryMarkers.push(marker);
+      this.addMarkerListener(marker, country.countryCoords);
     }
+  },
+  addMarkerListener: function(marker, countryCoords) {
+    marker.addListener('click', function() {
+      this.map.setCenter(countryCoords)
+      this.map.setZoom(5);
+      for (var flag of this.countryMarkers) {
+        flag.setMap(null);
+      }
+    }.bind(this))
   }
 }
 
