@@ -96,7 +96,10 @@ GameView.prototype = {
     var nameH1 = document.createElement('h1');
     nameH1.innerText = fighter.name;
     var abilitiesList = document.createElement('ul');
+    // var multiplier = 1;
     for(ability in fighter.abilities) {
+      // this.timeOutMessage(h2, multiplier, word);
+      // multiplier++;
       var listItem = document.createElement('li');
       var button = document.createElement('button');
       button.innerText = ability + ": " + fighter.abilities[ability];
