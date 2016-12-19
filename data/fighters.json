@@ -150,7 +150,7 @@
       "homeCountry": "United States of America",
       "fightingStyle": "Using secret spy gadgets",
       "quote": "Try getting a real job!",
-      "image": "h/images/fighters/cviper.png",
+      "image": "/images/fighters/cviper.png",
       "abilities":{
                   "strength": 10,
                   "agility":  15,
