@@ -120,8 +120,9 @@ GameView.prototype = {
         if (!this.isDraw) {
           event.target.style.backgroundColor = "black";
           event.target.style.color = "#C9A955";
-          this.buildSecondCard();
-          this.game.compareAbility(event.target.key);
+          var chosenAbility = event.target.key
+          this.buildSecondCard(chosenAbility);
+          this.game.compareAbility(chosenAbility);
           this.displayRoundWinner();  
         }
       }.bind(this);
@@ -129,7 +130,7 @@ GameView.prototype = {
     }.bind(this), multiplier * 500)
   },
 
-  buildSecondCard: function() {
+  buildSecondCard: function(chosenAbility) {
     var currentPlayer = this.game.currentPlayer;
     if (currentPlayer === this.game.players[0]) {
       var secondCard = document.getElementById('player2Card');
@@ -153,9 +154,17 @@ GameView.prototype = {
       var button = document.createElement('button');
       listItem.appendChild(button);
       abilitiesList.appendChild(listItem); 
-      this.timeOutSecondCardAbilityBuilder(button, ability, fighter.abilities, multiplier);
-      multiplier++;
+      if (ability !== chosenAbility) {
+        this.timeOutSecondCardAbilityBuilder(button, ability, fighter.abilities, multiplier);
+        multiplier++;
+      } else {
+        button.id = "matchingAbilityButton";
+      }
     }
+    var matchingButton = document.getElementById('matchingAbilityButton');
+    matchingButton.style.backgroundColor = "black";
+    matchingButton.style.color = "#C9A955";
+    this.timeOutSecondCardAbilityBuilder(matchingButton, chosenAbility, fighter.abilities, multiplier);
   },
 
   timeOutSecondCardAbilityBuilder: function(button, ability, abilities, multiplier) {
