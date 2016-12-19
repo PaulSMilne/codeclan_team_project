@@ -1,10 +1,11 @@
 /*SPLASH STYLES*/
 #splash {
      background: black no-repeat center top url("/images/logo-sf.png");
+     color:white;
+     height:100%;
      padding-bottom: 50px;
      padding-top:225px;
      text-align:center;
-     color:white;
 }
 
 #splash h1 {
@@ -120,6 +121,9 @@
      margin: 25px 0 0 25px;
 }
 
+#player1Card {
+     margin: 25px 25px 0 0;
+}
 /*Message display styles*/
 
 #message-display {
@@ -144,10 +148,13 @@
 
 #gameBody {
      align-items: center;
+     background: no-repeat center top url('/images/venues/ring_of_destiny.png');
      /*border: 1px blue solid;*/
      display: flex;
      flex-direction: row;
+     height:500px;
      justify-content: space-between;
+     padding:20px;
 }
 
 #playerDetails {
