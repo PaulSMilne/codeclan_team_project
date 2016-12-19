@@ -13,8 +13,13 @@ MapView.prototype = {
     mapView.style.display = "block";
     var container = document.getElementById('map-container');
     this.map = new google.maps.Map(container, { 
-      center: {lat: 40, lng: 0}, 
+      center: {lat: 40, lng: 20}, 
       zoom: 2,
+      disableDefaultUI: true,
+      draggable: false,
+      zoomControl: false,
+      scaleControl: false,
+      scrollwheel: false,
       styles: [
         {
           "elementType": "geometry",
@@ -297,8 +302,21 @@ MapView.prototype = {
         }
       ]
     })
+    this.addMarkers();
+  },
+  addMarkers: function() {
+    var countries = this.data.countries;
+    for(country of countries) {
+      var marker = new google.maps.Marker({
+        position: country.countryCoords,
+        map: this.map,
+        icon: {
+          url: "/images/country_flags/" + country.flag,
+          scaledSize: new google.maps.Size(50, 30)
+        }
+      })
+    }
   }
-
 }
 
 module.exports = MapView;
