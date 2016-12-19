@@ -316,6 +316,7 @@ MapView.prototype = {
           scaledSize: new google.maps.Size(50, 30)
         }
       })
+      marker.country = country;
       this.countryMarkers.push(marker);
       this.addMarkerListener(marker, country.countryCoords);
     }
@@ -327,8 +328,17 @@ MapView.prototype = {
       for (var flag of this.countryMarkers) {
         flag.setMap(null);
       }
+      var venues = marker.country.venues
+      for(venue of venues) {
+        var venueMarker = new google.maps.Marker({
+          position: venue.coords,
+          map: this.map
+        })
+      }
     }.bind(this))
   }
-}
+
+};
+
 
 module.exports = MapView;
