@@ -2,6 +2,7 @@
 #splash {
      background: black no-repeat center top url("/images/logo-sf.png");
      color:white;
+     font-family: Helvetica, sans-serif;
      height:100%;
      padding-bottom: 50px;
      padding-top:225px;
@@ -9,7 +10,6 @@
 }
 
 #splash h1 {
-     font-family: 'Shojumaru', cursive;
      font-size:2em;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .topCard h1 {
-     font-family: 'Shojumaru', cursive;
+     font-family: Helvetica, sans-serif;
      margin-top: 10px;
      text-align:center;
      font-size: 1.2em;
@@ -118,20 +118,24 @@
 .topCard li { margin-bottom:1px; font-weight:bold;}
 
 #player1Card {
-     margin: 25px 0 0 25px;
+     /*margin: 25px 0 0 25px;*/
+     transform: rotate(2deg);
 }
 
-#player1Card {
-     margin: 25px 25px 0 0;
+#player2Card {
+     /*margin: 25px 25px 0 0;*/
+     transform: rotate(-2deg);
 }
 
 
 /*MESSAGE DISPLAY STYLES*/
 
 #message-display {
+     background-color: rgba(255, 255, 255, 0.1);
      color:white;
      font-family: Helvetica, sans-serif;
      text-align:center;
+     text-shadow: 2px 2px #666;
      width:275px;
 }
 
