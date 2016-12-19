@@ -29,6 +29,14 @@
      background-color: #FF1403;
 }
 
+
+/*MAP STYLES*/
+
+#map-view {
+     margin: auto;
+     width:1000px;
+}
+
 #map-container {
      height: 600px;
      width: 1000px;
