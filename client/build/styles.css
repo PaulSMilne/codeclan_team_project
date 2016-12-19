@@ -54,3 +54,21 @@
 }
 
 .topCard li { margin-bottom:1px; font-weight:bold;}
+
+/*Flex box stuff*/
+
+#game {
+     display: flex;
+     flexDirection: column;
+}
+
+#gameBody {
+     display: flex;
+     flexDirection: row;
+}
+
+#playerDetails {
+     display: flex;
+     flexDirection: row;
+}
+
