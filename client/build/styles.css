@@ -1,6 +1,6 @@
 /*SPLASH STYLES*/
 #splash {
-     background: #FF1403 no-repeat center top url("/images/logo-sf.png");
+     background: black no-repeat center top url("/images/logo-sf.png");
      padding-bottom: 50px;
      padding-top:225px;
      text-align:center;
@@ -28,7 +28,7 @@
      font-size:1em;
      padding:10px;
      color:white;
-     background-color: black;
+     background-color: #FF1403;
 }
 
 #game, #winner {display:none;}
@@ -38,6 +38,11 @@
 .test {background-color:red;width:100%;}
 
 /* Player bar styles*/
+
+#playerDetails {
+     background-color: black;
+     color:white;
+}
 
 #playerDetails section {
      /*border: 1px solid orange;*/
@@ -65,7 +70,7 @@
 */
 .topCard {
      visibility: hidden;
-     overflow:auto;
+     /*overflow:auto;*/
      background-color: white;
      border:2px #C9A955 solid;
      border-radius:10px;
@@ -106,6 +111,10 @@
 
 .topCard li { margin-bottom:1px; font-weight:bold;}
 
+#player1Card {
+     margin: 25px 0 0 25px;
+}
+
 /*Message display styles*/
 
 #message-display {
@@ -113,7 +122,12 @@
      width:275px;
 }
 
-#message-display h2 {font-family: 'Shojumaru', cursive;}
+#message-display h2 {
+     font-family: 'Shojumaru', cursive;
+     font-size: 3em;
+}
+
+#message-display h3 {font-family: 'Helvetica', sans-serif;}
 
 /*Flex box stuff*/
 

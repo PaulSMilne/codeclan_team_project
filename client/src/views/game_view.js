@@ -58,7 +58,7 @@ GameView.prototype = {
     message.innerHTML = "";
     var h2 = document.createElement('h2');
     message.appendChild(h2);
-    var firstWord = "Round " + this.game.roundCount + "!";
+    var firstWord = "Round " + this.game.roundCount;
     var words = [firstWord, 3, 2, 1, "FIGHT!!!"];
     var multiplier = 1;
     for(word of words) {
@@ -72,7 +72,7 @@ GameView.prototype = {
     setTimeout(function() {
       console.log("timeout word",word);
       h2Element.innerText = word;
-    }, multiplier * 750);
+    }, multiplier * 1000);
   },
   
   buildFirstCard: function() {
