@@ -17,12 +17,9 @@
      font-family: Helvetica, sans-serif;
      font-size:1.5em;
 }
-/*#splash label {font-family: 'Shojumaru', cursive;}*/
 
 #splash input {
      font-size: 1em;
-     /*height:2em;
-     width:20em;*/
 }
 
 #splash button {
@@ -51,13 +48,9 @@
 }
 
 #playerDetails section {
-     /*border: 1px solid orange;*/
      text-align: center;
 }
 
-/*#playerDetails h2 {
-     font-family: 'Shojumaru', cursive;
-}*/
 
 #playerDetails {
      font-family: Helvetica, sans-serif;
@@ -76,7 +69,6 @@
 */
 .topCard {
      visibility: hidden;
-     /*overflow:auto;*/
      background-color: white;
      border:2px #C9A955 solid;
      border-radius:10px;
@@ -124,33 +116,31 @@
 #player1Card {
      margin: 25px 25px 0 0;
 }
-/*Message display styles*/
+
+
+/*MESSAGE DISPLAY STYLES*/
 
 #message-display {
      color:white;
+     font-family: Helvetica, sans-serif;
      text-align:center;
      width:275px;
 }
 
 #message-display h2 {
-     font-family: 'Shojumaru', cursive;
      font-size: 3em;
 }
 
-#message-display h3 {font-family: 'Helvetica', sans-serif;}
-
-/*Flex box stuff*/
+/*FLEX BOX STUFF*/
 
 #game {
      display: flex;
      flex-direction: column;
-     /*border: 1px red solid;*/
 }
 
 #gameBody {
      align-items: center;
      background: no-repeat center top;
-     /*border: 1px blue solid;*/
      display: flex;
      flex-direction: row;
      height:500px;
@@ -161,7 +151,6 @@
 #playerDetails {
      display: flex;
      flex-direction: row;
-     /*border: 1px green solid;*/
      justify-content: space-between;
 }
 
