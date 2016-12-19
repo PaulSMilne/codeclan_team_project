@@ -12,6 +12,8 @@ MapView.prototype = {
   create: function() {
     var splash = document.getElementById('splash');
     splash.style.display = "none";
+    var gameView = document.getElementById('game');
+    gameView.style.display = "none";
     var mapView = document.getElementById('map-view');
     mapView.style.display = "block";
     var container = document.getElementById('map-container');

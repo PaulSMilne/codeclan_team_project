@@ -1,4 +1,4 @@
-var Player = require('../top_trumps/player.js');
+var StartView = require("./start_view");
 
 var GameView = function(game, venue) {
   this.game = game;
@@ -8,6 +8,7 @@ var GameView = function(game, venue) {
 
 GameView.prototype = {
   display: function() {
+    
     console.log("venue", this.venue);
     var map = document.getElementById('map-view');
     var game = document.getElementById('game');
@@ -20,9 +21,9 @@ GameView.prototype = {
   },
   buildControlButton: function() {
     var gameSection = document.getElementById('game');
-    var controlButton = document.createElement('button');
+    var controlButton = document.getElementById('startGameButton');
+    controlButton.style.display = "initial";
     controlButton.innerText = "Start Game";
-    gameSection.appendChild(controlButton);
     controlButton.onclick = function() {
       this.game.deal();
       this.buildPlayerBar();
@@ -108,8 +109,7 @@ GameView.prototype = {
       this.timeOutFirstCardAbilityBuilder(button, ability, fighter.abilities, multiplier);
       multiplier++;
     }
-    
-
+  
   },
 
   timeOutFirstCardAbilityBuilder: function(button, ability, abilities, multiplier) {
@@ -183,7 +183,7 @@ GameView.prototype = {
       var quoteh3= document.createElement('h3');
       var playerh2 = document.createElement('h2');
       if (this.game.winningCard) {
-        fighterh3.innerText = this.game.winningCard.name;
+        fighterh3.innerText = this.game.winningCard.name+ " . . .";
         quoteh3.innerText =  '"' + this.game.winningCard.quote + '"';
         playerh2.innerText = this.game.currentPlayer.name + " wins";
       } else {
@@ -227,9 +227,43 @@ GameView.prototype = {
   gameOver: function() {
     var message = document.getElementById('message-display');
     var h2 = document.createElement("h2");
+    var winner = document.createElement("h2");
     message.innerText = "";
+    winner.innerText = this.game.currentPlayer.name + " wins!";
     h2.innerText = "Game Over!"
+    message.appendChild(winner);
     message.appendChild(h2);
+    var rematchButton = document.createElement('button');
+    var quitButton = document.createElement('button');
+    rematchButton.innerText = "Rematch";
+    quitButton.innerText = "Quit";
+    rematchButton.onclick = function() {
+      this.newGame(); 
+    }.bind(this)
+    message.appendChild(rematchButton);
+    message.appendChild(quitButton);
+  },
+
+  newGame: function() {
+    this.collectCards(this.game.players[0]);
+    this.collectCards(this.game.players[1]);
+    this.game.roundCount = 0;
+    this.game.deal();
+    this.buildPlayerBar();
+    this.game.populateTable();
+    this.displayRoundMessage();
+    setTimeout(function() {
+      var message = document.getElementById('message-display');
+      message.style.visibility = "hidden";
+      this.buildFirstCard();
+    }.bind(this), 6500);
+  },
+
+  collectCards: function(player) {
+    var cardCount = player.hand.length;
+    for (var i = 0; i < cardCount; i++) {
+      this.game.deck.cards.unshift(player.hand.pop());
+    }
   }
 
 };
