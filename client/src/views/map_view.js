@@ -1,7 +1,10 @@
+var GameView = require('./game_view.js');
+
 var MapView = function(data, game) {
   this.data = data;
   this.game = game;
   this.map = null;
+  this.countryMarkers = [];
   
 }
 
@@ -315,8 +318,36 @@ MapView.prototype = {
           scaledSize: new google.maps.Size(50, 30)
         }
       })
+      marker.country = country;
+      this.countryMarkers.push(marker);
+      this.addMarkerListener(marker, country.countryCoords);
     }
+  },
+  addMarkerListener: function(marker, countryCoords) {
+    marker.addListener('click', function() {
+      this.map.setCenter(countryCoords)
+      this.map.setZoom(5);
+      for (var flag of this.countryMarkers) {
+        flag.setMap(null);
+      }
+      var venues = marker.country.venues
+      for(venue of venues) {
+        var venueMarker = new google.maps.Marker({
+          position: venue.coords,
+          map: this.map
+        })
+        this.addVenueListener(venueMarker, venue);
+      }
+    }.bind(this))
+  },
+  addVenueListener: function(venueMarker, venue) {
+    venueMarker.addListener('click', function() {
+      var gameView = new GameView(this.game, venue)
+      gameView.display()
+    }.bind(this))
   }
-}
+
+};
+
 
 module.exports = MapView;

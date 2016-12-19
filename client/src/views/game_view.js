@@ -1,14 +1,16 @@
 var Player = require('../top_trumps/player.js');
 
-var GameView = function(game) {
+var GameView = function(game, venue) {
   this.game = game;
+  this.venue = venue;
 };
 
 GameView.prototype = {
   display: function() {
-    var splash = document.getElementById('splash');
+    var map = document.getElementById('map-view');
     var game = document.getElementById('game');
-    splash.style.display = "none";
+    map.style.display = "none";
+    game.style.display = "initial";
     var gameBody = document.getElementById('gameBody');
     var playerDetails = document.getElementById('playerDetails');
     this.buildControlButton();
