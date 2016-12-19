@@ -1,3 +1,5 @@
+var GameView = require('./game_view.js');
+
 var MapView = function(data, game) {
   this.data = data;
   this.game = game;
@@ -334,7 +336,14 @@ MapView.prototype = {
           position: venue.coords,
           map: this.map
         })
+        this.addVenueListener(venueMarker, venue);
       }
+    }.bind(this))
+  },
+  addVenueListener: function(venueMarker, venue) {
+    venueMarker.addListener('click', function() {
+      var gameView = new GameView(this.game, venue)
+      gameView.display()
     }.bind(this))
   }
 

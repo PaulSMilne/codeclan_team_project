@@ -1,22 +1,18 @@
 var Player = require('../top_trumps/player.js');
 
-var GameView = function(game) {
+var GameView = function(game, venue) {
   this.game = game;
+  this.venue = venue;
 };
 
 GameView.prototype = {
   display: function() {
-    var splash = document.getElementById('splash');
+    var map = document.getElementById('map-view');
     var game = document.getElementById('game');
-    splash.style.display = "none";
-    // game.style.display = "flex";
-    // game.style.flexDirection = "column";
+    map.style.display = "none";
+    game.style.display = "initial";
     var gameBody = document.getElementById('gameBody');
-    // gameBody.style.display = "flex";
-    // gameBody.style.flexDirection = "row";
     var playerDetails = document.getElementById('playerDetails');
-    // playerDetails.style.display = "flex";
-    // playerDetails.style.flexDirection = "row";
     this.buildControlButton();
   },
   buildControlButton: function() {
