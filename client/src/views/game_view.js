@@ -3,15 +3,18 @@ var Player = require('../top_trumps/player.js');
 var GameView = function(game, venue) {
   this.game = game;
   this.venue = venue;
+  this.isDraw = false;
 };
 
 GameView.prototype = {
   display: function() {
+    console.log("venue", this.venue);
     var map = document.getElementById('map-view');
     var game = document.getElementById('game');
     map.style.display = "none";
     game.style.display = "initial";
     var gameBody = document.getElementById('gameBody');
+    gameBody.style.backgroundImage = "url('/images/venues/" + this.venue.image + "')";
     var playerDetails = document.getElementById('playerDetails');
     this.buildControlButton();
   },
@@ -30,7 +33,7 @@ GameView.prototype = {
         var message = document.getElementById('message-display');
         message.style.visibility = "hidden";
         this.buildFirstCard();
-      }.bind(this), 5000);
+      }.bind(this), 6500);
     }.bind(this);
   },
 
@@ -99,10 +102,11 @@ GameView.prototype = {
       button.innerText = ability + ": " + fighter.abilities[ability];
       button.key = ability;
       button.onclick = function(event) {
-        console.log("selected ability", event.target.key);
-        this.buildSecondCard();
-        this.game.compareAbility(event.target.key);
-        this.displayRoundWinner();
+        if (!this.isDraw) {
+          this.buildSecondCard();
+          this.game.compareAbility(event.target.key);
+          this.displayRoundWinner();  
+        }
       }.bind(this);
       listItem.appendChild(button);
       abilitiesList.appendChild(listItem);
@@ -143,16 +147,20 @@ GameView.prototype = {
     var message = document.getElementById('message-display');
     message.innerHTML = "";
     message.style.visibility = "visible";
-    var h2 = document.createElement('h2');
-    var h3 = document.createElement('h3');
+    var fighterh3 = document.createElement('h3');
+    var quoteh3= document.createElement('h3');
+    var playerh2 = document.createElement('h2');
     if (this.game.winningCard) {
-      h2.innerText = this.game.currentPlayer.name + " wins";
-      h3.innerText = this.game.winningCard.quote;
+      fighterh3.innerText = this.game.winningCard.name;
+      quoteh3.innerText =  '"' + this.game.winningCard.quote + '"';
+      playerh2.innerText = this.game.currentPlayer.name + " wins";
     } else {
-      h2.innerText = "DRAW!";
+      this.isDraw = true;
+      playerh2.innerText = "DRAW!";
     }
-    message.appendChild(h2);
-    message.appendChild(h3);
+    message.appendChild(fighterh3);
+    message.appendChild(quoteh3);
+    message.appendChild(playerh2);
     if(this.game.isGameWon) {
       setTimeout(function() {
         this.clearLastRound();
@@ -169,8 +177,9 @@ GameView.prototype = {
         setTimeout(function() {
           var message = document.getElementById('message-display');
           message.style.visibility = "hidden";
+          this.isDraw = false;
           this.buildFirstCard();
-        }.bind(this), 5000);
+        }.bind(this), 6500);
       }.bind(this),5000);
     } 
   },

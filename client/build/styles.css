@@ -122,6 +122,7 @@
 /*Message display styles*/
 
 #message-display {
+     color:white;
      text-align:center;
      width:275px;
 }
@@ -143,7 +144,7 @@
 
 #gameBody {
      align-items: center;
-     background: no-repeat center top url('/images/venues/ring_of_destiny.png');
+     background: no-repeat center top;
      /*border: 1px blue solid;*/
      display: flex;
      flex-direction: row;

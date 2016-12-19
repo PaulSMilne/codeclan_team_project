@@ -17,7 +17,7 @@ Game.prototype = {
     this.players.push(newPlayer);
   },
   deal: function() {
-    this.deck.shuffleCards();
+    // this.deck.shuffleCards();
     this.currentPlayer = this.players[0];
     var cardCount = 0;
     while (cardCount < this.handSize) {
