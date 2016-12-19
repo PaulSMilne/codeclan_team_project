@@ -9,6 +9,29 @@
 
 .test {background-color:red;width:100%;}
 
+/* Player bar styles*/
+
+#playerDetails section {
+     /*border: 1px solid orange;*/
+     text-align: center;
+}
+
+#playerDetails h2 {
+     font-family: 'Shojumaru', cursive;
+}
+
+#playerDetails h3 {
+     font-family: Helvetica, sans-serif;
+}
+
+#player1Bar{
+     margin-left:75px;
+}
+#player2Bar{
+     margin-right:75px;
+}
+
+
 /*
      CARD STYLES
 */
@@ -55,20 +78,35 @@
 
 .topCard li { margin-bottom:1px; font-weight:bold;}
 
+/*Message display styles*/
+
+#message-display {
+     text-align:center;
+     width:275px;
+}
+
+#message-display h2 {font-family: 'Shojumaru', cursive;}
+
 /*Flex box stuff*/
 
 #game {
      display: flex;
-     flexDirection: column;
+     flex-direction: column;
+     /*border: 1px red solid;*/
 }
 
 #gameBody {
+     align-items: center;
+     /*border: 1px blue solid;*/
      display: flex;
-     flexDirection: row;
+     flex-direction: row;
+     justify-content: space-between;
 }
 
 #playerDetails {
      display: flex;
-     flexDirection: row;
+     flex-direction: row;
+     /*border: 1px green solid;*/
+     justify-content: space-between;
 }
 

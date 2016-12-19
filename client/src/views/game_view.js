@@ -9,14 +9,8 @@ GameView.prototype = {
     var splash = document.getElementById('splash');
     var game = document.getElementById('game');
     splash.style.display = "none";
-    // game.style.display = "flex";
-    // game.style.flexDirection = "column";
     var gameBody = document.getElementById('gameBody');
-    // gameBody.style.display = "flex";
-    // gameBody.style.flexDirection = "row";
     var playerDetails = document.getElementById('playerDetails');
-    // playerDetails.style.display = "flex";
-    // playerDetails.style.flexDirection = "row";
     this.buildControlButton();
   },
   buildControlButton: function() {
@@ -188,7 +182,10 @@ GameView.prototype = {
   },
   gameOver: function() {
     var message = document.getElementById('message-display');
-    message.innerText = "Game Over!";
+    var h2 = document.createElement("h2");
+    message.innerText = "";
+    h2.innerText = "Game Over!"
+    message.appendChild(h2);
   }
 
 };
