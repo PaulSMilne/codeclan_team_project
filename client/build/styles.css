@@ -31,7 +31,12 @@
      background-color: black;
 }
 
-#game, #winner {display:none;}
+#map-container {
+     height: 600px;
+     width: 1000px;
+}
+
+#game, #winner, #map-view {display:none;}
 
 .newGame {margin-right:10px;}
 
