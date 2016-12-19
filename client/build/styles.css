@@ -1,6 +1,34 @@
+/*SPLASH STYLES*/
 #splash {
-     background: no-repeat center top url("/images/logo-sf.png");
-     padding-top:250px;
+     background: #FF1403 no-repeat center top url("/images/logo-sf.png");
+     padding-bottom: 50px;
+     padding-top:225px;
+     text-align:center;
+     color:white;
+}
+
+#splash h1 {
+     font-family: 'Shojumaru', cursive;
+     font-size:2em;
+}
+
+#splash p {
+     font-family: Helvetica, sans-serif;
+     font-size:1.5em;
+}
+#splash label {font-family: 'Shojumaru', cursive;}
+
+#splash input {
+     font-size: 1em;
+     /*height:2em;
+     width:20em;*/
+}
+
+#splash button {
+     font-size:1em;
+     padding:10px;
+     color:white;
+     background-color: black;
 }
 
 #game, #winner {display:none;}
