@@ -70,7 +70,7 @@
       "flag": "united_states_of_america.png",
       "countryCoords" : {
         "lat": 37.090,
-        "lng": -95.713
+        "lng": -110.713
       },
       "venues": [
         {
@@ -98,7 +98,7 @@
       "flag": "russia.png",
       "countryCoords" : {
         "lat": 61.524,
-        "lng": 105.319
+        "lng": 40.319
       },
       "venues": [
         {
@@ -142,8 +142,8 @@
         {
           "name": "Shadaloo Base",
           "coords": {
-            "lat": -21.833,
-            "lng": -138.917
+            "lat": -18.767,
+            "lng": 46.869
           },
           "image": "shadaloo_base.jpg",
           "themeMusic": ""
@@ -192,7 +192,7 @@
       "country": "Brazil",
       "flag": "brazil.png",
       "countryCoords" : {
-        "lat": -14.235,
+        "lat": -7.235,
         "lng": -51.925
       },
       "venues": [
@@ -212,7 +212,7 @@
       "flag": "china.png",
       "countryCoords" : {
         "lat": 35.862,
-        "lng": 104.195
+        "lng": 120.195
       },
       "venues": [
         {
@@ -268,7 +268,7 @@
       "country": "India",
       "flag": "india.png",
       "countryCoords" : {
-        "lat": 20.594,
+        "lat": 25.594,
         "lng": 78.963
       },
       "venues": [
