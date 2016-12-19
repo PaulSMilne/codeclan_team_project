@@ -28,7 +28,6 @@ GameView.prototype = {
       this.game.deal();
       this.buildPlayerBar();
       this.game.populateTable();
-      this.buildPlayerBar();
       controlButton.style.display = "none";
       this.displayRoundMessage();
       setTimeout(function() {
@@ -162,13 +161,14 @@ GameView.prototype = {
       setTimeout(function() {
         this.clearLastRound();
         this.gameOver();
+        this.buildPlayerBar();
       }.bind(this), 5000);
     } else 
     {
       setTimeout(function () {
         this.clearLastRound();
-        this.game.populateTable();
         this.buildPlayerBar();
+        this.game.populateTable();
         this.displayRoundMessage();
         setTimeout(function() {
           var message = document.getElementById('message-display');
