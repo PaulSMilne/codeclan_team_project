@@ -91,22 +91,25 @@ GameView.prototype = {
     } else {
       var firstCard = document.getElementById('player2Card');
     }
+    var fighter = this.game.table[1];
     firstCard.style.display = "inline-block";
     var image = document.createElement('img');
-    image.src = this.game.table[1].image;
+    image.src = fighter.image;
     var nameH1 = document.createElement('h1');
-    nameH1.innerText = this.game.table[1].name;
+    nameH1.innerText = fighter.name;
     var abilitiesList = document.createElement('ul');
-    for(ability in this.game.table[1].abilities) {
+    for(ability in fighter.abilities) {
       var listItem = document.createElement('li');
-      listItem.innerText = ability + ": " + this.game.table[1].abilities[ability];
-      listItem.key = ability;
-      listItem.onclick = function(event) {
+      var button = document.createElement('button');
+      button.innerText = ability + ": " + fighter.abilities[ability];
+      button.key = ability;
+      button.onclick = function(event) {
         console.log("selected ability", event.target.key);
         this.buildSecondCard();
         this.game.compareAbility(event.target.key);
         this.displayRoundWinner();
       }.bind(this);
+      listItem.appendChild(button);
       abilitiesList.appendChild(listItem);
     }
     firstCard.appendChild(image);
@@ -123,15 +126,18 @@ GameView.prototype = {
     } else {
       var secondCard = document.getElementById('player1Card');
     }
+    var fighter = this.game.table[0];
     secondCard.style.display = "inline-block";
     var image = document.createElement('img');
-    image.src = this.game.table[0].image;
+    image.src = fighter.image;
     var nameH1 = document.createElement('h1');
-    nameH1.innerText = this.game.table[0].name;
+    nameH1.innerText = fighter.name;
     var abilitiesList = document.createElement('ul');
-    for(ability in this.game.table[0].abilities) {
+    for(ability in fighter.abilities) {
       var listItem = document.createElement('li');
-      listItem.innerText = ability + ": " + this.game.table[0].abilities[ability];
+      var button = document.createElement('button');
+      button.innerText = ability + ": " + fighter.abilities[ability];
+      listItem.appendChild(button);
       abilitiesList.appendChild(listItem);
     }
     secondCard.appendChild(image);

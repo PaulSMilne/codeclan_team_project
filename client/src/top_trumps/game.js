@@ -89,7 +89,7 @@ Game.prototype = {
     return this.currentPlayer;
   },
   gameOverCheck: function() {
-    if (this.players[0].hand.length ===0 || this.players[1].hand.length===0) {
+    if (this.players[0].hand.length === 0 || this.players[1].hand.length === 0) {
       this.isGameWon = true;
     }
   }

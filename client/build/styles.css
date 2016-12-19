@@ -26,7 +26,7 @@
 
 .topCard h1 {
      font-family: 'Shojumaru', cursive;
-     margin-top: 25px;
+     margin-top: 10px;
      text-align:center;
      font-size: 1.2em;
      margin-bottom:5px;
@@ -38,14 +38,14 @@
      font-family:Helvetica, sans-serif;
      font-size:.85em;
      font-weight:bold;
-     height:2.5em;
+     height:2em;
      padding:3px;
      width:100%;
 }
 
 .topCard button:first-letter {text-transform:capitalize;}
 
-.topCard ul#abilities {
+.topCard ul {
      list-style-type: none;
      padding-left:0;
      margin-left:0;
@@ -53,4 +53,4 @@
      margin-top:0;
 }
 
-.topCard ul#abilities li { margin-bottom:1px; font-weight:bold;}
+.topCard li { margin-bottom:1px; font-weight:bold;}
