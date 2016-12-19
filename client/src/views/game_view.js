@@ -20,8 +20,11 @@ GameView.prototype = {
     this.buildControlButton();
   },
   buildControlButton: function() {
-    var gameSection = document.getElementById('game');
-    var controlButton = document.getElementById('startGameButton');
+    var message = document.getElementById('message-display');
+    message.innerHTML = "";
+    var controlButton = document.createElement('button');
+    message.appendChild(controlButton);
+    controlButton.id = 'startGameButton';
     controlButton.style.display = "initial";
     controlButton.innerText = "Start Game";
     controlButton.onclick = function() {
@@ -31,7 +34,6 @@ GameView.prototype = {
       controlButton.style.display = "none";
       this.displayRoundMessage();
       setTimeout(function() {
-        var message = document.getElementById('message-display');
         message.style.visibility = "hidden";
         this.buildFirstCard();
       }.bind(this), 6500);
@@ -238,27 +240,23 @@ GameView.prototype = {
     rematchButton.innerText = "Rematch";
     changeVenueButton.innerText = "Change Venue";
     rematchButton.onclick = function() {
-      this.quickGame(); 
+      this.clearCards();
+      this.buildControlButton(); 
     }.bind(this)
     message.appendChild(rematchButton);
     message.appendChild(changeVenueButton);
     var startViewButton = document.getElementById('start_play');
-    changeVenueButton.onclick = startViewButton.onclick;
+    changeVenueButton.onclick = function() {
+      this.clearCards();
+      startViewButton.onclick();
+    }.bind(this);
   },
 
-  quickGame: function() {
+  clearCards: function() {
     this.collectCards(this.game.players[0]);
     this.collectCards(this.game.players[1]);
     this.game.roundCount = 0;
-    this.game.deal();
     this.buildPlayerBar();
-    this.game.populateTable();
-    this.displayRoundMessage();
-    setTimeout(function() {
-      var message = document.getElementById('message-display');
-      message.style.visibility = "hidden";
-      this.buildFirstCard();
-    }.bind(this), 6500);
   },
 
   collectCards: function(player) {
