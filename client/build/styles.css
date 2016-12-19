@@ -13,7 +13,7 @@
      CARD STYLES
 */
 .topCard {
-     display: none;
+     visibility: hidden;
      overflow:auto;
      background-color: white;
      border:2px #C9A955 solid;

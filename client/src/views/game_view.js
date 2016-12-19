@@ -9,14 +9,14 @@ GameView.prototype = {
     var splash = document.getElementById('splash');
     var game = document.getElementById('game');
     splash.style.display = "none";
-    game.style.display = "flex";
-    game.style.flexDirection = "column";
+    // game.style.display = "flex";
+    // game.style.flexDirection = "column";
     var gameBody = document.getElementById('gameBody');
-    gameBody.style.display = "flex";
-    gameBody.style.flexDirection = "row";
+    // gameBody.style.display = "flex";
+    // gameBody.style.flexDirection = "row";
     var playerDetails = document.getElementById('playerDetails');
-    playerDetails.style.display = "flex";
-    playerDetails.style.flexDirection = "row";
+    // playerDetails.style.display = "flex";
+    // playerDetails.style.flexDirection = "row";
     this.buildControlButton();
   },
   buildControlButton: function() {
@@ -32,7 +32,7 @@ GameView.prototype = {
       this.displayRoundMessage();
       setTimeout(function() {
         var message = document.getElementById('message-display');
-        message.style.display = "none";
+        message.style.visibility = "hidden";
         this.buildFirstCard();
       }.bind(this), 5000);
     }.bind(this);
@@ -90,8 +90,8 @@ GameView.prototype = {
     } else {
       var firstCard = document.getElementById('player2Card');
     }
+    firstCard.style.visibility = "visible";
     var fighter = this.game.table[1];
-    firstCard.style.display = "inline-block";
     var image = document.createElement('img');
     image.src = fighter.image;
     var nameH1 = document.createElement('h1');
@@ -125,8 +125,8 @@ GameView.prototype = {
     } else {
       var secondCard = document.getElementById('player1Card');
     }
+    secondCard.style.visibility = "visible";
     var fighter = this.game.table[0];
-    secondCard.style.display = "inline-block";
     var image = document.createElement('img');
     image.src = fighter.image;
     var nameH1 = document.createElement('h1');
@@ -146,14 +146,14 @@ GameView.prototype = {
   displayRoundWinner: function() {
     var message = document.getElementById('message-display');
     message.innerHTML = "";
-    message.style.display = "initial";
+    message.style.visibility = "visible";
     var h2 = document.createElement('h2');
     var h3 = document.createElement('h3');
     if (this.game.winningCard) {
       h2.innerText = this.game.currentPlayer.name + " wins";
       h3.innerText = this.game.winningCard.quote;
     } else {
-      h2.innerText = "draw!";
+      h2.innerText = "DRAW!";
     }
     message.appendChild(h2);
     message.appendChild(h3);
@@ -172,7 +172,7 @@ GameView.prototype = {
         this.displayRoundMessage();
         setTimeout(function() {
           var message = document.getElementById('message-display');
-          message.style.display = "none";
+          message.style.visibility = "hidden";
           this.buildFirstCard();
         }.bind(this), 5000);
       }.bind(this),5000);
@@ -181,10 +181,10 @@ GameView.prototype = {
   clearLastRound: function() {
     var firstCard = document.getElementById('player1Card');
     firstCard.innerHTML = "";
-    firstCard.style.display = "none";
+    firstCard.style.visibility = "hidden";
     var secondCard = document.getElementById('player2Card');
     secondCard.innerHTML = "";
-    secondCard.style.display = "none";
+    secondCard.style.visibility = "hidden";
   },
   gameOver: function() {
     var message = document.getElementById('message-display');
