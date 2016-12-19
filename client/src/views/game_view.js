@@ -96,31 +96,41 @@ GameView.prototype = {
     var nameH1 = document.createElement('h1');
     nameH1.innerText = fighter.name;
     var abilitiesList = document.createElement('ul');
-    // var multiplier = 1;
-    for(ability in fighter.abilities) {
-      // this.timeOutMessage(h2, multiplier, word);
-      // multiplier++;
-      var listItem = document.createElement('li');
-      var button = document.createElement('button');
-      button.innerText = ability + ": " + fighter.abilities[ability];
-      button.key = ability;
-      button.onclick = function(event) {
-        if (!this.isDraw) {
-          this.buildSecondCard();
-          this.game.compareAbility(event.target.key);
-          this.displayRoundWinner();  
-        }
-      }.bind(this);
-      listItem.appendChild(button);
-      abilitiesList.appendChild(listItem);
-    }
     firstCard.appendChild(image);
     firstCard.appendChild(nameH1);
     firstCard.appendChild(abilitiesList);
+    var multiplier = 1;
+    for(ability in fighter.abilities) {
+      var listItem = document.createElement('li');
+      var button = document.createElement('button');
+      listItem.appendChild(button);
+      abilitiesList.appendChild(listItem);
+      this.timeOutFirstCardAbilityBuilder(button, ability, fighter.abilities, multiplier);
+      multiplier++;
+    }
+    
 
   },
 
-  buildSecondCard: function() {
+  timeOutFirstCardAbilityBuilder: function(button, ability, abilities, multiplier) {
+    setTimeout(function() {      
+      button.innerText = ability + ": " + abilities[ability];
+      button.key = ability;
+      button.onclick = function(event) {
+        if (!this.isDraw) {
+          event.target.style.backgroundColor = "black";
+          event.target.style.color = "#C9A955";
+          var chosenAbility = event.target.key
+          this.buildSecondCard(chosenAbility);
+          this.game.compareAbility(chosenAbility);
+          this.displayRoundWinner();  
+        }
+      }.bind(this);
+      
+    }.bind(this), multiplier * 500)
+  },
+
+  buildSecondCard: function(chosenAbility) {
     var currentPlayer = this.game.currentPlayer;
     if (currentPlayer === this.game.players[0]) {
       var secondCard = document.getElementById('player2Card');
@@ -135,56 +145,76 @@ GameView.prototype = {
     var nameH1 = document.createElement('h1');
     nameH1.innerText = fighter.name;
     var abilitiesList = document.createElement('ul');
-    for(ability in fighter.abilities) {
-      var listItem = document.createElement('li');
-      var button = document.createElement('button');
-      button.innerText = ability + ": " + fighter.abilities[ability];
-      listItem.appendChild(button);
-      abilitiesList.appendChild(listItem);
-    }
     secondCard.appendChild(image);
     secondCard.appendChild(nameH1);
     secondCard.appendChild(abilitiesList);
-  },
-  displayRoundWinner: function() {
-    var message = document.getElementById('message-display');
-    message.innerHTML = "";
-    message.style.visibility = "visible";
-    var fighterh3 = document.createElement('h3');
-    var quoteh3= document.createElement('h3');
-    var playerh2 = document.createElement('h2');
-    if (this.game.winningCard) {
-      fighterh3.innerText = this.game.winningCard.name;
-      quoteh3.innerText =  '"' + this.game.winningCard.quote + '"';
-      playerh2.innerText = this.game.currentPlayer.name + " wins";
-    } else {
-      this.isDraw = true;
-      playerh2.innerText = "DRAW!";
+    var multiplier = 1;
+    for(ability in fighter.abilities) {
+      var listItem = document.createElement('li');
+      var button = document.createElement('button');
+      listItem.appendChild(button);
+      abilitiesList.appendChild(listItem); 
+      if (ability !== chosenAbility) {
+        this.timeOutSecondCardAbilityBuilder(button, ability, fighter.abilities, multiplier);
+        multiplier++;
+      } else {
+        button.id = "matchingAbilityButton";
+      }
     }
-    message.appendChild(fighterh3);
-    message.appendChild(quoteh3);
-    message.appendChild(playerh2);
-    if(this.game.isGameWon) {
-      setTimeout(function() {
-        this.clearLastRound();
-        this.gameOver();
-        this.buildPlayerBar();
-      }.bind(this), 5000);
-    } else 
-    {
-      setTimeout(function () {
-        this.clearLastRound();
-        this.buildPlayerBar();
-        this.game.populateTable();
-        this.displayRoundMessage();
+    var matchingButton = document.getElementById('matchingAbilityButton');
+    matchingButton.style.backgroundColor = "black";
+    matchingButton.style.color = "#C9A955";
+    this.timeOutSecondCardAbilityBuilder(matchingButton, chosenAbility, fighter.abilities, multiplier);
+  },
+
+  timeOutSecondCardAbilityBuilder: function(button, ability, abilities, multiplier) {
+    setTimeout(function() {      
+      button.innerText = ability + ": " + abilities[ability];
+      button.key = ability;      
+    }, multiplier * 500)
+  },
+
+  displayRoundWinner: function() {
+    setTimeout(function() {
+      var message = document.getElementById('message-display');
+      message.innerHTML = "";
+      message.style.visibility = "visible";
+      var fighterh3 = document.createElement('h3');
+      var quoteh3= document.createElement('h3');
+      var playerh2 = document.createElement('h2');
+      if (this.game.winningCard) {
+        fighterh3.innerText = this.game.winningCard.name;
+        quoteh3.innerText =  '"' + this.game.winningCard.quote + '"';
+        playerh2.innerText = this.game.currentPlayer.name + " wins";
+      } else {
+        this.isDraw = true;
+        playerh2.innerText = "DRAW!";
+      }
+      message.appendChild(fighterh3);
+      message.appendChild(quoteh3);
+      message.appendChild(playerh2);
+      if(this.game.isGameWon) {
         setTimeout(function() {
-          var message = document.getElementById('message-display');
-          message.style.visibility = "hidden";
-          this.isDraw = false;
-          this.buildFirstCard();
-        }.bind(this), 6500);
-      }.bind(this),5000);
-    } 
+          this.clearLastRound();
+          this.gameOver();
+          this.buildPlayerBar();
+        }.bind(this), 5000);
+      } else 
+      {
+        setTimeout(function () {
+          this.clearLastRound();
+          this.buildPlayerBar();
+          this.game.populateTable();
+          this.displayRoundMessage();
+          setTimeout(function() {
+            var message = document.getElementById('message-display');
+            message.style.visibility = "hidden";
+            this.isDraw = false;
+            this.buildFirstCard();
+          }.bind(this), 6500);
+        }.bind(this),5000);
+      }
+    }.bind(this), 4000); 
   },
   clearLastRound: function() {
     var firstCard = document.getElementById('player1Card');
