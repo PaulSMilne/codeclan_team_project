@@ -234,17 +234,19 @@ GameView.prototype = {
     message.appendChild(winner);
     message.appendChild(h2);
     var rematchButton = document.createElement('button');
-    var quitButton = document.createElement('button');
+    var changeVenueButton = document.createElement('button');
     rematchButton.innerText = "Rematch";
-    quitButton.innerText = "Quit";
+    changeVenueButton.innerText = "Change Venue";
     rematchButton.onclick = function() {
-      this.newGame(); 
+      this.quickGame(); 
     }.bind(this)
     message.appendChild(rematchButton);
-    message.appendChild(quitButton);
+    message.appendChild(changeVenueButton);
+    var startViewButton = document.getElementById('start_play');
+    changeVenueButton.onclick = startViewButton.onclick;
   },
 
-  newGame: function() {
+  quickGame: function() {
     this.collectCards(this.game.players[0]);
     this.collectCards(this.game.players[1]);
     this.game.roundCount = 0;
