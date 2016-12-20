@@ -258,6 +258,9 @@ GameView.prototype = {
     rematchButton.setAttribute('id', 'rematchButton');
     var changeVenueButton = document.createElement('button');
     changeVenueButton.setAttribute('id', 'changeVenueButton');
+    var quitButton = document.createElement('button');
+    quitButton.setAttribute('id', 'quitButton');
+    quitButton.innerText = "Quit";
     rematchButton.innerText = "Rematch";
     changeVenueButton.innerText = "Change Venue";
     rematchButton.onclick = function() {
@@ -267,11 +270,15 @@ GameView.prototype = {
     }.bind(this)
     message.appendChild(rematchButton);
     message.appendChild(changeVenueButton);
+    message.appendChild(quitButton);
     var startViewButton = document.getElementById('start_play');
     changeVenueButton.onclick = function() {
       this.clearCards();
       startViewButton.onclick();
     }.bind(this);
+    quitButton.onclick = function() {
+      window.location.reload(false);
+    }
   },
 
   clearCards: function() {
