@@ -8,8 +8,6 @@ var GameView = function(game, venue) {
 
 GameView.prototype = {
   display: function() {
-    
-    console.log("venue", this.venue);
     var map = document.getElementById('map-view');
     var game = document.getElementById('game');
     map.style.display = "none";
@@ -17,6 +15,11 @@ GameView.prototype = {
     var gameBody = document.getElementById('gameBody');
     gameBody.style.backgroundImage = "url('/images/venues/" + this.venue.image + "')";
     var playerDetails = document.getElementById('playerDetails');
+    var themeMusic = document.createElement('audio');
+    gameBody.appendChild(themeMusic);
+    themeMusic.autoplay = true;
+    themeMusic.loop = true;
+    themeMusic.src = "/audio/" + this.venue.themeMusic;
     this.buildControlButton();
   },
   buildControlButton: function() {

@@ -184,7 +184,7 @@
             "lng": 2.349
           },
           "image": "the_beep.jpg",
-          "themeMusic": "dee_jay_music"
+          "themeMusic": "dee_jay_music.mp3"
         }
       ] 
     },
@@ -222,7 +222,7 @@
             "lng": 121.474
           },
           "image": "downtown.jpg",
-          "themeMusic": "chun_li.mp3"
+          "themeMusic": "chun_li_music.mp3"
         }
       ] 
     },

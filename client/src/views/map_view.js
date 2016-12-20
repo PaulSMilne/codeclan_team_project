@@ -384,7 +384,7 @@ MapView.prototype = {
     }.bind(this))
   },
   addVenueMouseOutListener: function(infoWindow, venueMarker) {
-    venueMarker.addListener('mouseout', function() {
+    var mouseOutHandle = venueMarker.addListener('mouseout', function() {
       infoWindow.close()
       var themeMusic = document.getElementById('music');
       themeMusic.src = "";
