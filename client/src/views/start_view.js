@@ -20,6 +20,9 @@ StartView.prototype = {
         return;
 
       }
+      var themeMusic = document.getElementById('music');
+      themeMusic.src = "/audio/fight_button.mp3";
+      themeMusic.loop = false;
       this.player1 = new Player(p1.value);
       this.player2 = new Player(p2.value);
       console.log("p1", this.player1);
@@ -59,8 +62,6 @@ StartView.prototype = {
       var jsonString = event.target.responseText;
       var data = JSON.parse(jsonString);
       var mapView = new MapView(data, game);
-      var themeMusic = document.getElementById('music');
-      themeMusic.src = "";
       mapView.create();
     }.bind(this);
     request.send();
