@@ -236,7 +236,9 @@ GameView.prototype = {
     message.appendChild(winner);
     message.appendChild(h2);
     var rematchButton = document.createElement('button');
+    rematchButton.setAttribute('id', 'rematchButton');
     var changeVenueButton = document.createElement('button');
+    changeVenueButton.setAttribute('id', 'changeVenueButton');
     rematchButton.innerText = "Rematch";
     changeVenueButton.innerText = "Change Venue";
     rematchButton.onclick = function() {

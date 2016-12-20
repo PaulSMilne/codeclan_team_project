@@ -48,7 +48,7 @@
 
 .test {background-color:red;width:100%;}
 
-/* Player bar styles*/
+/* PLAYER BAR STYLES*/
 
 #playerDetails {
      background-color: black;
@@ -141,9 +141,9 @@
 #message-display {
      background-color: rgba(255, 255, 255, 0.1);
      border-radius:25px;
-;
      color:white;
      font-family: Helvetica, sans-serif;
+     position:relative;
      text-align:center;
      text-shadow: 2px 2px #666;
      width:275px;
@@ -152,6 +152,16 @@
 #message-display h2 {
      font-size: 3em;
 }
+
+#changeVenueButton, #rematchButton {
+     background-color: rgba(255, 255, 255, 0.2);
+     border-radius: 5px;
+     color:white;
+     font-size:1.25em;
+     text-shadow: 2px 2px #666;
+}
+
+#rematchButton{margin-right: 10px;}
 
 /*FLEX BOX STUFF*/
 
