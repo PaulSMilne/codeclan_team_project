@@ -265,10 +265,10 @@ body {
 
 #gameBody {
      align-items: center;
-     background: no-repeat center top;
+     background: no-repeat center center;
      display: flex;
      flex-direction: row;
-     height:500px;
+     height:550px;
      justify-content: space-between;
      padding:20px;
 }

@@ -14,7 +14,7 @@ GameView.prototype = {
     game.style.display = "initial";
     var gameBody = document.getElementById('gameBody');
     gameBody.style.backgroundImage = "url('/images/venues/" + this.venue.image + "')";
-    gameBody.style.backgroundSize = "100%";
+    gameBody.style.backgroundSize = "100% 100%";
     var playerDetails = document.getElementById('playerDetails');
     
     this.buildControlButton();
