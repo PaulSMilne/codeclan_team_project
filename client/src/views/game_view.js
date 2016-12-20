@@ -72,7 +72,7 @@ GameView.prototype = {
     var h2 = document.createElement('h2');
     message.appendChild(h2);
     var firstWord = "Round " + this.game.roundCount;
-    var words = [firstWord, 3, 2, 1, "FIGHT!!!"];
+    var words = [firstWord, 3, 2, 1, "FIGHT!"];
     var multiplier = 1;
     for(word of words) {
       console.log("for word",word);
