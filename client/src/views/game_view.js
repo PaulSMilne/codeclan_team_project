@@ -8,8 +8,6 @@ var GameView = function(game, venue) {
 
 GameView.prototype = {
   display: function() {
-    
-    console.log("venue", this.venue);
     var map = document.getElementById('map-view');
     var game = document.getElementById('game');
     map.style.display = "none";
@@ -18,6 +16,12 @@ GameView.prototype = {
     gameBody.style.backgroundImage = "url('/images/venues/" + this.venue.image + "')";
     gameBody.style.backgroundSize = "100%";
     var playerDetails = document.getElementById('playerDetails');
+    var themeMusic = document.createElement('audio');
+    gameBody.appendChild(themeMusic);
+    themeMusic.id="game-music";
+    themeMusic.autoplay = true;
+    themeMusic.loop = true;
+    themeMusic.src = "/audio/" + this.venue.themeMusic;
     this.buildControlButton();
   },
   buildControlButton: function() {
@@ -228,6 +232,8 @@ GameView.prototype = {
     secondCard.style.visibility = "hidden";
   },
   gameOver: function() {
+    var gameOver = document.getElementById('game-music');
+    gameOver.src = "/audio/game_over.mp3";
     var message = document.getElementById('message-display');
     var h2 = document.createElement("h2");
     var winner = document.createElement("h2");
