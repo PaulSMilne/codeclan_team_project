@@ -70,17 +70,22 @@ body {
 #map-view {
      margin: 50px auto;
      width:1000px;
-     box-shadow: 10px 10px 10px;
+     border:10px solid #FFC301;
 }
+
 
 #map-container {
      height: 600px;
      width: 1000px;
 }
 
+/*HIDING AND DISPLAYING STYLES*/
+
 #game, #winner, #map-view {display:none;}
 
 .newGame {margin-right:10px;}
+
+
 
 /* PLAYER BAR STYLES*/
 
