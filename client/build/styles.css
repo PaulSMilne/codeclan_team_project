@@ -1,3 +1,10 @@
+/*CUSTOM ARCADE FONT*/
+
+@font-face {
+     font-family: "Star Force";
+     src: url(/fonts/Star_Force_TTF.ttf) format("truetype");
+}
+
 /*SPLASH STYLES*/
 #splash {
      background: black no-repeat center top url("/images/logo-sf.png");
@@ -10,6 +17,7 @@
 }
 
 #splash h1 {
+     font-family: "Star Force", sans-serif;
      font-size:2em;
 }
 

@@ -41,8 +41,10 @@ GameView.prototype = {
   buildPlayerBar: function() {
     player1bar = document.getElementById('player1Bar');
     player1Bar.innerHTML = "";
+    var multiplier = this.game.players[0].cardCount();
+    var cardsCount = ("&nbsp;<img src='/images/sf-icon.jpg'>").repeat(multiplier);
     var p1name = document.createElement('h2');
-    p1name.innerText = this.game.players[0].name;
+    p1name.innerHTML = this.game.players[0].name + cardsCount;
     player1bar.appendChild(p1name);
     var p1cardCount = document.createElement('h3');
     p1cardCount.innerText = this.game.players[0].cardCount() + " cards in hand";
@@ -50,8 +52,10 @@ GameView.prototype = {
 
     player2bar = document.getElementById('player2Bar');
     player2Bar.innerHTML = "";
+    var multiplier2 = this.game.players[1].cardCount();
+    var cardsCount2 = ("&nbsp;<img src='/images/sf-icon.jpg'>").repeat(multiplier2);
     var p2name = document.createElement('h2');
-    p2name.innerText = this.game.players[1].name;
+    p2name.innerHTML = this.game.players[1].name + cardsCount2;
     player2bar.appendChild(p2name);
     var p2cardCount = document.createElement('h3');
     p2cardCount.innerText = this.game.players[1].cardCount() + " cards in hand";
