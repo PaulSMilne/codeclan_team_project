@@ -375,7 +375,8 @@ MapView.prototype = {
   addVenueMouseOverListener: function(venueMarker, venue) {
     venueMarker.addListener('mouseover', function() {
       var infoWindow = new google.maps.InfoWindow({
-        content: "Test"
+        content: '<div id="infowindow">' + '<h2 id="venue-name">' + 
+        venue.name + '</h2>' + '<img id="venue-img" src="/images/venues/' + venue.image + '"width="200px"/>' + '</div>'
       })
       infoWindow.open(this.map, venueMarker);
       this.addVenueMouseOutListener(infoWindow, venueMarker);
