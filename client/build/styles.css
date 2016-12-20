@@ -1,3 +1,5 @@
+/*CUSTOM ARCADE FONT*/
+
 @font-face {
     font-family: CapcomStreetFighter;
     src: url(/fonts/Capcom_Serif_Large.ttf);
@@ -22,6 +24,7 @@
 #splash header { margin-bottom:75px; }
 
 #splash h1 {
+
      color: #FFC301;
      font-family: "CapcomStreetFighter", sans-serif;
      font-size:3.5em;
@@ -184,6 +187,11 @@
 #player2Card {
      /*margin: 25px 25px 0 0;*/
      transform: rotate(-2deg);
+}
+
+.cardImage {
+     border:1px #F6F6F6 solid;
+     border-radius:3px;
 }
 
 
