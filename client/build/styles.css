@@ -1,8 +1,13 @@
 /*CUSTOM ARCADE FONT*/
 
 @font-face {
-     font-family: "Star Force";
-     src: url(/fonts/Star_Force_TTF.ttf) format("truetype");
+    font-family: CapcomStreetFighter;
+    src: url(/fonts/Capcom_Serif_Large.ttf);
+}
+
+@font-face {
+    font-family: RydenMK2;
+    src: url(/fonts/Ryden_MK2.ttf);
 }
 
 /*SPLASH STYLES*/
@@ -16,25 +21,43 @@
      text-align:center;
 }
 
+#splash header { margin-bottom:75px; }
+
 #splash h1 {
-     font-family: Helvetica, sans-serif;
-     font-size:2em;
+
+     color: #FFC301;
+     font-family: "CapcomStreetFighter", sans-serif;
+     font-size:3.5em;
 }
 
 #splash p {
-     font-family: Helvetica, sans-serif;
-     font-size:1.5em;
+     color: #FFC301;
+     font-family: "CapcomStreetFighter", sans-serif;
+     font-size:2em;
 }
 
 #splash input {
-     font-size: 1em;
+     font-family:"RydenMK2", sans-serif;
+     font-size: .65em;
+     color:white;
+     border:none;
+     background-color:black;
 }
 
 #splash button {
-     font-size:1em;
+     font-family: "CapcomStreetFighter", sans-serif;
+     font-size:3em;
      padding:10px;
-     color:white;
-     background-color: #FF1403;
+     color:red;
+     background-color: black;
+     margin-top:30px;
+     margin-bottom:20px;
+}
+
+#splash #warning {
+     color: #FFC301;
+     font-family: "CapcomStreetFighter", sans-serif;
+     font-size:1.5em;
 }
 
 
@@ -69,8 +92,9 @@
 }
 
 
-#playerDetails {
-     font-family: Helvetica, sans-serif;
+#playerDetails h2 {
+     font-family: "RydenMK2", sans-serif;
+     font-size:1em;
 }
 
 #player1Bar{
