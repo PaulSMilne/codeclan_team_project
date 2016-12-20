@@ -82,12 +82,10 @@ body {
 
 .newGame {margin-right:10px;}
 
-.test {background-color:red;width:100%;}
-
 /* PLAYER BAR STYLES*/
 
 #playerDetails {
-     background-color: black;
+     background: black url('/images/logo-sf.png') center center/250px no-repeat ;
      color: #FFF11D;
 }
 
@@ -99,6 +97,12 @@ body {
 #playerDetails h2 {
      font-family: "RydenMK2", sans-serif;
      font-size:1em;
+     margin-top:15px;
+     margin-bottom:0;
+}
+#playerDetails h3 {
+     margin-top:0;
+     margin-bottom:0;
 }
 
 #player1Bar{
@@ -197,6 +201,7 @@ body {
 .cardImage {
      border:1px #F6F6F6 solid;
      border-radius:3px;
+     margin-top: 10px;
 }
 
 .bloodImage {
