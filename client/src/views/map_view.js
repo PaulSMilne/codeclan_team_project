@@ -362,6 +362,7 @@ MapView.prototype = {
         })
         this.venueMarkers.push(venueMarker);
         this.addVenueClickListener(venueMarker, venue);
+        this.addVenueMouseOverListener(venueMarker, venue);
       }
     }.bind(this))
   },
@@ -369,6 +370,20 @@ MapView.prototype = {
     venueMarker.addListener('click', function() {
       var gameView = new GameView(this.game, venue)
       gameView.display()
+    }.bind(this))
+  },
+  addVenueMouseOverListener: function(venueMarker, venue) {
+    venueMarker.addListener('mouseover', function() {
+      var infoWindow = new google.maps.InfoWindow({
+        content: "Test"
+      })
+      infoWindow.open(this.map, venueMarker);
+      this.addVenueMouseOutListener(infoWindow, venueMarker);
+    }.bind(this))
+  },
+  addVenueMouseOutListener: function(infoWindow, venueMarker) {
+    venueMarker.addListener('mouseout', function() {
+      infoWindow.close()
     }.bind(this))
   }
 
