@@ -255,6 +255,7 @@ GameView.prototype = {
     rematchButton.innerText = "Rematch";
     changeVenueButton.innerText = "Change Venue";
     rematchButton.onclick = function() {
+      this.game.isGameWon = false;
       this.clearCards();
       this.buildControlButton(); 
     }.bind(this)

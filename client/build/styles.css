@@ -10,6 +10,10 @@
     src: url(/fonts/Ryden_MK2.ttf);
 }
 
+body {
+     background-color: black;
+}
+
 /*SPLASH STYLES*/
 #splash {
      background: black no-repeat center top url("/images/logo-sf.png");
@@ -64,7 +68,7 @@
 /*MAP STYLES*/
 
 #map-view {
-     margin: auto;
+     margin: 50px auto;
      width:1000px;
      box-shadow: 10px 10px 10px;
 }
