@@ -8,8 +8,6 @@ var GameView = function(game, venue) {
 
 GameView.prototype = {
   display: function() {
-    
-    console.log("venue", this.venue);
     var map = document.getElementById('map-view');
     var game = document.getElementById('game');
     map.style.display = "none";
@@ -18,9 +16,14 @@ GameView.prototype = {
     gameBody.style.backgroundImage = "url('/images/venues/" + this.venue.image + "')";
     gameBody.style.backgroundSize = "100%";
     var playerDetails = document.getElementById('playerDetails');
+    
     this.buildControlButton();
   },
   buildControlButton: function() {
+    var gameBody = document.getElementById('gameBody');
+    var themeMusic = document.getElementById('game-music');
+    themeMusic.loop = true;
+    themeMusic.src = "/audio/" + this.venue.themeMusic;
     var message = document.getElementById('message-display');
     message.innerHTML = "";
     var controlButton = document.createElement('button');
@@ -72,7 +75,7 @@ GameView.prototype = {
     var h2 = document.createElement('h2');
     message.appendChild(h2);
     var firstWord = "Round " + this.game.roundCount;
-    var words = [firstWord, 3, 2, 1, "FIGHT!!!"];
+    var words = [firstWord, 3, 2, 1, "FIGHT!"];
     var multiplier = 1;
     for(word of words) {
       console.log("for word",word);
@@ -232,6 +235,11 @@ GameView.prototype = {
     secondCard.style.visibility = "hidden";
   },
   gameOver: function() {
+    this.isDraw = false;
+    var gameOver = document.getElementById('game-music');
+    gameOver.src = "";
+    gameOver.loop = false;
+    gameOver.src = "/audio/game_over.mp3";
     var message = document.getElementById('message-display');
     var h2 = document.createElement("h2");
     var winner = document.createElement("h2");
@@ -262,6 +270,10 @@ GameView.prototype = {
   clearCards: function() {
     this.collectCards(this.game.players[0]);
     this.collectCards(this.game.players[1]);
+    var cardCount = this.game.table.length;
+    for (var i = 0; i < cardCount; i++) {
+      this.game.deck.cards.unshift(this.game.table.pop());
+    }
     this.game.roundCount = 0;
     this.buildPlayerBar();
   },

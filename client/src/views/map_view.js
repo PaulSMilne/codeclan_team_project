@@ -362,6 +362,7 @@ MapView.prototype = {
         })
         this.venueMarkers.push(venueMarker);
         this.addVenueClickListener(venueMarker, venue);
+        this.addVenueMouseOverListener(venueMarker, venue);
       }
     }.bind(this))
   },
@@ -369,6 +370,24 @@ MapView.prototype = {
     venueMarker.addListener('click', function() {
       var gameView = new GameView(this.game, venue)
       gameView.display()
+    }.bind(this))
+  },
+  addVenueMouseOverListener: function(venueMarker, venue) {
+    venueMarker.addListener('mouseover', function() {
+      var infoWindow = new google.maps.InfoWindow({
+        content: '<div id="infowindow">' + '<h2 id="venue-name">Stage: ' + venue.name + '</h2>' + '<img id="venue-img" src="/images/venues/' + venue.image + '"width="200px"/>' + '</div>'
+      })
+      infoWindow.open(this.map, venueMarker);
+      var themeMusic = document.getElementById('music');
+      themeMusic.src = "/audio/" + venue.themeMusic;
+      this.addVenueMouseOutListener(infoWindow, venueMarker);
+    }.bind(this))
+  },
+  addVenueMouseOutListener: function(infoWindow, venueMarker) {
+    var mouseOutHandle = venueMarker.addListener('mouseout', function() {
+      infoWindow.close()
+      var themeMusic = document.getElementById('music');
+      themeMusic.src = "";
     }.bind(this))
   }
 

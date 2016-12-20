@@ -59,6 +59,8 @@ StartView.prototype = {
       var jsonString = event.target.responseText;
       var data = JSON.parse(jsonString);
       var mapView = new MapView(data, game);
+      var themeMusic = document.getElementById('music');
+      themeMusic.src = "";
       mapView.create();
     }.bind(this);
     request.send();

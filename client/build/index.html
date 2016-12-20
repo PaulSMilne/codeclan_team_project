@@ -11,7 +11,7 @@
 
     <section id="splash">
 
-    <audio src="audio/title.mp3" autoplay muted="false"></audio>
+    <audio id="music" src="audio/title.mp3" autoplay></audio>
 
       <header>
         <h1>TOP TRUMPS</h1>
@@ -21,7 +21,7 @@
 
       <p><label for="player2">Player 2</label>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="player2" class="player_name" placeholder="xxx" maxlength="3" size="4"></p>
 
-      <button id="start_play" value="Start Play">FIGHT!!!</button>
+      <button id="start_play" value="Start Play">FIGHT!</button>
 
       <div id="warning"></div>
 
@@ -43,6 +43,7 @@
       </section>
       
       <section id="gameBody">
+        <audio id="game-music" src="" autoplay></audio>
         <section class="topCard" id="player1Card"></section>
         <section id="message-display">
           <!-- <button id="startGameButton">Start Game</button> -->

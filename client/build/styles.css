@@ -14,7 +14,7 @@
 #splash {
      background: black no-repeat center top url("/images/logo-sf.png");
      color:white;
-     font-family: Helvetica, sans-serif;
+     /*font-family: Helvetica, sans-serif;*/
      height:100%;
      padding-bottom: 50px;
      padding-top:225px;
@@ -84,7 +84,7 @@
 
 #playerDetails {
      background-color: black;
-     color:white;
+     color: #FFF11D;
 }
 
 #playerDetails section {
@@ -174,8 +174,8 @@
 #message-display {
      background-color: rgba(255, 255, 255, 0.1);
      border-radius:25px;
-     color:white;
-     font-family: Helvetica, sans-serif;
+     color: #FFF11D;
+     font-family: "RydenMK2", sans-serif;
      position:relative;
      text-align:center;
      text-shadow: 2px 2px #666;
@@ -186,10 +186,18 @@
      font-size: 3em;
 }
 
+#message-display h3 {
+     /*color: #FFC301;*/
+     font-family: "CapcomStreetFighter", sans-serif;
+     font-size:2em;
+     line-height:1.25em;
+}
+
 #changeVenueButton, #rematchButton {
      background-color: rgba(255, 255, 255, 0.2);
      border-radius: 5px;
-     color:white;
+     color: #FFF11D;
+     font-family:"RydenMK2", sans-serif;
      font-size:1.25em;
      margin-bottom:15px;
      text-shadow: 2px 2px #666;
@@ -216,9 +224,9 @@
 
 #startGameButton {
      background-color: rgba(255, 255, 255, 0.2);
-     color:white;
+     color: #FFF11D;
      font-size: 3em;
-     font-family:Helvetica, sans-serif;
+     font-family:"RydenMK2", sans-serif;
      text-shadow: 2px 2px #666;
 }
 
