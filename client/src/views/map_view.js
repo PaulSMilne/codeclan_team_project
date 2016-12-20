@@ -375,16 +375,19 @@ MapView.prototype = {
   addVenueMouseOverListener: function(venueMarker, venue) {
     venueMarker.addListener('mouseover', function() {
       var infoWindow = new google.maps.InfoWindow({
-        content: '<div id="infowindow">' + '<h2 id="venue-name">' + 
-        venue.name + '</h2>' + '<img id="venue-img" src="/images/venues/' + venue.image + '"width="200px"/>' + '</div>'
+        content: '<div id="infowindow">' + '<h2 id="venue-name">Stage: ' + venue.name + '</h2>' + '<img id="venue-img" src="/images/venues/' + venue.image + '"width="200px"/>' + '</div>'
       })
       infoWindow.open(this.map, venueMarker);
+      var themeMusic = document.getElementById('music');
+      themeMusic.src = "/audio/" + venue.themeMusic;
       this.addVenueMouseOutListener(infoWindow, venueMarker);
     }.bind(this))
   },
   addVenueMouseOutListener: function(infoWindow, venueMarker) {
     venueMarker.addListener('mouseout', function() {
       infoWindow.close()
+      var themeMusic = document.getElementById('music');
+      themeMusic.src = "";
     }.bind(this))
   }
 
