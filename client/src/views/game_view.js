@@ -82,13 +82,12 @@ GameView.prototype = {
 
   timeOutMessage: function(h2Element, multiplier, word) {
     setTimeout(function() {
-      console.log("timeout word",word);
       h2Element.innerText = word;
     }, multiplier * 1000);
   },
   
   buildFirstCard: function() {
-    console.log(this);
+    this.buildBlood();
     var currentPlayer = this.game.currentPlayer;
     if (currentPlayer === this.game.players[0]) {
       var firstCard = document.getElementById('player1Card');
@@ -96,6 +95,12 @@ GameView.prototype = {
     } else {
       var firstCard = document.getElementById('player2Card');
     }
+    var firstblood = document.createElement('img');
+    firstblood.id = "first-blood";
+    firstblood.classList.add("bloodImage");
+    firstblood.src = "/images/blood.png";
+    firstblood.style.diplay = "none";
+    firstCard.appendChild(firstblood);
     firstCard.style.visibility = "visible";
     var fighter = this.game.table[1];
     var image = document.createElement('img');
@@ -189,6 +194,7 @@ GameView.prototype = {
       var quoteh3= document.createElement('h3');
       var playerh2 = document.createElement('h2');
       if (this.game.winningCard) {
+        this.showBlood();
         fighterh3.innerText = this.game.winningCard.name+ " . . .";
         quoteh3.innerText =  '"' + this.game.winningCard.quote + '"';
         playerh2.innerText = this.game.currentPlayer.name + " wins";
@@ -278,6 +284,36 @@ GameView.prototype = {
     var cardCount = player.hand.length;
     for (var i = 0; i < cardCount; i++) {
       this.game.deck.cards.unshift(player.hand.pop());
+    }
+  },
+
+  buildBlood: function() {
+    var firstCard = document.getElementById('player1Card');
+    var secondCard = document.getElementById('player2Card');
+
+    var firstblood = document.createElement('img');
+    firstblood.id = "p1-blood";
+    firstblood.classList.add("bloodImage");
+    firstblood.src = "/images/blood.png";
+    firstblood.style.diplay = "none";
+    firstCard.appendChild(firstblood);
+
+    var secondBlood = document.createElement('img');
+    secondBlood.id = "p2-blood";
+    secondBlood.classList.add("bloodImage");
+    secondBlood.src = "/images/blood.png";
+    secondBlood.style.diplay = "none";
+    secondCard.appendChild(secondBlood);
+  },
+
+  showBlood: function() {
+    var currentPlayer = this.game.currentPlayer;
+    if (currentPlayer === this.game.players[0]) {
+      var p2Blood = document.getElementById('p2-blood');
+      p2Blood.style.display = "initial"
+    } else {
+      var p1Blood= document.getElementById('p1-blood');
+      p1Blood.style.display = "initial"
     }
   }
 

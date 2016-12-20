@@ -46,7 +46,7 @@ StartView.prototype = {
   },
   createNewGame: function(data) {
     var deck = new Deck(data.fighters);
-    var game = new Game(deck, 1);
+    var game = new Game(deck, 3);
     game.addPlayer(this.player1);
     game.addPlayer(this.player2);
     this.getVenues(game);

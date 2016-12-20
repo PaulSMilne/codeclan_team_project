@@ -128,6 +128,7 @@
 */
 .topCard {
      visibility: hidden;
+     position: relative;
      background-color: white;
      border:2px #C9A955 solid;
      border-radius:10px;
@@ -184,6 +185,16 @@
 #player2Card {
      /*margin: 25px 25px 0 0;*/
      transform: rotate(-2deg);
+}
+
+.bloodImage {
+     display: none;
+     position: absolute;
+     height: 675px;
+     width: 100%;
+     top: 0;
+     right: 0;
+     z-index: 10;
 }
 
 
