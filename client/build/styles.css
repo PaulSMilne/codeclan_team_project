@@ -168,6 +168,11 @@
      transform: rotate(-2deg);
 }
 
+.cardImage {
+     border:1px #F6F6F6 solid;
+     border-radius:3px;
+}
+
 
 /*MESSAGE DISPLAY STYLES*/
 

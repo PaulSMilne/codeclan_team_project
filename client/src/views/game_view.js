@@ -48,7 +48,7 @@ GameView.prototype = {
     player1bar = document.getElementById('player1Bar');
     player1Bar.innerHTML = "";
     var multiplier = this.game.players[0].cardCount();
-    var cardsCount = ("&nbsp;<img src='/images/sf-icon.jpg'>").repeat(multiplier);
+    var cardsCount = ("&nbsp;<img class='cardImage' src='/images/littlecardback.png'>").repeat(multiplier);
     var p1name = document.createElement('h2');
     p1name.innerText = this.game.players[0].name;
     player1bar.appendChild(p1name);
@@ -59,7 +59,7 @@ GameView.prototype = {
     player2bar = document.getElementById('player2Bar');
     player2Bar.innerHTML = "";
     var multiplier2 = this.game.players[1].cardCount();
-    var cardsCount2 = ("&nbsp;<img src='/images/sf-icon.jpg'>").repeat(multiplier2);
+    var cardsCount2 = ("&nbsp;<img class='cardImage' src='/images/littlecardback.png'>").repeat(multiplier2);
     var p2name = document.createElement('h2');
     p2name.innerText = this.game.players[1].name;
     player2bar.appendChild(p2name);
