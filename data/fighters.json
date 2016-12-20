@@ -397,7 +397,7 @@
     },
     {
       "id": 23,
-      "name": "Juri Han",
+      "name": "Juri",
       "homeCountry": "South Korea",
       "fightingStyle": "Taekwondo",
       "quote": "Well then, where do you want me to break you first?",
@@ -415,7 +415,7 @@
     },
     {
       "id": 24,
-      "name": "Ken Masters",
+      "name": "Ken",
       "homeCountry": "United States of America",
       "fightingStyle": "Ansatsuken",
       "quote": "I'm ready for ya, bring it on!",
@@ -541,7 +541,7 @@
     },
     {
       "id": 31,
-      "name": "Sakura Kasugano",
+      "name": "Sakura",
       "homeCountry": "Japan",
       "fightingStyle": "Ansatsuken",
       "quote": "Training is fun if you set your mind to a specific goal to work toward!",
