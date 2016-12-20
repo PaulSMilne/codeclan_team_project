@@ -15,7 +15,7 @@
             "lng": 127.977
           },
           "image": "kanzuki_beach.jpg",
-          "themeMusic": ""
+          "themeMusic": "karin_music.mp3"
         },
         {
           "name": "Suzaku Castle",
@@ -24,7 +24,7 @@
             "lng": 141.354
           },
           "image": "suzaku_castle.jpg",
-          "themeMusic": ""
+          "themeMusic": "ryu_music.mp3"
         },
         {
           "name": "Kanzuki Estate",
@@ -33,7 +33,7 @@
             "lng": 135.502
           },
           "image": "kanzuki_estate.jpg",
-          "themeMusic": ""
+          "themeMusic": "karin_estate_music.mp3"
         },
         {
           "name": "Bath House",
@@ -42,7 +42,7 @@
             "lng": 139.753
           },
           "image": "bath_house.jpg",
-          "themeMusic": ""
+          "themeMusic": "honda_music.mp3"
         }
       ]
     },
@@ -61,7 +61,7 @@
             "lng": 100.502
           },
           "image": "buddha_statue.jpg",
-          "themeMusic": ""
+          "themeMusic": "sagat_music.mp3"
         }
       ] 
     },
@@ -70,7 +70,7 @@
       "flag": "united_states_of_america.png",
       "countryCoords" : {
         "lat": 37.090,
-        "lng": -95.713
+        "lng": -110.713
       },
       "venues": [
         {
@@ -80,7 +80,7 @@
             "lng": -115.140
           },
           "image": "ring_of_destiny.png",
-          "themeMusic": ""
+          "themeMusic": "ken_music.mp3"
         },
         {
           "name": "Air Force Base",
@@ -89,7 +89,7 @@
             "lng": -105.782
           },
           "image": "air_force_base.jpg",
-          "themeMusic": ""
+          "themeMusic": "guile_music.mp3"
         }
       ] 
     },
@@ -98,7 +98,7 @@
       "flag": "russia.png",
       "countryCoords" : {
         "lat": 61.524,
-        "lng": 105.319
+        "lng": 40.319
       },
       "venues": [
         {
@@ -108,7 +108,7 @@
             "lng": 37.618
           },
           "image": "factory.jpg",
-          "themeMusic": ""
+          "themeMusic": "zangief_music.mp3"
         }
       ] 
     },
@@ -127,7 +127,7 @@
             "lng": 174.763
           },
           "image": "mysterious_cove.jpg",
-          "themeMusic": ""
+          "themeMusic": "balrog_music.mp3"
         }
       ] 
     },
@@ -142,11 +142,11 @@
         {
           "name": "Shadaloo Base",
           "coords": {
-            "lat": -21.833,
-            "lng": -138.917
+            "lat": -18.767,
+            "lng": 46.869
           },
           "image": "shadaloo_base.jpg",
-          "themeMusic": ""
+          "themeMusic": "bison_music.mp3"
         }
       ]
     },
@@ -165,7 +165,7 @@
             "lng": -0.128
           },
           "image": "distillery.jpg",
-          "themeMusic": ""
+          "themeMusic": "cammy_music.mp3"
         }
       ] 
     },
@@ -184,7 +184,7 @@
             "lng": 2.349
           },
           "image": "the_beep.jpg",
-          "themeMusic": ""
+          "themeMusic": "dee_jay_music"
         }
       ] 
     },
@@ -192,7 +192,7 @@
       "country": "Brazil",
       "flag": "brazil.png",
       "countryCoords" : {
-        "lat": -14.235,
+        "lat": -7.235,
         "lng": -51.925
       },
       "venues": [
@@ -203,7 +203,7 @@
             "lng": -62.216
           },
           "image": "jungle.jpg",
-          "themeMusic": ""
+          "themeMusic": "blanka_music.mp3"
         }
       ] 
     },
@@ -212,7 +212,7 @@
       "flag": "china.png",
       "countryCoords" : {
         "lat": 35.862,
-        "lng": 104.195
+        "lng": 120.195
       },
       "venues": [
         {
@@ -222,7 +222,7 @@
             "lng": 121.474
           },
           "image": "downtown.jpg",
-          "themeMusic": ""
+          "themeMusic": "chun_li.mp3"
         }
       ] 
     },
@@ -241,7 +241,7 @@
             "lng": 114.149
           },
           "image": "big_city.jpg",
-          "themeMusic": ""
+          "themeMusic": "fei_long_music.mp3"
         }
       ] 
     },
@@ -260,7 +260,7 @@
             "lng": 2.154
           },
           "image": "the_cage.jpg",
-          "themeMusic": ""
+          "themeMusic": "vega_music.mp3"
         }
       ]  
     },
@@ -268,7 +268,7 @@
       "country": "India",
       "flag": "india.png",
       "countryCoords" : {
-        "lat": 20.594,
+        "lat": 25.594,
         "lng": 78.963
       },
       "venues": [
@@ -279,7 +279,7 @@
             "lng": 77.209
           },
           "image": "hyper_street.jpg",
-          "themeMusic": ""
+          "themeMusic": "dhalsim_music.mp3"
         }
       ] 
     }

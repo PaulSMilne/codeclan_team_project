@@ -5,13 +5,15 @@ var MapView = function(data, game) {
   this.game = game;
   this.map = null;
   this.countryMarkers = [];
-  
+  this.venueMarkers = []; 
 }
 
 MapView.prototype = {
   create: function() {
     var splash = document.getElementById('splash');
     splash.style.display = "none";
+    var gameView = document.getElementById('game');
+    gameView.style.display = "none";
     var mapView = document.getElementById('map-view');
     mapView.style.display = "block";
     var container = document.getElementById('map-container');
@@ -305,8 +307,26 @@ MapView.prototype = {
         }
       ]
     })
+    this.addLogo();
     this.addMarkers();
   },
+  addLogo: function() {
+    var logoContainer = document.createElement('div');
+    var logo = document.createElement('img');
+    logo.src = "/images/logo-sf.png";
+    logo.style.width = "300px";
+    logoContainer.appendChild(logo);
+    logoContainer.onclick = function() {
+      this.map.setCenter({lat: 40, lng: 20});
+      this.map.setZoom(2);
+      for (venue of this.venueMarkers) {
+        venue.setMap(null);
+      }
+      this.addMarkers();
+    }.bind(this);
+    this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(logoContainer);
+  },
+
   addMarkers: function() {
     var countries = this.data.countries;
     for(country of countries) {
@@ -334,13 +354,18 @@ MapView.prototype = {
       for(venue of venues) {
         var venueMarker = new google.maps.Marker({
           position: venue.coords,
-          map: this.map
+          map: this.map,
+          icon: {
+            url: "/images/fist_icon.ico",
+            scaledSize: new google.maps.Size(50, 50)
+          }
         })
-        this.addVenueListener(venueMarker, venue);
+        this.venueMarkers.push(venueMarker);
+        this.addVenueClickListener(venueMarker, venue);
       }
     }.bind(this))
   },
-  addVenueListener: function(venueMarker, venue) {
+  addVenueClickListener: function(venueMarker, venue) {
     venueMarker.addListener('click', function() {
       var gameView = new GameView(this.game, venue)
       gameView.display()

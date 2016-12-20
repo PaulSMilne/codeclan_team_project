@@ -43,11 +43,9 @@ StartView.prototype = {
   },
   createNewGame: function(data) {
     var deck = new Deck(data.fighters);
-    var game = new Game(deck, 3);
+    var game = new Game(deck, 1);
     game.addPlayer(this.player1);
     game.addPlayer(this.player2);
-    // var gameView = new GameView(game);
-    // gameView.display();
     this.getVenues(game);
   },
   getVenues: function(game) {
