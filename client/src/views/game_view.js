@@ -111,24 +111,29 @@ GameView.prototype = {
     image.src = fighter.image;
     var nameH1 = document.createElement('h1');
     nameH1.innerText = fighter.name;
+    var soundEffect = document.createElement('audio');
+    soundEffect.id = "sound-effect";
+    soundEffect.autoplay = true;
     var abilitiesList = document.createElement('ul');
     firstCard.appendChild(image);
     firstCard.appendChild(nameH1);
     firstCard.appendChild(abilitiesList);
+    firstCard.appendChild(soundEffect);
     var multiplier = 1;
     for(ability in fighter.abilities) {
       var listItem = document.createElement('li');
       var button = document.createElement('button');
       listItem.appendChild(button);
       abilitiesList.appendChild(listItem);
-      this.timeOutFirstCardAbilityBuilder(button, ability, fighter.abilities, multiplier);
+      this.timeOutFirstCardAbilityBuilder(soundEffect, button, ability, fighter.abilities, multiplier);
       multiplier++;
     }
   
   },
 
-  timeOutFirstCardAbilityBuilder: function(button, ability, abilities, multiplier) {
-    setTimeout(function() {      
+  timeOutFirstCardAbilityBuilder: function(soundEffect, button, ability, abilities, multiplier) {
+    setTimeout(function() { 
+      soundEffect.src = "/audio/punch.mp3";     
       button.innerText = ability + ": " + abilities[ability];
       button.key = ability;
       button.onclick = function(event) {
@@ -183,7 +188,9 @@ GameView.prototype = {
   },
 
   timeOutSecondCardAbilityBuilder: function(button, ability, abilities, multiplier) {
-    setTimeout(function() {      
+    setTimeout(function() {
+      var soundEffect = document.getElementById('sound-effect');
+      soundEffect.src = "/audio/punch.mp3";      
       button.innerText = ability + ": " + abilities[ability];
       button.key = ability;      
     }, multiplier * 500)
