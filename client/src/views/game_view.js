@@ -233,6 +233,7 @@ GameView.prototype = {
   },
   gameOver: function() {
     var gameOver = document.getElementById('game-music');
+    gameOver.loop = false;
     gameOver.src = "/audio/game_over.mp3";
     var message = document.getElementById('message-display');
     var h2 = document.createElement("h2");
