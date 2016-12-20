@@ -100,6 +100,27 @@
 #player2Bar{
      margin-right:75px;
 }
+#venue-container{
+     margin-right:30px;
+     margin-bottom:30px;
+     padding: 0 20px 20px 20px;
+     background-color: rgba(255, 255, 255, 0.1);
+     border-radius:25px;
+     text-align: center;
+}
+#venue-container h2 {
+     color: white;
+     text-shadow: 2px 2px #444;
+     font-family: "CapcomStreetFighter", sans-serif;
+     font-size:2.5em;
+}
+
+#venue-container img{
+     width: 350px;
+     height: 200px;
+     border-radius:5px;
+     box-shadow: 3px 3px 10px;
+}
 
 
 /*

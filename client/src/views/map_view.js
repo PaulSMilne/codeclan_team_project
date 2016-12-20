@@ -324,7 +324,14 @@ MapView.prototype = {
       }
       this.addMarkers();
     }.bind(this);
+    logoContainer.index = 1;
     this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(logoContainer);
+    var venueContainer = document.createElement('div');
+    venueContainer.id = "venue-container";
+    venueContainer.index = 2;
+    venueContainer.style.display = "none";
+    this.map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(venueContainer);
+    
   },
 
   addMarkers: function() {
@@ -374,18 +381,23 @@ MapView.prototype = {
   },
   addVenueMouseOverListener: function(venueMarker, venue) {
     venueMarker.addListener('mouseover', function() {
-      var infoWindow = new google.maps.InfoWindow({
-        content: '<div id="infowindow">' + '<h2 id="venue-name">Stage: ' + venue.name + '</h2>' + '<img id="venue-img" src="/images/venues/' + venue.image + '"width="200px"/>' + '</div>'
-      })
-      infoWindow.open(this.map, venueMarker);
+      var venueContainer = document.getElementById('venue-container');
+      venueContainer.style.display = "initial"
+      var venueName = document.createElement('h2');
+      var image = document.createElement('img');
+      venueContainer.appendChild(venueName);
+      venueContainer.appendChild(image);
+      venueName.innerText = "Stage: " + venue.name;
+      image.src = "/images/venues/"+venue.image;
       var themeMusic = document.getElementById('music');
       themeMusic.src = "/audio/" + venue.themeMusic;
-      this.addVenueMouseOutListener(infoWindow, venueMarker);
+      this.addVenueMouseOutListener(venueMarker, venueContainer);
     }.bind(this))
   },
-  addVenueMouseOutListener: function(infoWindow, venueMarker) {
+  addVenueMouseOutListener: function(venueMarker, venueContainer) {
     var mouseOutHandle = venueMarker.addListener('mouseout', function() {
-      infoWindow.close()
+      venueContainer.innerHTML = "";
+      venueContainer.style.display = "none";
       var themeMusic = document.getElementById('music');
       themeMusic.src = "";
     }.bind(this))
