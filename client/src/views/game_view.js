@@ -17,6 +17,7 @@ GameView.prototype = {
     var playerDetails = document.getElementById('playerDetails');
     var themeMusic = document.createElement('audio');
     gameBody.appendChild(themeMusic);
+    themeMusic.id="game-music";
     themeMusic.autoplay = true;
     themeMusic.loop = true;
     themeMusic.src = "/audio/" + this.venue.themeMusic;
@@ -230,6 +231,8 @@ GameView.prototype = {
     secondCard.style.visibility = "hidden";
   },
   gameOver: function() {
+    var gameOver = document.getElementById('game-music');
+    gameOver.src = "/audio/game_over.mp3";
     var message = document.getElementById('message-display');
     var h2 = document.createElement("h2");
     var winner = document.createElement("h2");
