@@ -6,6 +6,7 @@ var Game = function(deck, handSize) {
   this.currentPlayer;
   this.isGameWon = false;
   this.winningCard = null;
+  this.losingCard = null;
   this.roundCount = 0;
 };
 
@@ -39,14 +40,17 @@ Game.prototype = {
     var secondCard = this.table[0].abilities[ability];
     if(firstCard === secondCard ) {
       this.winningCard = null;
+      this.losingCard = null;
     }
     else if (firstCard > secondCard ) {
       this.winningCard = this.table[1];
+      this.losingCard = this.table[0];
       while (this.table.length > 0) {
         this.currentPlayer.addCard(this.table.pop());
       }
     } else {
       this.winningCard = this.table[0];
+      this.losingCard = this.table[1];
       this.updateTurn();
         while (this.table.length > 0) {
           this.currentPlayer.addCard(this.table.pop());
@@ -62,16 +66,19 @@ Game.prototype = {
     var secondCard = this.table[0].abilities[ability];
     if(firstCard === secondCard ) {
       this.winningCard = null;
+      this.losingCard = null;
       return;
     }
     else if (firstCard > secondCard) {
       this.winningCard = this.table[1];
+      this.losingCard = this.table[0];
       this.updateTurn();
       while (this.table.length > 0) {
         this.currentPlayer.addCard(this.table.pop());
       }
     } else {
       this.winningCard = this.table[0];
+      this.losingCard = this.table[1];
         while(this.table.length > 0) {
           this.currentPlayer.addCard(this.table.pop());
         }
