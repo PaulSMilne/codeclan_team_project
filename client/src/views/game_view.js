@@ -127,6 +127,7 @@ GameView.prototype = {
     nameH1.innerText = fighter.name;
     var soundEffect = document.getElementById('sound-effect');
     var abilitiesList = document.createElement('ul');
+    abilitiesList.id = "firstcard-abilities";
     firstCard.appendChild(image);
     firstCard.appendChild(nameH1);
     firstCard.appendChild(abilitiesList);
@@ -154,7 +155,11 @@ GameView.prototype = {
           var chosenAbility = event.target.key
           this.buildSecondCard(chosenAbility);
           this.game.compareAbility(chosenAbility);
-          this.displayRoundWinner();  
+          this.displayRoundWinner(); 
+          var abilitiesList = document.getElementById('firstcard-abilities')
+          for (ability of abilitiesList.children) {
+            ability.firstChild.onclick = null;
+          } 
         }
       }.bind(this);
       
@@ -229,6 +234,7 @@ GameView.prototype = {
         playerh2.innerText = this.game.currentPlayer.name + " wins";
       } else {
         this.isDraw = true;
+        soundEffect.src = "/audio/draw.mp3";
         playerh2.innerText = "DRAW!";
       }
       message.appendChild(fighterh3);
