@@ -218,11 +218,11 @@ GameView.prototype = {
       var playerh2 = document.createElement('h2');
       if (this.game.winningCard) {
         this.showBlood();
-        console.log("card gender", this.game.winningCard.gender)
-        if (this.game.winningCard.gender === "male") {
-          soundEffect.src = "/audio/female_defeat.mp3";  
+        console.log("card gender", this.game.losingCard.gender)
+        if (this.game.losingCard.gender === "male") {
+          soundEffect.src = "/audio/male_defeat.mp3";
         } else {
-          soundEffect.src = "/audio/male_defeat.mp3"; 
+          soundEffect.src = "/audio/female_defeat.mp3";
         }
         fighterh3.innerText = this.game.winningCard.name+ " . . .";
         quoteh3.innerText =  '"' + this.game.winningCard.quote + '"';

@@ -11,6 +11,10 @@ var StartView = function() {
 
 StartView.prototype = {
   makePlayers: function() {
+    setTimeout(function() {
+      var themeMusic = document.getElementById('music');
+      themeMusic.src = "/audio/title.mp3";
+    }, 4000)
     var startPlayButton = document.getElementById('start_play');
     startPlayButton.onclick = function() {
       var p1 = document.getElementById('player1');
