@@ -11,7 +11,7 @@ GameView.prototype = {
     var map = document.getElementById('map-view');
     var game = document.getElementById('game');
     map.style.display = "none";
-    game.style.display = "initial";
+    game.style.display = "flex";
     var gameBody = document.getElementById('gameBody');
     gameBody.style.backgroundImage = "url('/images/venues/" + this.venue.image + "')";
     gameBody.style.backgroundSize = "100%";
@@ -280,6 +280,7 @@ GameView.prototype = {
     message.appendChild(quitButton);
     var startViewButton = document.getElementById('start_play');
     changeVenueButton.onclick = function() {
+      game.style.display = "none";
       this.clearCards();
       startViewButton.onclick();
     }.bind(this);

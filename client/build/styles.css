@@ -79,10 +79,6 @@ body {
      width: 1000px;
 }
 
-/*HIDING AND DISPLAYING STYLES*/
-
-#game, #winner, #map-view {display:none;}
-
 .newGame {margin-right:10px;}
 
 
@@ -92,6 +88,9 @@ body {
 #playerDetails {
      background: black url('/images/logo-sf.png') center center/250px no-repeat ;
      color: #FFF11D;
+     height: 112px;
+     box-shadow: 0 8px 10px -6px;
+     z-index: 5;
 }
 
 #playerDetails section {
@@ -286,4 +285,8 @@ body {
      flex-direction: row;
      justify-content: space-between;
 }
+
+/*HIDING AND DISPLAYING STYLES*/
+
+#game, #winner, #map-view {display:none;}
 
