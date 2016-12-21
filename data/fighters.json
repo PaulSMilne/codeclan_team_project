@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Abel",
+      "gender": "male",
       "homeCountry": "France",
       "fightingStyle": "MMA",
       "quote": "You've got good skills, but you have some growing to do before going pro.",
@@ -21,6 +22,7 @@
     {
       "id": 2,
       "name": "Adon",
+      "gender": "male",
       "homeCountry": "Thailand",
       "fightingStyle": "Muay Thai",
       "quote": "I'll show you just how strong I am!",
@@ -39,6 +41,7 @@
     {
       "id": 3,
       "name": "Akuma",
+      "gender": "male",
       "homeCountry": "Japan",
       "fightingStyle": "Ansatsuken",
       "quote": "I am Akuma. And I will teach you the meaning of pain!",
@@ -57,6 +60,7 @@
     {
       "id": 4,
       "name": "Balrog",
+      "gender": "male",
       "homeCountry": "United States of America",
       "fightingStyle": "Fight-Style Boxing",
       "quote": "I'll make you regret that you were ever born. You two-bit chump!",
@@ -75,6 +79,7 @@
     {
       "id": 5,
       "name": "Blanka",
+      "gender": "male",
       "homeCountry": "Brazil",
       "fightingStyle": "Electricity, feral maneuvers",
       "quote": "Seeing you in action is a joke!",
@@ -93,6 +98,7 @@
     {
       "id": 6,
       "name": "Cammy",
+      "gender": "female",
       "homeCountry": "United Kingdom",
       "fightingStyle": "Shadaloo",
       "quote": "You must enjoy being beat. Let me remodel your face one more time.",
@@ -111,6 +117,7 @@
     {
       "id": 7,
       "name": "Chun Li",
+      "gender": "female",
       "homeCountry": "China",
       "fightingStyle": "Chinese martial arts",
       "quote": "Want to see my Kung-Fu? I'll show you",
@@ -129,6 +136,7 @@
     {
       "id": 8,
       "name": "Cody",
+      "gender": "male",
       "homeCountry": "United States of America",
       "fightingStyle": "Underworld brawling",
       "quote": "Well now, let's see if we can't do somethin' about my boredom.",
@@ -147,6 +155,7 @@
     {
       "id": 9,
       "name": "C. Viper",
+      "gender": "female",
       "homeCountry": "United States of America",
       "fightingStyle": "Using secret spy gadgets",
       "quote": "Try getting a real job!",
@@ -165,6 +174,7 @@
     { 
       "id": 10,
       "name": "Dan",
+      "gender": "male",
       "homeCountry": "Hong Kong",
       "fightingStyle": "Saikyo Ultimate Style",
       "quote": "I hope you're ready for a beating!",
@@ -182,6 +192,7 @@
     },
     { "id": 11,
       "name": "Dee Jay",
+      "gender": "male",
       "homeCountry": "Jamaica",
       "fightingStyle": "Kickboxing",
       "quote": "Were my killer combos too much for you, mon?",
@@ -200,6 +211,7 @@
     {
       "id": 12,
       "name": "Dhalsim",
+      "gender": "male",
       "homeCountry": "India",
       "fightingStyle": "Esoteris Yoga",
       "quote": "Today, I shall win again.",
@@ -218,6 +230,7 @@
     {
       "id": 13,
       "name": "Dudley",
+      "gender": "male",
       "homeCountry": "United Kingdom",
       "fightingStyle": "Boxing",
       "quote": "You have no dignity!",
@@ -236,6 +249,7 @@
     {
       "id": 14,
       "name": "E. Honda",
+      "gender": "male",
       "homeCountry": "Japan",
       "fightingStyle": "Sumo Wrestling",
       "quote": "It's only natural that a Sumo should become the World's Strongest!",
@@ -254,6 +268,7 @@
     {
       "id": 15,
       "name": "El Fuerte",
+      "gender": "male",
       "homeCountry": "Mexico",
       "fightingStyle": "Lucha Libre (Mexican wrestling)",
       "quote": "It's Super Dynamic Cooking Time!",
@@ -272,6 +287,7 @@
     {
       "id": 16,
       "name": "Fei Long",
+      "gender": "male",
       "homeCountry": "Hong Kong",
       "fightingStyle": "Kung Fu",
       "quote": "There is no way you can ever knock me out!",
@@ -290,6 +306,7 @@
     {
       "id": 17,
       "name": "Gen",
+      "gender": "male",
       "homeCountry": "China",
       "fightingStyle": "Chinese martial arts (Sō and Ki styles)",
       "quote": "You cannot keep my fists in your sight, for they move with the fury of hell!",
@@ -308,6 +325,7 @@
     {
       "id": 18,
       "name": "Gouken",
+      "gender": "male",
       "homeCountry": "Japan",
       "fightingStyle": "Ansatsuken",
       "quote": "Concentrate not on destroying your foe, but on attaining your own victory.",
@@ -326,6 +344,7 @@
     {
       "id": 19,
       "name": "Guile",
+      "gender": "male",
       "homeCountry": "United States of America",
       "fightingStyle": "Martial Arts and Pro Wrestling",
       "quote": "Go home and be a family man.",
@@ -344,6 +363,7 @@
     {
       "id": 20,
       "name": "Guy",
+      "gender": "male",
       "homeCountry": "United States of America",
       "fightingStyle": "Bushin-ryu Ninjutsu",
       "quote": "There's something you should get to know better. Your limits.",
@@ -362,6 +382,7 @@
     {
       "id": 21,
       "name": "Hakan",
+      "gender": "male",
       "homeCountry": "Turkey",
       "fightingStyle": "Turkish Oil Wrestling",
       "quote": "Looks like it's time to oil up!",
@@ -380,6 +401,7 @@
     {
       "id": 22,
       "name": "Ibuki",
+      "gender": "female",
       "homeCountry": "Japan",
       "fightingStyle": "Ninjutsu",
       "quote": "Ibuki! On the scene!",
@@ -398,6 +420,7 @@
     {
       "id": 23,
       "name": "Juri",
+      "gender": "female",
       "homeCountry": "South Korea",
       "fightingStyle": "Taekwondo",
       "quote": "Well then, where do you want me to break you first?",
@@ -416,6 +439,7 @@
     {
       "id": 24,
       "name": "Ken",
+      "gender": "male",
       "homeCountry": "United States of America",
       "fightingStyle": "Ansatsuken",
       "quote": "I'm ready for ya, bring it on!",
@@ -434,6 +458,7 @@
     {
       "id": 25,
       "name": "Makoto",
+      "gender": "female",
       "homeCountry": "Japan",
       "fightingStyle": "Rindoukan",
       "quote": "I know I'm still young, but fighters in training really have the desire to win!",
@@ -452,6 +477,7 @@
     {
       "id": 26,
       "name": "M. Bison",
+      "gender": "male",
       "homeCountry": "Unknown",
       "fightingStyle": "Psycho Power",
       "quote": "Now, face the mighty Bison!",
@@ -470,6 +496,7 @@
     {
       "id": 27,
       "name": "Rose",
+      "gender": "female",
       "homeCountry": "Italy",
       "fightingStyle": "Soul Power",
       "quote": "You're nervous, aren't you?",
@@ -488,6 +515,7 @@
     {
       "id": 28,
       "name": "Rufus",
+      "gender": "male",
       "homeCountry": "United States of America",
       "fightingStyle": "Kung Fu",
       "quote": "My fists'll give you amnesia!",
@@ -506,6 +534,7 @@
     {
       "id": 29,
       "name": "Ryu",
+      "gender": "male",
       "homeCountry": "Japan",
       "fightingStyle": "Ansatsuken",
       "quote": "This is the path of my destiny!",
@@ -524,6 +553,7 @@
     {
       "id": 30,
       "name": "Sagat",
+      "gender": "male",
       "homeCountry": "Thailand",
       "fightingStyle": "Muay Thai",
       "quote": "A strong fighter is not one who always wins, but one who stands after defeat.",
@@ -542,6 +572,7 @@
     {
       "id": 31,
       "name": "Sakura",
+      "gender": "female",
       "homeCountry": "Japan",
       "fightingStyle": "Ansatsuken",
       "quote": "Training is fun if you set your mind to a specific goal to work toward!",
@@ -560,6 +591,7 @@
     {
       "id": 32,
       "name": "Seth",
+      "gender": "male",
       "homeCountry": "Unknown",
       "fightingStyle": "Transcendent Fighting Style",
       "quote": "Show me everything you have to offer.",
@@ -578,6 +610,7 @@
     {
       "id": 33,
       "name": "T. Hawk",
+      "gender": "male",
       "homeCountry": "Mexico",
       "fightingStyle": "Thunderfoot Martial Arts",
       "quote": "Your scream sounds like a pathetic war cry!",
@@ -596,6 +629,7 @@
     {
       "id": 34,
       "name": "Vega",
+      "gender": "male",
       "homeCountry": "Spain",
       "fightingStyle": "Spanish Ninjutsu",
       "quote": "You'll be seeing red by the time I'm done with you...",
@@ -614,6 +648,7 @@
     {
       "id": 35,
       "name": "Zangief",
+      "gender": "male",
       "homeCountry": "Russia",
       "fightingStyle": "Russian Pro Wrestling",
       "quote": "I am...the Red Cyclone!",

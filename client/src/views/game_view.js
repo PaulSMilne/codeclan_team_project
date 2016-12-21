@@ -21,6 +21,10 @@ GameView.prototype = {
   },
   buildControlButton: function() {
     var gameBody = document.getElementById('gameBody');
+    var soundEffect = document.createElement('audio');
+    soundEffect.id = "sound-effect";
+    soundEffect.autoplay = true;
+    gameBody.appendChild(soundEffect);
     var themeMusic = document.getElementById('game-music');
     themeMusic.loop = true;
     themeMusic.src = "/audio/" + this.venue.themeMusic;
@@ -87,6 +91,16 @@ GameView.prototype = {
   timeOutMessage: function(h2Element, multiplier, word) {
     setTimeout(function() {
       h2Element.innerText = word;
+      var soundEffect = document.getElementById('sound-effect');
+      if (word === 1) {
+        soundEffect.src = "/audio/one.mp3";
+      } else if (word === 2) {
+        soundEffect.src = "/audio/two.mp3";
+      } else if (word === 3) {
+        soundEffect.src = "/audio/three.mp3";
+      } else if (word === "FIGHT!") {
+        soundEffect.src = "/audio/fight.mp3";
+      }
     }, multiplier * 1000);
   },
   
@@ -111,14 +125,11 @@ GameView.prototype = {
     image.src = fighter.image;
     var nameH1 = document.createElement('h1');
     nameH1.innerText = fighter.name;
-    var soundEffect = document.createElement('audio');
-    soundEffect.id = "sound-effect";
-    soundEffect.autoplay = true;
+    var soundEffect = document.getElementById('sound-effect');
     var abilitiesList = document.createElement('ul');
     firstCard.appendChild(image);
     firstCard.appendChild(nameH1);
     firstCard.appendChild(abilitiesList);
-    firstCard.appendChild(soundEffect);
     var multiplier = 1;
     for(ability in fighter.abilities) {
       var listItem = document.createElement('li');
@@ -199,6 +210,7 @@ GameView.prototype = {
   displayRoundWinner: function() {
     setTimeout(function() {
       var message = document.getElementById('message-display');
+      var soundEffect = document.getElementById('sound-effect');
       message.innerHTML = "";
       message.style.visibility = "visible";
       var fighterh3 = document.createElement('h3');
@@ -206,6 +218,12 @@ GameView.prototype = {
       var playerh2 = document.createElement('h2');
       if (this.game.winningCard) {
         this.showBlood();
+        console.log("card gender", this.game.winningCard.gender)
+        if (this.game.winningCard.gender === "male") {
+          soundEffect.src = "/audio/female_defeat.mp3";  
+        } else {
+          soundEffect.src = "/audio/male_defeat.mp3"; 
+        }
         fighterh3.innerText = this.game.winningCard.name+ " . . .";
         quoteh3.innerText =  '"' + this.game.winningCard.quote + '"';
         playerh2.innerText = this.game.currentPlayer.name + " wins";
