@@ -98,14 +98,14 @@
       "flag": "russia.png",
       "countryCoords" : {
         "lat": 61.524,
-        "lng": 40.319
+        "lng": 70.319
       },
       "venues": [
         {
           "name": "Factory",
           "coords": {
             "lat": 55.751,
-            "lng": 37.618
+            "lng": 67.618
           },
           "image": "factory.jpg",
           "themeMusic": "zangief_music.mp3"
@@ -161,8 +161,8 @@
         {
           "name": "Distillery",
           "coords": {
-            "lat": 51.507,
-            "lng": -0.128
+            "lat": 55.953,
+            "lng": -3.188
           },
           "image": "distillery.jpg",
           "themeMusic": "cammy_music.mp3"
