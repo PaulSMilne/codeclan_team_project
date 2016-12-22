@@ -23,13 +23,14 @@ body {
      text-align:center;
 }
 
-#splash header { margin-bottom:75px; }
+/*#splash header {  }*/
 
 #splash h1 {
 
      color: #FFC301;
      font-family: "CapcomStreetFighter", sans-serif;
      font-size:3.5em;
+     margin-bottom:50px;
 }
 
 #splash p {
