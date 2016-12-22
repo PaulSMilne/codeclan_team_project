@@ -63,7 +63,7 @@
           "image": "buddha_statue.jpg",
           "themeMusic": "sagat_music.mp3"
         }
-      ] 
+      ]
     },
     {
       "country": "United States of America",
@@ -91,7 +91,7 @@
           "image": "air_force_base.jpg",
           "themeMusic": "guile_music.mp3"
         }
-      ] 
+      ]
     },
     {
       "country": "Russia",
@@ -110,7 +110,7 @@
           "image": "factory.jpg",
           "themeMusic": "zangief_music.mp3"
         }
-      ] 
+      ]
     },
     {
       "country": "New Zealand",
@@ -129,7 +129,7 @@
           "image": "mysterious_cove.jpg",
           "themeMusic": "balrog_music.mp3"
         }
-      ] 
+      ]
     },
     {
       "country": "Unknown",
@@ -167,7 +167,7 @@
           "image": "distillery.jpg",
           "themeMusic": "cammy_music.mp3"
         }
-      ] 
+      ]
     },
     {
       "country": "France",
@@ -186,7 +186,7 @@
           "image": "the_beep.jpg",
           "themeMusic": "dee_jay_music.mp3"
         }
-      ] 
+      ]
     },
     {
       "country": "Brazil",
@@ -205,7 +205,7 @@
           "image": "jungle.jpg",
           "themeMusic": "blanka_music.mp3"
         }
-      ] 
+      ]
     },
     {
       "country": "China",
@@ -224,7 +224,7 @@
           "image": "downtown.jpg",
           "themeMusic": "chun_li_music.mp3"
         }
-      ] 
+      ]
     },
     {
       "country": "Hong Kong",
@@ -243,7 +243,7 @@
           "image": "big_city.jpg",
           "themeMusic": "fei_long_music.mp3"
         }
-      ] 
+      ]
     },
     {
       "country": "Spain",
@@ -262,7 +262,7 @@
           "image": "the_cage.jpg",
           "themeMusic": "vega_music.mp3"
         }
-      ]  
+      ]
     },
     {
       "country": "India",
@@ -281,7 +281,7 @@
           "image": "hyper_street.jpg",
           "themeMusic": "dhalsim_music.mp3"
         }
-      ] 
+      ]
     }
   ]
 }
