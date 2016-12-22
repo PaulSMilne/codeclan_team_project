@@ -18,9 +18,7 @@ body {
 #splash {
      background: black no-repeat center top url("/images/logo-sf.png");
      color:white;
-     /*font-family: Helvetica, sans-serif;*/
      height:100%;
-     padding-bottom: 50px;
      padding-top:225px;
      text-align:center;
 }
@@ -187,9 +185,9 @@ body {
      margin-top:0;
 }
 
-.topCard li { 
+.topCard li {
      font-weight:bold;
-     margin-bottom:1px; 
+     margin-bottom:1px;
 }
 
 #player1Card {
@@ -289,4 +287,3 @@ body {
 /*HIDING AND DISPLAYING STYLES*/
 
 #game, #winner, #map-view {display:none;}
-
