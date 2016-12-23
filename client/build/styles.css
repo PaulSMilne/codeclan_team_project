@@ -89,7 +89,6 @@ body {
      z-index: 5;
 }
 
-
 #playerDetails h2 {
      font-family: "RydenMK2", sans-serif;
      font-size:1em;
@@ -110,15 +109,16 @@ body {
 #venue-container{
      background-color: rgba(255, 255, 255, 0.1);
      border-radius:25px;
+     color: white;
      margin-right:30px;
      margin-bottom:30px;
      padding: 0 20px 20px 20px;
      text-align: center;
-}
-#venue-container h2 {
-     color: white;
-     text-shadow: 2px 2px #444;
      font-family: "CapcomStreetFighter", sans-serif;
+     text-shadow: 2px 2px #444;
+}
+
+#venue-container h2 {
      font-size:2.5em;
 }
 
