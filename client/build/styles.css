@@ -77,8 +77,6 @@ body {
      width: 1000px;
 }
 
-.newGame {margin-right:10px;}
-
 
 /* PLAYER BAR STYLES*/
 
@@ -282,4 +280,4 @@ body {
 
 /*HIDING AND DISPLAYING STYLES*/
 
-#game, #winner, #map-view {display:none;}
+#game, #map-view {display:none;}
