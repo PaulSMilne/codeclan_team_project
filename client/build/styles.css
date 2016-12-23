@@ -154,7 +154,6 @@ body {
 .topCard button {
      background-color:#C9A955;
      border:none;
-     /*font-family:Helvetica, sans-serif;*/
      font-size:.85em;
      font-weight:bold;
      height:2em;
@@ -192,6 +191,8 @@ body {
      transform: rotate(-2deg);
 }
 
+/*cardImage refers to the wee card icons at the top
+that shows how many cards a play has in her hand*/
 .cardImage {
      border:1px #F6F6F6 solid;
      border-radius:3px;
