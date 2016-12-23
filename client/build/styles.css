@@ -85,12 +85,10 @@ body {
      box-shadow: 0 8px 10px -6px;
      color: #FFF11D;
      height: 112px;
+     text-align: center;
      z-index: 5;
 }
 
-#playerDetails section {
-     text-align: center;
-}
 
 #playerDetails h2 {
      font-family: "RydenMK2", sans-serif;
@@ -229,7 +227,6 @@ body {
 }
 
 #message-display h3 {
-     /*color: #FFC301;*/
      font-family: "CapcomStreetFighter", sans-serif;
      font-size:2em;
      line-height:1.25em;
