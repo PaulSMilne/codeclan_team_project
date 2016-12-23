@@ -1,3 +1,8 @@
+/*keyframes defines the start and finish state of the splash page animation, see
+https://fabriceleven.com/design/creating-fancy-css3-fade-in-animations-on-page-load/*/
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
 /*CUSTOM ARCADE FONT*/
 
 @font-face {
@@ -15,6 +20,14 @@ body {
 }
 
 /*SPLASH STYLES*/
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 3.5s;
+}
+
 #splash {
      background: black no-repeat center top url("/images/logo-sf.png");
      color:white;
