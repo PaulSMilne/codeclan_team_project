@@ -40,19 +40,19 @@ body {
 }
 
 #splash input {
-     font-family:"RydenMK2", sans-serif;
-     font-size: .65em;
      color:white;
      border:none;
      background-color:black;
+     font-family:"RydenMK2", sans-serif;
+     font-size: .65em;
 }
 
 #splash button {
+     color:red;
+     background-color: black;
      font-family: "CapcomStreetFighter", sans-serif;
      font-size:3em;
      padding:10px;
-     color:red;
-     background-color: black;
      margin-top:30px;
      margin-bottom:20px;
 }
@@ -64,14 +64,13 @@ body {
 }
 
 
-/*MAP STYLES*/
+/* MAP STYLES */
 
 #map-view {
+     border:10px solid #FFC301;
      margin: 50px auto;
      width:1000px;
-     border:10px solid #FFC301;
 }
-
 
 #map-container {
      height: 600px;
@@ -79,7 +78,6 @@ body {
 }
 
 .newGame {margin-right:10px;}
-
 
 
 /* PLAYER BAR STYLES*/
