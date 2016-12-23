@@ -84,16 +84,15 @@ body {
 
 #playerDetails {
      background: black url('/images/logo-sf.png') center center/250px no-repeat ;
+     box-shadow: 0 8px 10px -6px;
      color: #FFF11D;
      height: 112px;
-     box-shadow: 0 8px 10px -6px;
      z-index: 5;
 }
 
 #playerDetails section {
      text-align: center;
 }
-
 
 #playerDetails h2 {
      font-family: "RydenMK2", sans-serif;
@@ -113,11 +112,11 @@ body {
      margin-right:75px;
 }
 #venue-container{
+     background-color: rgba(255, 255, 255, 0.1);
+     border-radius:25px;
      margin-right:30px;
      margin-bottom:30px;
      padding: 0 20px 20px 20px;
-     background-color: rgba(255, 255, 255, 0.1);
-     border-radius:25px;
      text-align: center;
 }
 #venue-container h2 {
@@ -127,35 +126,33 @@ body {
      font-size:2.5em;
 }
 
-#venue-container img{
-     width: 350px;
-     height: 200px;
+#venue-container img {
      border-radius:5px;
      box-shadow: 3px 3px 10px;
+     height: 200px;
+     width: 350px;
 }
 
 
-/*
-     CARD STYLES
-*/
+/* CARD STYLES */
 .topCard {
-     visibility: hidden;
-     position: relative;
      background-color: white;
      border:2px #C9A955 solid;
      border-radius:10px;
      box-shadow: 3px 3px 10px;
      padding-bottom:5px;
      padding-top:5px;
+     position: relative;
+     visibility: hidden;
      width:275px;
 }
 
 .topCard h1 {
      font-family: Helvetica, sans-serif;
-     margin-top: 10px;
-     text-align:center;
      font-size: 1.2em;
      margin-bottom:5px;
+     margin-top: 10px;
+     text-align:center;
 }
 
 .topCard button {
@@ -178,10 +175,10 @@ body {
 
 .topCard ul {
      list-style-type: none;
-     padding-left:0;
      margin-left:0;
      margin-bottom:5px;
      margin-top:0;
+     padding-left:0;
 }
 
 .topCard li {
@@ -207,11 +204,11 @@ body {
 
 .bloodImage {
      display: none;
-     position: absolute;
      height: 675px;
-     width: 100%;
-     top: 0;
+     position: absolute;
      right: 0;
+     top: 0;
+     width: 100%;
      z-index: 10;
 }
 
@@ -272,8 +269,8 @@ body {
 #startGameButton {
      background-color: rgba(255, 255, 255, 0.2);
      color: #FFF11D;
-     font-size: 3em;
      font-family:"RydenMK2", sans-serif;
+     font-size: 3em;
      text-shadow: 2px 2px #666;
 }
 
