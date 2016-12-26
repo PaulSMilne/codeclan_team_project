@@ -49,8 +49,14 @@ GameView.prototype = {
   },
 
   buildPlayerBar: function() {
-    this.buildPlayer(0);
-    this.buildPlayer(1);
+    var players = this.game.players;
+    console.log(players);
+    var playerIndex = 0;
+    players.forEach(function(player){
+      console.log(playerIndex);
+      this.buildPlayer(playerIndex);
+      playerIndex++;
+    }.bind(this))
 },
 
   buildPlayer: function(playerIndex) {
