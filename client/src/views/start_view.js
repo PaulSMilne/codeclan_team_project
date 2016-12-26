@@ -1,7 +1,7 @@
 var Player = require('../top_trumps/player');
 var Deck = require('../top_trumps/deck.js');
 var Game = require('../top_trumps/game.js');
-var MapView = require('./map_view.js'); 
+var MapView = require('./map_view.js');
 
 var StartView = function() {
   this.player1 = null;
@@ -11,11 +11,15 @@ var StartView = function() {
 
 StartView.prototype = {
   makePlayers: function() {
+
+    //music starts playing after 5 seconds to allow capcom theme
     setTimeout(function() {
       var themeMusic = document.getElementById('music');
       themeMusic.src = "/audio/title.mp3";
-    }, 4000)
+    }, 5000)
+
     var startPlayButton = document.getElementById('start_play');
+
     startPlayButton.onclick = function() {
       var p1 = document.getElementById('player1');
       var p2 = document.getElementById('player2');
@@ -39,6 +43,7 @@ StartView.prototype = {
       this.getFighters();
     }.bind(this);
   },
+
   getFighters: function() {
     var url = "http://localhost:3000/fighters";
     var request = new XMLHttpRequest();
