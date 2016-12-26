@@ -50,7 +50,6 @@ GameView.prototype = {
 
   buildPlayerBar: function() {
     var players = this.game.players;
-    console.log(players);
     var playerIndex = 0;
     players.forEach(function(player){
       console.log(playerIndex);
@@ -85,7 +84,6 @@ GameView.prototype = {
     var words = [firstWord, 3, 2, 1, "FIGHT!"];
     var multiplier = 1;
     for(word of words) {
-      console.log("for word",word);
       this.timeOutMessage(h2, multiplier, word);
       multiplier++;
     }
@@ -226,7 +224,6 @@ GameView.prototype = {
       var playerh2 = document.createElement('h2');
       if (this.game.winningCard) {
         this.showBlood();
-        console.log("card gender", this.game.losingCard.gender)
         if (this.game.losingCard.gender === "male") {
           soundEffect.src = "/audio/male_defeat.mp3";
         } else {
