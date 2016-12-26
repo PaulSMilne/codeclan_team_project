@@ -16,7 +16,7 @@ GameView.prototype = {
     gameBody.style.backgroundImage = "url('/images/venues/" + this.venue.image + "')";
     gameBody.style.backgroundSize = "100% 100%";
     var playerDetails = document.getElementById('playerDetails');
-    
+
     this.buildControlButton();
   },
   buildControlButton: function() {
@@ -49,28 +49,25 @@ GameView.prototype = {
   },
 
   buildPlayerBar: function() {
-    player1bar = document.getElementById('player1Bar');
-    player1Bar.innerHTML = "";
-    var multiplier = this.game.players[0].cardCount();
+    this.buildPlayer(0);
+    this.buildPlayer(1);
+},
+
+  buildPlayer: function(playerIndex) {
+    var playerNumber = playerIndex + 1;
+    var playerBar = document.getElementById('player' + (playerNumber) + 'Bar');
+    var whichPlayer = "Player " + playerNumber + ": ";
+    var nameTag = document.createElement('h2');
+    var cardCountTag = document.createElement('h3');
+    var pName = this.game.players[playerIndex].name;
+    var multiplier = this.game.players[playerIndex].cardCount();
     var cardsCount = ("&nbsp;<img class='cardImage' src='/images/littlecardback.png'>").repeat(multiplier);
-    var p1name = document.createElement('h2');
-    p1name.innerText = "Player 1: " + this.game.players[0].name;
-    player1bar.appendChild(p1name);
-    var p1cardCount = document.createElement('h3');
-    p1cardCount.innerHTML = cardsCount;
-    player1bar.appendChild(p1cardCount); 
 
-    player2bar = document.getElementById('player2Bar');
-    player2Bar.innerHTML = "";
-    var multiplier2 = this.game.players[1].cardCount();
-    var cardsCount2 = ("&nbsp;<img class='cardImage' src='/images/littlecardback.png'>").repeat(multiplier2);
-    var p2name = document.createElement('h2');
-    p2name.innerText = "Player 2: " + this.game.players[1].name;
-    player2bar.appendChild(p2name);
-    var p2cardCount = document.createElement('h3');
-    p2cardCount.innerHTML = cardsCount2;
-    player2bar.appendChild(p2cardCount); 
-
+    playerBar.innerHTML = "";
+    nameTag.innerText = whichPlayer + pName;
+    cardCountTag.innerHTML = cardsCount;
+    playerBar.appendChild(nameTag);
+    playerBar.appendChild(cardCountTag);
   },
 
   displayRoundMessage: function() {
@@ -103,7 +100,7 @@ GameView.prototype = {
       }
     }, multiplier * 1000);
   },
-  
+
   buildFirstCard: function() {
     this.buildBlood();
     var currentPlayer = this.game.currentPlayer;
@@ -140,12 +137,12 @@ GameView.prototype = {
       this.timeOutFirstCardAbilityBuilder(soundEffect, button, ability, fighter.abilities, multiplier);
       multiplier++;
     }
-  
+
   },
 
   timeOutFirstCardAbilityBuilder: function(soundEffect, button, ability, abilities, multiplier) {
-    setTimeout(function() { 
-      soundEffect.src = "/audio/punch.mp3";     
+    setTimeout(function() {
+      soundEffect.src = "/audio/punch.mp3";
       button.innerText = ability + ": " + abilities[ability];
       button.key = ability;
       button.onclick = function(event) {
@@ -155,14 +152,14 @@ GameView.prototype = {
           var chosenAbility = event.target.key
           this.buildSecondCard(chosenAbility);
           this.game.compareAbility(chosenAbility);
-          this.displayRoundWinner(); 
+          this.displayRoundWinner();
           var abilitiesList = document.getElementById('firstcard-abilities')
           for (ability of abilitiesList.children) {
             ability.firstChild.onclick = null;
-          } 
+          }
         }
       }.bind(this);
-      
+
     }.bind(this), multiplier * 500)
   },
 
@@ -189,7 +186,7 @@ GameView.prototype = {
       var listItem = document.createElement('li');
       var button = document.createElement('button');
       listItem.appendChild(button);
-      abilitiesList.appendChild(listItem); 
+      abilitiesList.appendChild(listItem);
       if (ability !== chosenAbility) {
         this.timeOutSecondCardAbilityBuilder(button, ability, fighter.abilities, multiplier);
         multiplier++;
@@ -206,9 +203,9 @@ GameView.prototype = {
   timeOutSecondCardAbilityBuilder: function(button, ability, abilities, multiplier) {
     setTimeout(function() {
       var soundEffect = document.getElementById('sound-effect');
-      soundEffect.src = "/audio/punch.mp3";      
+      soundEffect.src = "/audio/punch.mp3";
       button.innerText = ability + ": " + abilities[ability];
-      button.key = ability;      
+      button.key = ability;
     }, multiplier * 500)
   },
 
@@ -246,7 +243,7 @@ GameView.prototype = {
           this.gameOver();
           this.buildPlayerBar();
         }.bind(this), 5000);
-      } else 
+      } else
       {
         setTimeout(function () {
           this.clearLastRound();
@@ -261,7 +258,7 @@ GameView.prototype = {
           }.bind(this), 6500);
         }.bind(this),5000);
       }
-    }.bind(this), 4000); 
+    }.bind(this), 4000);
   },
   clearLastRound: function() {
     var firstCard = document.getElementById('player1Card');
@@ -297,7 +294,7 @@ GameView.prototype = {
     rematchButton.onclick = function() {
       this.game.isGameWon = false;
       this.clearCards();
-      this.buildControlButton(); 
+      this.buildControlButton();
     }.bind(this)
     message.appendChild(rematchButton);
     message.appendChild(changeVenueButton);
