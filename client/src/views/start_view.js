@@ -48,16 +48,15 @@ StartView.prototype = {
     var url = "http://localhost:3000/fighters";
     var request = new XMLHttpRequest();
     request.open("GET", url);
-
     request.onload = function(event) {
       if (event.target.status !== 200) return;
-
       var jsonString = event.target.responseText;
       var data = JSON.parse(jsonString);
       this.createNewGame(data);
     }.bind(this);
     request.send();
   },
+
   createNewGame: function(data) {
     var deck = new Deck(data.fighters);
     var game = new Game(deck, this.handSize);
@@ -65,14 +64,13 @@ StartView.prototype = {
     game.addPlayer(this.player2);
     this.getVenues(game);
   },
+
   getVenues: function(game) {
     var url = "http://localhost:3000/venues";
     var request = new XMLHttpRequest();
     request.open("GET", url);
-
     request.onload = function(event) {
       if (event.target.status !== 200) return;
-
       var jsonString = event.target.responseText;
       var data = JSON.parse(jsonString);
       var mapView = new MapView(data, game);
