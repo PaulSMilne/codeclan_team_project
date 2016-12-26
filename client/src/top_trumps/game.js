@@ -100,8 +100,6 @@ Game.prototype = {
       this.isGameWon = true;
     }
   }
-  //winchecker loops round each hand to see if = 0, then declare winner is other person
-
 };
 
 module.exports = Game;
