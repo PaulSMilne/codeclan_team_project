@@ -25,7 +25,7 @@ body {
   opacity: 0;
   animation: fadeIn ease-in 1;
   animation-fill-mode: forwards;
-  animation-duration: 4s;
+  animation-duration: 3s;
 }
 
 #splash {

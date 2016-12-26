@@ -16,7 +16,7 @@ StartView.prototype = {
     setTimeout(function() {
       var themeMusic = document.getElementById('music');
       themeMusic.src = "/audio/title.mp3";
-    }, 5000)
+    }, 4500)
 
     var startPlayButton = document.getElementById('start_play');
 
