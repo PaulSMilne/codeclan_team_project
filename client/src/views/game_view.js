@@ -339,14 +339,14 @@ GameView.prototype = {
     firstblood.id = "p1-blood";
     firstblood.classList.add("bloodImage");
     firstblood.src = "/images/blood.png";
-    firstblood.style.diplay = "none";
+    firstblood.style.display = "none";
     firstCard.appendChild(firstblood);
 
     var secondBlood = document.createElement('img');
     secondBlood.id = "p2-blood";
     secondBlood.classList.add("bloodImage");
     secondBlood.src = "/images/blood.png";
-    secondBlood.style.diplay = "none";
+    secondBlood.style.display = "none";
     secondCard.appendChild(secondBlood);
   },
 
