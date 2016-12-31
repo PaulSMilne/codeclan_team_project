@@ -86,14 +86,15 @@ buildPlayerBar: function() {
 
   buildPlayer: function(player, playerNumber) {
     //var playerNumber = playerIndex + 1;
-    var playerBar = document.getElementById('player' + playerNumber + 'Bar');
+    // var playerBarId = "player" + playerNumber + "Bar";
+    var playerBar = document.getElementById('player' + (playerNumber) + 'Bar');
+    console.log(playerBar);
     var whichPlayer = "Player " + playerNumber + ": ";
     var nameTag = document.createElement('h2');
     var cardCountTag = document.createElement('h3');
     var pName = player.name;
     var multiplier = player.cardCount();
     var cardsCount = ("&nbsp;<img class='cardImage' src='/images/littlecardback.png'>").repeat(multiplier);
-
     playerBar.innerHTML = "";
     nameTag.innerText = whichPlayer + pName;
     cardCountTag.innerHTML = cardsCount;
