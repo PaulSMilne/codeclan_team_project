@@ -48,24 +48,50 @@ GameView.prototype = {
     }.bind(this);
   },
 
-  buildPlayerBar: function() {
-    var players = this.game.players;
-    var playerIndex = 0;
-    players.forEach(function(player){
-      console.log(playerIndex);
-      this.buildPlayer(playerIndex);
-      playerIndex++;
-    }.bind(this))
-},
+//   buildPlayerBar: function() {
+//     var players = this.game.players;
+//     var playerIndex = 0;
+//     players.forEach(function(player){
+//       console.log(playerIndex);
+//       this.buildPlayer(playerIndex);
+//       playerIndex++;
+//     }.bind(this))
+// },
 
-  buildPlayer: function(playerIndex) {
-    var playerNumber = playerIndex + 1;
-    var playerBar = document.getElementById('player' + (playerNumber) + 'Bar');
+buildPlayerBar: function() {
+  var players = this.game.players;
+  var playerNumber = 1;
+  players.forEach(function(player){
+    console.log(playerNumber);
+    this.buildPlayer(player, playerNumber);
+    playerNumber++;
+  }.bind(this))
+},
+  // buildPlayer: function(playerIndex) {
+  //   var playerNumber = playerIndex + 1;
+  //   var playerBar = document.getElementById('player' + (playerNumber) + 'Bar');
+  //   var whichPlayer = "Player " + playerNumber + ": ";
+  //   var nameTag = document.createElement('h2');
+  //   var cardCountTag = document.createElement('h3');
+  //   var pName = this.game.players[playerIndex].name;
+  //   var multiplier = this.game.players[playerIndex].cardCount();
+  //   var cardsCount = ("&nbsp;<img class='cardImage' src='/images/littlecardback.png'>").repeat(multiplier);
+  //
+  //   playerBar.innerHTML = "";
+  //   nameTag.innerText = whichPlayer + pName;
+  //   cardCountTag.innerHTML = cardsCount;
+  //   playerBar.appendChild(nameTag);
+  //   playerBar.appendChild(cardCountTag);
+  // },
+
+  buildPlayer: function(player, playerNumber) {
+    //var playerNumber = playerIndex + 1;
+    var playerBar = document.getElementById('player' + playerNumber + 'Bar');
     var whichPlayer = "Player " + playerNumber + ": ";
     var nameTag = document.createElement('h2');
     var cardCountTag = document.createElement('h3');
-    var pName = this.game.players[playerIndex].name;
-    var multiplier = this.game.players[playerIndex].cardCount();
+    var pName = player.name;
+    var multiplier = player.cardCount();
     var cardsCount = ("&nbsp;<img class='cardImage' src='/images/littlecardback.png'>").repeat(multiplier);
 
     playerBar.innerHTML = "";
