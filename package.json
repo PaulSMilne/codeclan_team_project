@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/PaulSMilne/codeclan_team_project#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "mongodb": "^2.2.19",
     "underscore": "^1.8.3"
   }
 }

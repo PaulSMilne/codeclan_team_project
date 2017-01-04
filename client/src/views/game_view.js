@@ -158,6 +158,8 @@ buildPlayer: function(player, playerNumber) {
           var chosenAbility = event.target.key
           this.buildSecondCard(chosenAbility);
           this.game.compareAbility(chosenAbility);
+          var statsObjects = this.makeStatsObjects();
+          this.updateFighterStats(statsObjects);
           this.displayRoundWinner();
           var abilitiesList = document.getElementById('firstcard-abilities')
           for (ability of abilitiesList.children) {
@@ -266,7 +268,37 @@ buildPlayer: function(player, playerNumber) {
       }
     }.bind(this), 4000);
   },
-  clearLastRound: function() {
+  makeStatsObjects: function() {
+    var statsObjects = [];
+
+    if (this.game.winningCard) {
+      var winningObject = {name: this.game.winningCard.name, wins: 1, draws: 0, loses: 0};
+      var losingObject = {name: this.game.losingCard.name, wins: 0, draws: 0, loses: 1};
+      statsObjects.push(winningObject);
+      statsObjects.push(losingObject);
+    } else {
+      var drawObject1 = {name: this.game.table[0].name, wins: 0, draws: 1, loses: 0};
+      var drawObject2 = {name: this.game.table[1].name, wins: 0, draws: 1, loses: 0};
+      statsObjects.push(drawObject1);
+      statsObjects.push(drawObject2);
+    }
+    return statsObjects;
+  },
+  updateFighterStats: function(statsObjects) {
+    statsObjects.forEach(function(statsObject) {
+      var url = "http://localhost:3000/fighter_stats";
+      var request = new XMLHttpRequest();
+      request.open("POST", url);
+      request.setRequestHeader("Content-Type", "application/json");
+      request.onload = function() {
+        if(request.status === 200) {
+        }
+      };
+      console.log("statsObject", statsObject);
+      request.send(JSON.stringify(statsObject)); 
+    })
+  }, 
+   clearLastRound: function() {
     var firstCard = document.getElementById('player1Card');
     firstCard.innerHTML = "";
     firstCard.style.visibility = "hidden";
