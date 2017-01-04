@@ -4,6 +4,7 @@ var GameView = function(game, venue) {
   this.game = game;
   this.venue = venue;
   this.isDraw = false;
+  this.isSelected = false;
 };
 
 GameView.prototype = {
@@ -36,6 +37,7 @@ GameView.prototype = {
     controlButton.style.display = "initial";
     controlButton.innerText = "Start Game";
     controlButton.onclick = function() {
+      // this.game.shuffleDeck();
       this.game.deal();
       this.buildPlayerBar();
       this.game.populateTable();
@@ -59,7 +61,7 @@ buildPlayerBar: function() {
 },
 
 buildPlayer: function(player, playerNumber) {
-    var playerBar = document.getElementById('player' + (playerNumber) + 'Bar');
+    var playerBar = document.getElementById('player' + playerNumber + 'Bar');
     console.log(playerBar);
     var whichPlayer = "Player " + playerNumber + ": ";
     var nameTag = document.createElement('h2');
@@ -149,7 +151,8 @@ buildPlayer: function(player, playerNumber) {
       button.innerText = ability + ": " + abilities[ability];
       button.key = ability;
       button.onclick = function(event) {
-        if (!this.isDraw) {
+        if (!this.isDraw && !this.isSelected) {
+          this.isSelected = true;
           event.target.style.backgroundColor = "black";
           event.target.style.color = "#C9A955";
           var chosenAbility = event.target.key
@@ -256,6 +259,7 @@ buildPlayer: function(player, playerNumber) {
             var message = document.getElementById('message-display');
             message.style.visibility = "hidden";
             this.isDraw = false;
+            this.isSelected = false;
             this.buildFirstCard();
           }.bind(this), 6500);
         }.bind(this),5000);
@@ -295,6 +299,8 @@ buildPlayer: function(player, playerNumber) {
     changeVenueButton.innerText = "Change Venue";
     rematchButton.onclick = function() {
       this.game.isGameWon = false;
+      this.isDraw = false;
+      this.isSelected = false;
       this.clearCards();
       this.buildControlButton();
     }.bind(this)
