@@ -19,7 +19,7 @@
   "homepage": "https://github.com/PaulSMilne/codeclan_team_project#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
     "webpack": "^1.14.0"
   }
 }
