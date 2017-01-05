@@ -16,5 +16,22 @@ The styling is retro-video-game using fighter and venue graphics based on the or
 
 We developed the game to run on a local npm Express server, using Webpack to bundle the JavaScript files for serving to the browser.
 
+## Installing and Running App
+
+### Requirements
+* Node.js with NPM - install instructions [here](https://docs.npmjs.com/getting-started/installing-node)
+* MongoDB - install instructions [here](https://docs.mongodb.com/manual/installation/)
+
+1. Clone repository using `git clone https://github.com/PaulSMilne/codeclan_team_project.git`
+2. Install dependancies express, webpack and underscore using `npm install` from the root project folder.
+3. Start running mongoDB using `mongod`.
+4. Create bundle.js file using `webpack` or `webpack -w` from codeclan_team_project/client folder.
+5. Start server using `npm start` from root project folder.
+6. Application will run on localhost:3000.
+
+### Run Dev Tests
+1. Install mocha using `npm install` from codeclan_team_project/client/src/top_trumps folder.
+2. Run tests using `npm test` from same folder.
+
 
 
