@@ -10,16 +10,22 @@ var StartView = function() {
 };
 
 StartView.prototype = {
+  makeMenu: function() {
+    var newGameButton = document.getElementById('new_game');
+    newGameButton.onclick = function() {
+      this.makePlayers()
+    }.bind(this);
+  },
   makePlayers: function() {
+    var startMenu = document.getElementById('start_menu')
+    startMenu.style.display = "none";
+    var playerDetails = document.getElementById('player_details')
+    playerDetails.style.display = "initial";
 
-    //music starts playing after 5 seconds to allow capcom theme
-    setTimeout(function() {
-      var themeMusic = document.getElementById('music');
-      themeMusic.src = "/audio/title.mp3";
-    }, 4500)
-
+    var themeMusic = document.getElementById('music');
+    themeMusic.src = "/audio/title.mp3";
+    
     var startPlayButton = document.getElementById('start_play');
-
     startPlayButton.onclick = function() {
       var p1 = document.getElementById('player1');
       var p2 = document.getElementById('player2');

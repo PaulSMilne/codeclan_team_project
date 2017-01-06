@@ -54,7 +54,7 @@ app.post('/fighter_stats', function(req, res) {
             { "name": req.body.name,
               "wins": req.body.wins,
               "draws": req.body.draws,
-              "loses": req.body.loses
+              "losses": req.body.losses
             }
         )
       } else {
@@ -63,7 +63,7 @@ app.post('/fighter_stats', function(req, res) {
           { 
             $inc: { "wins": req.body.wins,
                     "draws": req.body.draws,
-                    "loses": req.body.loses}
+                    "losses": req.body.losses}
                   }
         )
       }

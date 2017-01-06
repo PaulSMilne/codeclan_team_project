@@ -272,13 +272,13 @@ buildPlayer: function(player, playerNumber) {
     var statsObjects = [];
 
     if (this.game.winningCard) {
-      var winningObject = {name: this.game.winningCard.name, wins: 1, draws: 0, loses: 0};
-      var losingObject = {name: this.game.losingCard.name, wins: 0, draws: 0, loses: 1};
+      var winningObject = {name: this.game.winningCard.name, wins: 1, draws: 0, losses: 0};
+      var losingObject = {name: this.game.losingCard.name, wins: 0, draws: 0, losses: 1};
       statsObjects.push(winningObject);
       statsObjects.push(losingObject);
     } else {
-      var drawObject1 = {name: this.game.table[0].name, wins: 0, draws: 1, loses: 0};
-      var drawObject2 = {name: this.game.table[1].name, wins: 0, draws: 1, loses: 0};
+      var drawObject1 = {name: this.game.table[0].name, wins: 0, draws: 1, losses: 0};
+      var drawObject2 = {name: this.game.table[1].name, wins: 0, draws: 1, losses: 0};
       statsObjects.push(drawObject1);
       statsObjects.push(drawObject2);
     }

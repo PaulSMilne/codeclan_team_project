@@ -76,6 +76,21 @@ body {
      font-size:1.5em;
 }
 
+#player_details {
+     display: none;
+}
+
+#start_menu {
+     display: flex;
+     flex-direction: column;
+}
+
+#start_menu button {
+     width: 250px;
+     margin: auto;
+     margin-bottom: 30px;
+}
+
 
 /* MAP STYLES */
 
