@@ -322,7 +322,8 @@ that shows how many cards a play has in her hand*/
      transform: scale(0.85);
 }
 
-#return_menu {
+#return_menu,
+#return_fighters {
      color:red;
      background-color: black;
      font-family: "CapcomStreetFighter", sans-serif;
@@ -335,6 +336,28 @@ that shows how many cards a play has in her hand*/
      display: flex;
      flex-direction: row;
      background-color: white;
+     justify-content: center;
+}
+
+#profile, #stats {
+     width: 45%;
+}
+
+#profile {
+     margin-top: 30px;
+}
+
+#stats {
+     margin-top: 80px;
+}
+
+#stats h2 {
+     margin-bottom: 50px;
+}
+
+#stats h3 {
+     display: inline-block;
+     margin-right: 30px;
 }
 
 

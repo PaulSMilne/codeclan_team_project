@@ -13,6 +13,15 @@ FightersView.prototype = {
     returnMenuButton.onclick = function() {
       window.location.reload(false);
     }
+    var returnFightersButton = document.getElementById('return_fighters');
+    returnFightersButton.style.display = "none";
+    returnFightersButton.onclick = function() {
+      var allFighters = document.getElementById('all_fighters');
+      allFighters.style.display = "flex";
+      var fighterProfile = document.getElementById('fighter_profile');
+      fighterProfile.style.display = "none"; 
+      returnFightersButton.style.display = "none"; 
+    }
     this.getFighters();
   },
   getFighters: function() {
@@ -80,8 +89,9 @@ FightersView.prototype = {
       image.onclick = function(event) {
         allFighters.style.display = "none";
         var fighterProfile = document.getElementById('fighter_profile');
-        fighterProfile.style.display = "block";
-        console.log("fighter", event)
+        fighterProfile.style.display = "flex";
+        var returnFightersButton = document.getElementById('return_fighters');
+        returnFightersButton.style.display = "initial";
         this.buildFighterProfile(event.target.fighter);
         this.buildFighterStats(event.target.fighter);
       }.bind(this);
@@ -89,6 +99,7 @@ FightersView.prototype = {
   },
   buildFighterProfile: function(fighter) {
     var profile = document.getElementById('profile');
+    profile.innerHTML = "";
     var image = document.createElement('img');
     image.src = fighter.image;
     var nameH1 = document.createElement('h1');
@@ -118,18 +129,19 @@ FightersView.prototype = {
   },
   buildFighterStats: function(fighter) {
     var stats = document.getElementById('stats');
+    stats.innerHTML = "";
     var quoteH2 = document.createElement('h2');
     quoteH2.innerText = '"' + fighter.quote + '"';
-    var winsH2 = document.createElement('h2');
-    var drawsH2 = document.createElement('h2');
-    var lossesH2 = document.createElement('h2');
-    winsH2.innerText = "Wins: " + fighter.wins;
-    drawsH2.innerText = "Draws: " + fighter.draws;
-    lossesH2.innerText = "losses: " + fighter.losses;
+    var winsH3 = document.createElement('h3');
+    var drawsH3 = document.createElement('h3');
+    var lossesH3 = document.createElement('h3');
+    winsH3.innerText = "Wins: " + fighter.wins;
+    drawsH3.innerText = "Draws: " + fighter.draws;
+    lossesH3.innerText = "Losses: " + fighter.losses;
     stats.appendChild(quoteH2);
-    stats.appendChild(winsH2);
-    stats.appendChild(drawsH2);
-    stats.appendChild(lossesH2);
+    stats.appendChild(winsH3);
+    stats.appendChild(drawsH3);
+    stats.appendChild(lossesH3);
   }
 };
 
