@@ -23,17 +23,43 @@ FightersView.prototype = {
       if (event.target.status !== 200) return;
       var jsonString = event.target.responseText;
       var data = JSON.parse(jsonString);
-      this.createFighters(data);
+      this.getFighterStats(data.fighters);
     }.bind(this);
     request.send();
   },
-  createFighters: function(data) {
+  getFighterStats: function(fighters) {
+    var url = "http://localhost:3000/fighter_stats";
+    var request = new XMLHttpRequest();
+    request.open("GET", url);
+    request.onload = function(event) {
+      if (event.target.status !== 200) return;
+      var jsonString = event.target.responseText;
+      var data = JSON.parse(jsonString);
+      for (fighter of fighters) {
+        var fighterStat = data.find(function(statObject) {
+          return fighter.name === statObject.name;
+        })
+        if (fighterStat) {
+          fighter.wins = fighterStat.wins;
+          fighter.draws = fighterStat.draws;
+          fighter.losses = fighterStat.losses;
+        } else {
+          fighter.wins = 0;
+          fighter.draws = 0;
+          fighter.losses = 0;
+        }
+      }
+      this.createFighters(fighters);
+    }.bind(this);
+    request.send();
+  },
+  createFighters: function(fighters) {
     var allFighters = document.getElementById('all_fighters');
-    for (fighter of data.fighters) {
+    for (fighter of fighters) {
       var fighterContainer = document.createElement('section');
-      fighterContainer.fighter = fighter;
       var image = document.createElement('img');
       image.src = fighter.image;
+      image.fighter = fighter;
       var nameH1 = document.createElement('h1');
       nameH1.innerText = fighter.name;
       var abilitiesList = document.createElement('ul');
@@ -51,29 +77,32 @@ FightersView.prototype = {
         listItem.appendChild(button);
         abilitiesList.appendChild(listItem);
       }
-      fighterContainer.onclick = this.fighterCardClick;
+      image.onclick = function(event) {
+        allFighters.style.display = "none";
+        var fighterProfile = document.getElementById('fighter_profile');
+        fighterProfile.style.display = "block";
+        console.log("fighter", event)
+        this.buildFighterProfile(event.target.fighter);
+        this.buildFighterStats(event.target.fighter);
+      }.bind(this);
     }
   },
-  fighterCardClick: function() {
-    var allFighters = document.getElementById('all_fighters')
-    allFighters.style.display = "none";
-    var fighterProfile = document.getElementById('fighter_profile');
-    fighterProfile.style.display = "block";
+  buildFighterProfile: function(fighter) {
     var profile = document.getElementById('profile');
     var image = document.createElement('img');
-    image.src = this.fighter.image;
+    image.src = fighter.image;
     var nameH1 = document.createElement('h1');
-    nameH1.innerText = this.fighter.name;
+    nameH1.innerText = fighter.name;
     var genderH2 = document.createElement('h2');
-    genderH2.innerText = "Gender: " + this.fighter.gender;
+    genderH2.innerText = "Gender: " + fighter.gender;
     var countryH2 = document.createElement('h2');
-    countryH2.innerText = "Home Country: " + this.fighter.homeCountry;
+    countryH2.innerText = "Home Country: " + fighter.homeCountry;
     var fightingStyleH2 = document.createElement('h2');
-    fightingStyleH2.innerText = "Fighting Style: " + this.fighter.fightingStyle;
+    fightingStyleH2.innerText = "Fighting Style: " + fighter.fightingStyle;
     var specialMoveH2 = document.createElement('h2');
     specialMoveH2.innerText = "Special Moves:";
     var specialMovesList = document.createElement('ul');
-    for (move of this.fighter.specialMoves) {
+    for (move of fighter.specialMoves) {
       var moveItem = document.createElement('li');
       moveItem.innerText = move;
       specialMovesList.appendChild(moveItem);
@@ -86,7 +115,21 @@ FightersView.prototype = {
     profile.appendChild(fightingStyleH2);
     profile.appendChild(specialMoveH2);
     profile.appendChild(specialMovesList);
-
+  },
+  buildFighterStats: function(fighter) {
+    var stats = document.getElementById('stats');
+    var quoteH2 = document.createElement('h2');
+    quoteH2.innerText = '"' + fighter.quote + '"';
+    var winsH2 = document.createElement('h2');
+    var drawsH2 = document.createElement('h2');
+    var lossesH2 = document.createElement('h2');
+    winsH2.innerText = "Wins: " + fighter.wins;
+    drawsH2.innerText = "Draws: " + fighter.draws;
+    lossesH2.innerText = "losses: " + fighter.losses;
+    stats.appendChild(quoteH2);
+    stats.appendChild(winsH2);
+    stats.appendChild(drawsH2);
+    stats.appendChild(lossesH2);
   }
 };
 
