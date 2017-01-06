@@ -310,8 +310,35 @@ that shows how many cards a play has in her hand*/
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
+     justify-content: center;
 }
+
+.small_card {
+     transform: scale(0.8);
+     transition: transform 0.5s;
+}
+
+.small_card:hover {
+     transform: scale(0.85);
+}
+
+#return_menu {
+     color:red;
+     background-color: black;
+     font-family: "CapcomStreetFighter", sans-serif;
+     font-size:1.5em;
+     padding:10px;
+     margin: 30px 0 20px 60px;
+}
+
+#fighter_profile {
+     display: flex;
+     flex-direction: row;
+     background-color: white;
+}
+
+
 
 /*HIDING AND DISPLAYING STYLES*/
 
-#game, #map-view, #fighter_stats {display:none;}
+#game, #map-view, #fighter_stats, #fighter_profile {display:none;}

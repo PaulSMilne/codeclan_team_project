@@ -9,6 +9,10 @@ FightersView.prototype = {
     splash.style.display = "none";
     var fighterStats = document.getElementById('fighter_stats');
     fighterStats.style.display = "block";
+    var returnMenuButton = document.getElementById('return_menu');
+    returnMenuButton.onclick = function() {
+      window.location.reload(false);
+    }
     this.getFighters();
   },
   getFighters: function() {
@@ -27,6 +31,7 @@ FightersView.prototype = {
     var allFighters = document.getElementById('all_fighters');
     for (fighter of data.fighters) {
       var fighterContainer = document.createElement('section');
+      fighterContainer.fighter = fighter;
       var image = document.createElement('img');
       image.src = fighter.image;
       var nameH1 = document.createElement('h1');
@@ -36,6 +41,7 @@ FightersView.prototype = {
       fighterContainer.appendChild(nameH1);
       fighterContainer.appendChild(abilitiesList);
       fighterContainer.classList.add('topCard');
+      fighterContainer.classList.add('small_card');
       fighterContainer.style.visibility = 'visible';
       allFighters.appendChild(fighterContainer);
       for(ability in fighter.abilities) {
@@ -45,7 +51,42 @@ FightersView.prototype = {
         listItem.appendChild(button);
         abilitiesList.appendChild(listItem);
       }
+      fighterContainer.onclick = this.fighterCardClick;
     }
+  },
+  fighterCardClick: function() {
+    var allFighters = document.getElementById('all_fighters')
+    allFighters.style.display = "none";
+    var fighterProfile = document.getElementById('fighter_profile');
+    fighterProfile.style.display = "block";
+    var profile = document.getElementById('profile');
+    var image = document.createElement('img');
+    image.src = this.fighter.image;
+    var nameH1 = document.createElement('h1');
+    nameH1.innerText = this.fighter.name;
+    var genderH2 = document.createElement('h2');
+    genderH2.innerText = "Gender: " + this.fighter.gender;
+    var countryH2 = document.createElement('h2');
+    countryH2.innerText = "Home Country: " + this.fighter.homeCountry;
+    var fightingStyleH2 = document.createElement('h2');
+    fightingStyleH2.innerText = "Fighting Style: " + this.fighter.fightingStyle;
+    var specialMoveH2 = document.createElement('h2');
+    specialMoveH2.innerText = "Special Moves:";
+    var specialMovesList = document.createElement('ul');
+    for (move of this.fighter.specialMoves) {
+      var moveItem = document.createElement('li');
+      moveItem.innerText = move;
+      specialMovesList.appendChild(moveItem);
+    }
+
+    profile.appendChild(image);
+    profile.appendChild(nameH1);
+    profile.appendChild(genderH2);
+    profile.appendChild(countryH2);
+    profile.appendChild(fightingStyleH2);
+    profile.appendChild(specialMoveH2);
+    profile.appendChild(specialMovesList);
+
   }
 };
 
