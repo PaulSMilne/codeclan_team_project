@@ -2,6 +2,7 @@ var Player = require('../top_trumps/player');
 var Deck = require('../top_trumps/deck.js');
 var Game = require('../top_trumps/game.js');
 var MapView = require('./map_view.js');
+var FightersView = require('./fighters_view.js');
 
 var StartView = function() {
   this.player1 = null;
@@ -15,6 +16,11 @@ StartView.prototype = {
     newGameButton.onclick = function() {
       this.makePlayers()
     }.bind(this);
+    var allFighterButton = document.getElementById('fighters')
+    allFighterButton.onclick = function() {
+      var fightersView = new FightersView();
+      fightersView.display();
+    }
   },
   makePlayers: function() {
     var startMenu = document.getElementById('start_menu')
@@ -24,7 +30,7 @@ StartView.prototype = {
 
     var themeMusic = document.getElementById('music');
     themeMusic.src = "/audio/title.mp3";
-    
+
     var startPlayButton = document.getElementById('start_play');
     startPlayButton.onclick = function() {
       var p1 = document.getElementById('player1');

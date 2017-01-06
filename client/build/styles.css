@@ -304,6 +304,14 @@ that shows how many cards a play has in her hand*/
      justify-content: space-between;
 }
 
+/*FIGHTER STYLES*/
+
+#all_fighters {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+}
+
 /*HIDING AND DISPLAYING STYLES*/
 
-#game, #map-view {display:none;}
+#game, #map-view, #fighter_stats {display:none;}
