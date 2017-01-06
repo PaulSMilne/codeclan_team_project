@@ -14,7 +14,7 @@
                   "defense":  11,
                   "intelligence": 7,
                   "charm": 5,
-                  "resolve": 16,
+                  "resolve": 15,
                   "range": 12
                 },
       "specialMoves": ["Grappling", "Wheel Kick", "Marseilles Roll", "Falling Sky", "Tornado"]
@@ -29,7 +29,7 @@
       "image": "/images/fighters/adon.png",
       "abilities": {
                   "strength": 13,
-                  "agility":  15,
+                  "agility":  14,
                   "defense":  11,
                   "intelligence": 8,
                   "charm": 10,
@@ -52,10 +52,10 @@
                   "defense":  15,
                   "intelligence": 10,
                   "charm": 7,
-                  "resolve": 17,
+                  "resolve": 15,
                   "range": 13
                 },
-      "specialMoves": ["Gohadoken", "Goshoryuken", "Tatsumaki Zankukyaku", "Zanku Hadoken", "Shakunetsu Hadoken, Hyakkishu, Tenmakujinkyaku, Zenpou Tenshin"]
+      "specialMoves": ["Gohadoken", "Goshoryuken", "Tatsumaki Zankukyaku", "Zanku Hadoken", "Shakunetsu Hadoken", "Hyakkishu", "Tenmakujinkyaku", "Zenpou Tenshin"]
     },
     {
       "id": 4,
@@ -105,7 +105,7 @@
       "image": "/images/fighters/cammy.png",
       "abilities": {
                   "strength": 12,
-                  "agility":  15,
+                  "agility":  13,
                   "defense":  11,
                   "intelligence": 10,
                   "charm": 10,
@@ -148,7 +148,7 @@
                   "intelligence": 9,
                   "charm": 11,
                   "resolve": 7,
-                  "range": 13
+                  "range": 12
                 },
       "specialMoves": ["Bad Spray", "Crack Kick", "Jaw Crusher", "Bad Stone", "Criminal Upper", "Ruffian Kick", "Zonk Knuckle", "Mega Crash", "Dead End Irony"]
     },
@@ -164,7 +164,7 @@
                   "strength": 10,
                   "agility":  15,
                   "defense":  13,
-                  "intelligence": 16,
+                  "intelligence": 15,
                   "charm": 13,
                   "resolve": 10,
                   "range": 7
@@ -198,11 +198,11 @@
       "quote": "Were my killer combos too much for you, mon?",
       "image": "/images/fighters/deejay.png",
       "abilities":{
-                  "strength": 14,
+                  "strength": 13,
                   "agility":  13,
                   "defense":  14,
                   "intelligence": 13,
-                  "charm": 16,
+                  "charm": 15,
                   "resolve": 12,
                   "range": 13
                 },
@@ -221,8 +221,8 @@
                   "agility":  17,
                   "defense":  11,
                   "intelligence": 15,
-                  "charm": 16,
-                  "resolve": 14,
+                  "charm": 14,
+                  "resolve": 13,
                   "range": 19
                 },
       "specialMoves": ["Yoga Fire", "Yoga Flame", "Yoga Blast", "Yoga Teleport", "Yoga Escape", "Yoga Teleport", "Yoga Bringer", "Yoga Legend", "Yoga Smash", "Yoga Float", "Yoga Burner", "Yoga Strike", "Yoga Stream", "Yoga Tempest", "Yoga Inferno", "Yoga Volcano", "Yoga Catastrophe", "Yoga Shangri-La"]
@@ -255,7 +255,7 @@
       "quote": "It's only natural that a Sumo should become the World's Strongest!",
       "image": "/images/fighters/ehonda.png",
       "abilities":{
-                  "strength": 15,
+                  "strength": 14,
                   "agility":  13,
                   "defense":  13,
                   "intelligence": 14,
@@ -275,7 +275,7 @@
       "image": "/images/fighters/elfuerte.png",
       "abilities": {
                   "strength": 12,
-                  "agility":  16,
+                  "agility":  13,
                   "defense":  10,
                   "intelligence": 12,
                   "charm": 13,
@@ -294,10 +294,10 @@
       "image": "/images/fighters/feilong.png",
       "abilities":{
                   "strength": 13,
-                  "agility":  17,
+                  "agility":  14,
                   "defense":  12,
                   "intelligence": 13,
-                  "charm": 15,
+                  "charm": 14,
                   "resolve": 14,
                   "range": 10
                 },
@@ -317,7 +317,7 @@
                   "defense":  13,
                   "intelligence": 16,
                   "charm": 15,
-                  "resolve": 18,
+                  "resolve": 17,
                   "range": 9
                 },
       "specialMoves": ["Hyakurenko", "Gekiro", "Jyasen", "Shishisho", "Oga", "Setsunasen", "Kouga", "Zan'ei", "Zetsuei", "Shitenshuu", "Shitenketsu", "Jyakoha", "Ryukoha", "Teiga"]
@@ -336,7 +336,7 @@
         "defense": 17,
         "intelligence": 14, 
         "charm": 5,
-        "resolve": 14,
+        "resolve": 16,
         "range": 10
       },
       "specialMoves": ["Senkugoshoha", "Tatsumaki Gorasen", "Kongoshin"]
@@ -369,13 +369,13 @@
       "quote": "There's something you should get to know better. Your limits.",
       "image": "/images/fighters/guy.png",
       "abilities": {
-        "strength": 14,
-        "agility": 16,
+        "strength": 13,
+        "agility": 14,
         "defense": 6,
         "intelligence": 10, 
         "charm": 13,
         "resolve": 9,
-        "range": 16
+        "range": 13
       },
       "specialMoves": ["Bushin Senpukyaku", "Hozanto", "Bushin Izuna Otoshi"]
     },
@@ -393,7 +393,7 @@
         "defense": 12,
         "intelligence": 7, 
         "charm": 7,
-        "resolve": 14,
+        "resolve": 13,
         "range": 11
       },
       "specialMoves": ["slide attack", "Oil Rocket throw"]
@@ -407,11 +407,11 @@
       "quote": "Ibuki! On the scene!",
       "image": "/images/fighters/ibuki.png",
       "abilities": {
-        "strength": 5,
-        "agility": 17,
-        "defense": 15,
+        "strength": 9,
+        "agility": 15,
+        "defense": 12,
         "intelligence": 14, 
-        "charm": 14,
+        "charm": 13,
         "resolve": 7,
         "range": 7
       },
@@ -450,7 +450,7 @@
         "defense": 8,
         "intelligence": 11, 
         "charm": 13,
-        "resolve": 16,
+        "resolve": 15,
         "range": 14
       },
       "specialMoves": ["Shoryuken", "Heat Rush"]
@@ -464,8 +464,8 @@
       "quote": "I know I'm still young, but fighters in training really have the desire to win!",
       "image": "/images/fighters/makoto.png",
       "abilities": {
-        "strength": 16,
-        "agility": 11,
+        "strength": 12,
+        "agility": 12,
         "defense": 13,
         "intelligence": 14, 
         "charm": 8,
@@ -502,7 +502,7 @@
       "quote": "You're nervous, aren't you?",
       "image": "/images/fighters/rose.png",
       "abilities": {
-        "strength": 8,
+        "strength": 9,
         "agility": 13,
         "defense": 16,
         "intelligence": 11, 
@@ -521,7 +521,7 @@
       "quote": "My fists'll give you amnesia!",
       "image": "/images/fighters/rufus.png",
       "abilities": {
-        "strength": 18,
+        "strength": 16,
         "agility": 14,
         "defense": 12,
         "intelligence": 6, 
@@ -541,12 +541,12 @@
       "image": "/images/fighters/ryu.png",
       "abilities": {
         "strength": 16,
-        "agility": 12,
+        "agility": 13,
         "defense": 14,
         "intelligence": 12, 
         "charm": 13,
         "resolve": 16,
-        "range": 10
+        "range": 11
       },
       "specialMoves": ["Shoryuken", "Hadoken", "Tatsumaki Senpukyaku"]
     },
@@ -560,7 +560,7 @@
       "image": "/images/fighters/sagat.png",
       "abilities": {
         "strength": 16,
-        "agility": 16,
+        "agility": 15,
         "defense": 13,
         "intelligence": 11, 
         "charm": 9,
@@ -579,10 +579,10 @@
       "image": "/images/fighters/sakura.png",
       "abilities": {
         "strength": 9,
-        "agility": 16,
+        "agility": 15,
         "defense": 8,
         "intelligence": 12, 
-        "charm": 17,
+        "charm": 15,
         "resolve": 9,
         "range": 13
       },
@@ -616,7 +616,7 @@
       "quote": "Your scream sounds like a pathetic war cry!",
       "image": "/images/fighters/thawk.png",
       "abilities": {
-        "strength": 16,
+        "strength": 15,
         "agility": 10,
         "defense": 13,
         "intelligence": 11, 
@@ -636,10 +636,10 @@
       "image": "/images/fighters/vega.png",
       "abilities": {
         "strength": 12,
-        "agility": 18,
+        "agility": 16,
         "defense": 8,
         "intelligence": 12, 
-        "charm": 17,
+        "charm": 16,
         "resolve": 9,
         "range": 16
       },
@@ -654,7 +654,7 @@
       "quote": "I am...the Red Cyclone!",
       "image": "/images/fighters/zangief.png",
       "abilities": {
-        "strength": 17,
+        "strength": 16,
         "agility": 5,
         "defense": 13,
         "intelligence": 9, 

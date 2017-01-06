@@ -15,15 +15,22 @@
 
     <h1>TOP TRUMPS</h1>
 
-      <p><label for="player1">Player 1</label>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="player1" class="player_name" placeholder="---" maxlength="3" size="4"></p>
+    <div id="start_menu">
+      <button id="new_game" value="New Game">New Game</button>
+      <button id="fighters" value="Fighters">Fighters</button>
+     </div>
 
-      <p><label for="player2">Player 2</label>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="player2" class="player_name" placeholder="---" maxlength="3" size="4"></p>
+     <div id="player_details">
+        <p><label for="player1">Player 1</label>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="player1" class="player_name" placeholder="---" maxlength="3" size="4"></p>
 
-      <p><label for="cardNumber">Cards in hand</label>:&nbsp;&nbsp;&nbsp;<input type="number" id="cardNumber" class="player_name" placeholder="-" max="5" min="1" size="3"></p>
+        <p><label for="player2">Player 2</label>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="player2" class="player_name" placeholder="---" maxlength="3" size="4"></p>
 
-      <button id="start_play" value="Start Play">FIGHT!</button>
+        <p><label for="cardNumber">Cards in hand</label>:&nbsp;&nbsp;&nbsp;<input type="number" id="cardNumber" class="player_name" placeholder="-" max="5" min="1" size="3"></p>
 
-      <div id="warning"></div>
+        <button id="start_play" value="Start Play">FIGHT!</button>
+
+        <div id="warning"></div>
+      </div>
 
     </section><!-- /splash -->
 
@@ -59,7 +66,18 @@
 
       </section><!-- /gameBody -->
 
-    </section><!-- /game--
+    </section><!-- /game-->
+
+
+    <section id="fighter_stats">
+      <button id="return_menu">Back to Menu</button>
+      <button id="return_fighters">Back to Fighters</button>
+      <section id="all_fighters"></section>
+      <section id="fighter_profile">
+        <div id="profile"></div>
+        <div id="stats"></div>
+      </section> 
+    </section>
 
 
 </body>

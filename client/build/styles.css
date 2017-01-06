@@ -76,6 +76,21 @@ body {
      font-size:1.5em;
 }
 
+#player_details {
+     display: none;
+}
+
+#start_menu {
+     display: flex;
+     flex-direction: column;
+}
+
+#start_menu button {
+     width: 250px;
+     margin: auto;
+     margin-bottom: 30px;
+}
+
 
 /* MAP STYLES */
 
@@ -289,6 +304,64 @@ that shows how many cards a play has in her hand*/
      justify-content: space-between;
 }
 
+/*FIGHTER STYLES*/
+
+#all_fighters {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+}
+
+.small_card {
+     transform: scale(0.8);
+     transition: transform 0.5s;
+}
+
+.small_card:hover {
+     transform: scale(0.85);
+}
+
+#return_menu,
+#return_fighters {
+     color:red;
+     background-color: black;
+     font-family: "CapcomStreetFighter", sans-serif;
+     font-size:1.5em;
+     padding:10px;
+     margin: 30px 0 20px 60px;
+}
+
+#fighter_profile {
+     display: flex;
+     flex-direction: row;
+     background-color: white;
+     justify-content: center;
+}
+
+#profile, #stats {
+     width: 45%;
+}
+
+#profile {
+     margin-top: 30px;
+}
+
+#stats {
+     margin-top: 80px;
+}
+
+#stats h2 {
+     margin-bottom: 50px;
+}
+
+#stats h3 {
+     display: inline-block;
+     margin-right: 30px;
+}
+
+
+
 /*HIDING AND DISPLAYING STYLES*/
 
-#game, #map-view {display:none;}
+#game, #map-view, #fighter_stats, #fighter_profile {display:none;}
