@@ -37,7 +37,7 @@ GameView.prototype = {
     controlButton.style.display = "initial";
     controlButton.innerText = "Start Game";
     controlButton.onclick = function() {
-      // this.game.shuffleDeck();
+      this.game.shuffleDeck();
       this.game.deal();
       this.buildPlayerBar();
       this.game.populateTable();
