@@ -333,22 +333,43 @@ that shows how many cards a play has in her hand*/
 }
 
 #fighter_profile {
-     display: flex;
+     /*display: flex;*/
      flex-direction: row;
      background-color: white;
      justify-content: center;
+     font-family:Helvetica;
+
 }
 
-#profile, #stats {
+#fighter_profile h1 {font-size:2.5em;text-shadow: 2px 2px 3px black;color:white;margin-top:20px;}
+#fighter_profile h2 {font-size:1.25em;}
+
+/*#profile, #stats {
      width: 45%;
-}
+}*/
 
 #profile {
      margin-top: 30px;
+     /*border:1px red solid;*/
+     width:33%;
+}
+
+#personal {
+   background-color: #C9A955;
+   padding:10px;
+   box-shadow: 5px 5px 5px;
+   margin-top:20px;
+   border-radius: 10px;
+   margin-top:50px;
 }
 
 #stats {
+     display:flex;
+     flex-direction:column;
      margin-top: 80px;
+     /*border:1px green solid;*/
+     width:50%;
+     text-align:center;
 }
 
 #stats h2 {
@@ -357,7 +378,9 @@ that shows how many cards a play has in her hand*/
 
 #stats h3 {
      display: inline-block;
-     margin-right: 30px;
+     /*margin-right: 30px;*/
+     text-align: center;
+     margin-bottom:0;
 }
 
 

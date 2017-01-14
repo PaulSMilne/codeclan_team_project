@@ -102,6 +102,8 @@ FightersView.prototype = {
     profile.innerHTML = "";
     var image = document.createElement('img');
     image.src = fighter.image;
+    var personal = document.createElement('div');
+    personal.setAttribute('id', 'personal')
     var nameH1 = document.createElement('h1');
     nameH1.innerText = fighter.name;
     var genderH2 = document.createElement('h2');
@@ -118,14 +120,18 @@ FightersView.prototype = {
       moveItem.innerText = move;
       specialMovesList.appendChild(moveItem);
     }
+    personal.appendChild(nameH1);
+    personal.appendChild(genderH2);
+    personal.appendChild(countryH2);
+    personal.appendChild(fightingStyleH2);
+    personal.appendChild(specialMoveH2);
+    personal.appendChild(specialMovesList);
 
     profile.appendChild(image);
-    profile.appendChild(nameH1);
-    profile.appendChild(genderH2);
-    profile.appendChild(countryH2);
-    profile.appendChild(fightingStyleH2);
-    profile.appendChild(specialMoveH2);
-    profile.appendChild(specialMovesList);
+    profile.appendChild(personal)
+
+
+
   },
   buildFighterStats: function(fighter) {
     var stats = document.getElementById('stats');
