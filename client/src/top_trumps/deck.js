@@ -1,5 +1,5 @@
 var _ = require('underscore');
-//run npm install to install the underscore or lodash library
+//run npm install to install the underscore library
 var Deck = function(cards){
      this.cards = cards;
 }
